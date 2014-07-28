@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Menu Horizontal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: black;
+            }
+            
+            #contenedor {
+                width: 600px;
+                height: 400px;
+                position: relative;
+                /* Con esto centramos el contenedor horizontalmente */
+                margin: 0 auto 0 auto;
+                border: 2px solid aquamarine;
+                background-color: beige;
+            }
+            
+            .nav {
+                width: 100%;
+                height: 20px;
+                /* border: 2px solid aquamarine; */
+                color: blue;
+            }
+            
+            .menu {
+                /* Quitamos los puntos a los list-items */
+                list-style: none;
+                display: inline;
+                margin-right: 20px;
+                padding: 10px 15px;
+            }
+            
+            .separadores {
+                list-style: none;
+
+            }
+            
+            li:hover {
+                background-color: white;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+            <header>
+            </header>
+            <nav>
+                <ul>
+                    <li class="menu"><a href="http://www.movistar.es" accesskey="I"><u>I</u>nicio</a></li>
+                    <li class="separadores"><span style="">|</span></li>
+                    <li class="menu"><a href="http://www.movistar.es" accesskey="Q"><u>Q</u>uiénes somos</a></li>
+                    <li class="menu"><a href="http://www.movistar.es" accesskey="M"><u>M</u>apa del Sitio</a></li>
+                    <li class="menu"><a href="http://www.movistar.es" accesskey="C"><u>C</u>ontáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

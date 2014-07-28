@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Audi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Estoy incluyendo la hoja de estilos y que se incluye siempre en el head atributo rel="stylesheet" que indica
+        que estoy teniendo una relación de hoja de estilos en cascada el type se le indica que la hoja de estilos
+        (css) va a ser de texto-->
+<!--        <link href="css/galeria.css" rel="stylesheet" type="text/css"/>-->
+        <style>
+            * {
+                margin: 0px;
+            }
+            
+            #ContenedorDelCoche {
+                position: relative;
+                width: 600px;
+                height: 360px;
+                background-image: url(img/audi.jpg);
+            }
+            
+            body {
+                color: white;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            a:link {
+                color: white;
+            }
+            
+            a:active {
+                color: white;
+            }
+            
+            a:visited {
+                color: white;
+            }
+
+            li {
+                list-style: none;
+                display: inline-block;
+                width: 8%;
+                text-align: center;
+                /* Forma Antigua */
+                /*
+                display: inline;
+                margin-right: 15px;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                */
+            }
+            
+            /* Establecemos el color de fondo de los li al colocar el cursor por encima de él */
+            li:hover {
+                background-color: #434343;
+            }
+            
+            /* Se pueden aplicar una regla de estilo a dos o más selectores separándolos con coma */
+            #NavegaIzq, #NavegaDer {
+                width: 20px;
+                height: 100%;
+            }
+            
+            #NavegaIzq {
+                float: left;
+                /* Se utiliza display: table al contenedor para poder establecer alineación vertical a
+                   los elementos que estén contenidos dentro. */
+                display: table;
+                /* Ahora podremos centrar el elemento figure estableciéndole es estilo
+                   display: table-cell; y vertical-align: center */
+            }
+            
+            #NavegaDer {
+                position: relative;
+                float: right;
+            }
+            
+            #FlechaIzq {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            
+            #FlechaDer {
+                position: absolute;
+                width: 100%;
+                margin: 0px;
+                top: 44.44%
+            }
+
+            footer {
+                position: relative;
+                clear: both;
+                width: 100%;
+                height: 40px;
+                background-color: black;
+            }
+            
+            nav {
+                width: 400px;
+                position: relative;
+                float: right;
+                margin: 0;
+                margin-top: 9px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Contenedor del coche de la galería-->
+        <div id="ContenedorDelCoche">
+            <!--Navegar a la izq.-->
+            <aside id="NavegaIzq">
+                <figure id="FlechaIzq">
+                    <a href="resolucion-galeria7.html">
+                        <img src="img/left-arrow.png" alt="izquierda"></a>
+                </figure>
+            </aside>
+            <!--Navegar a la dcha-->
+            <aside id="NavegaDer">
+                <figure id="FlechaDer">
+                    <a href="resolucion-galeria5.html">
+                        <img src="img/right-arrow.png" alt="derecha"></a>
+                </figure>
+            </aside>
+           
+            <!--Pie de página de la galería-->
+            <footer>
+                <nav>
+                     <!--Menú de navegación-->
+                    <ul>
+                        <li><a href="resolucion-galeria1.html">1</a></li>
+                        <li><a href="resolucion-galeria2.html">2</a></li>
+                        <li><a href="resolucion-galeria3.html">3</a></li>
+                        <li><a href="resolucion-galeria4.html">4</a></li>
+                        <li><a href="resolucion-galeria5.html">5</a></li>
+                        <li><a href="resolucion-galeria6.html">6</a></li>
+                        <li><a href="resolucion-galeria7.html">7</a></li>
+                        <li><a href="resolucion-galeria8.html">8</a></li> 
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </body>
+</html>

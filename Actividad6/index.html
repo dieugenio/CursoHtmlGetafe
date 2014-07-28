@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+Actividad#6
+1.	Capas (Div y Span)
+2.	Atributos Globales
+-->
+<html>
+    <head>
+        <title>Actividad 6 - CAPAS Y ATRIBUTOS GLOBALES</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image:url(img/bg.jpg) ;
+                font-family: sans-serif;
+            }
+            h1{
+               text-align: center;
+            }
+            h2 {
+                text-align: center;
+                color: blue;
+            }
+            h3 {
+                text-align: center;
+                color: blue;
+                font-size: 0.7em;
+            }
+            #esquema {
+                max-width: 300px;
+                
+            }
+            #esquema ul li {
+                background-color:rgb(255,255,255);
+                font-size: 1.5em;
+            }
+            #content {
+                width: 100%;
+                height: auto;
+                margin-bottom: 100px;
+                
+            }
+            #content p{
+               font-family: sans-serif;
+               text-align: center;
+            }
+            #capa1 {
+                /*position: absolute; quiere decir que el elemento está posicionado a su primer padre que es el navegador en este caso*/
+                margin: 0 auto;/* para que se centre correctamente tendríamos que poner position static o quitarlo directamente*/
+                width: 600px;
+                height: 600px;
+                z-index: 1;
+                border: 2px solid blue;
+                /*para que esta capa se desplace en 100px*/
+                /*visibility: collapse; siempre es mejor usar collapse en vez de hidden*/
+                /* visible es lo que tiene por defecto, hidden es oculto y collapse para comprimir*/
+            }
+            #capa1b {
+                position: relative; /*quiere decir que el elemento está posicionado a su primer padre que es el navegador en este caso*/
+                width: auto;
+                height: 600px;
+                z-index: 1;
+                border: 2px solid blue;
+                /*para que esta capa se desplace en 100px*/
+                /*visibility: collapse; siempre es mejor usar collapse en vez de hidden*/
+                /* visible es lo que tiene por defecto, hidden es oculto y collapse para comprimir*/
+            }
+            
+            #capa1b img {
+                float: left;
+            }
+            #capa2 {/*el z-index de esta capa hace ponerse por encima a la imagen de la capa anterior*/
+                position: absolute;
+                left: 480px;
+                top: 600px;
+                width: 600px;
+                height: 600px;
+                z-index: 2;
+                border: 2px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ACTIVIDAD 6</h1>
+        <div id="esquema">
+            <ul>
+                <li>Capas Div y Span</li>
+                <li>Atributos Globales</li>
+            </ul>
+        </div>  
+        <hr />
+        <h2>DIV Y SPAN</h2>
+        <div id="content">
+            <p>El elemento div nos permite crear secciones en una página web
+            Los únicos elementos que se utilizan para crear secciones en una página web son el DIV y SPAN.
+            El elemento DIV es de los llamados a nivel bloque y el SPAN a nivel de línea; el div permite crear capas a nivel de bloque y el SPAN a nivel de línea. Lo cual significa que a un elemento DIV el navegador para representarlo añade un salto de línea al principio y al final del documento. Los elementos que son a nivel de línea SPAN no llevan salto de línea ni al principio ni al final.
+            El elemento DIV puede agrupar a cualquier conjunto de elemento fundamentalmente de lo llamado a nivel de bloques, es decir que encierra elementos a nivel de bloque, es un CONTENEDOR al igual que el SPAN, a ambos también se les llama contenedores. Visualmente no aportan nada si no incluyes elementos en su interior, ni el DIV y el SPAN.
+            Además el elemento DIV permite solapar contenido, permite que los elementos que se encierran en el puedan estar en distintos niveles de profundidad. Y además permite ocultar o mostrar estos elementos, con la propiedad VISIBILITY.
+            </p>
+            <p>
+                La posición de cualquier elemento puede ser estática, relativa, absoluta y fija. Y cada uno de estos valores tendrá un significado diferente. Por defecto el valor es estático, que quiere decir que los elementos los representa el navegador de izquierda a derecha y de arriba abajo.
+            </p>
+            <hr />
+            <p>A continuación un ejemplo de position absolute y margen en "capa1" y "capa2 comentada" donde incluimos una imagen, incluimos z-index en ambas</p>
+            <div id="capa1">
+                <h3>Capa 1</h3>
+                <img src="img/image1.png" alt="imagen"/>
+            </div>
+<!--            <div id="capa2">
+                <h3>Capa 2</h3>
+                <img src="img/image1.png" alt="imagen"/>
+            </div>-->
+            <h3>ATRIBUTO MARGIN Y PADDING</h3>
+            <p>Para centrar un elemento “auto” dices al navegador que calcule los márgenes de dicho elemento.
+            "margin: 0 auto;"
+            </p>
+            <p>En lugar de especificar de forma independiente los márgenes, realmente lo encontraremos contraído;<br>
+                margin: 100px 100px 100px 100px> todos detallados<br>
+                margin: 100px 100px 100px> deja sin especificar margin left</p>
+            <h3>ATRIBUTO FLOAT</h3>
+            <p>Si por ejemplo quiero mantener una imagen con un texto y meto ambos en una capa. Crearía crear una paca de imagen y a continuación la otra del texto. Esto solamente se logra con la propiedad FLOAT
+            <br>FLOAT: Esta propiedad permite controlar la ubicación de los elementos a nivel de bloque
+            </p>
+            
+            <div id="capa1b">
+                <img src="img/image1.png" alt="imagen" width="600" height="450"/><!--1elemento imagen-->
+                <p>Este párrafo debe aparecer a la derecha       texto texto texto texto texto texto textotexto texto texto texto texto texto textotexto texto texto texto texto texto texto texto <br>texto texto texto texto texto texto texto texto texto texto  </p> <!--2elemento imagen-->
+            </div>
+            <p>Entonces si deseamos poner una imagen a la izquierda y un texto a su derecha, para que este texto quede bien alineado con la imagen y no el la parte derecha de la página,si se encuentran dentro de una capa DIV, "img" se define en el estilo con <strong>float:left</strong> unicamente</p>
+        </div>
+    </body>
+</html>

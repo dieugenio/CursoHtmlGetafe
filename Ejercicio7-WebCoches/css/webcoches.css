@@ -1,0 +1,71 @@
+body {
+    color: white;
+}
+
+#LeftAside {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 160px;
+    left: 0px;
+    margin: 0;
+    z-index: 1;
+}
+
+#RightAside {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 160px;
+    left: 580px;
+    margin: 0;
+    z-index: 1;
+}
+
+#Content {
+    position: absolute;
+    width: 600px;
+    height: 360px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    z-index: 0;
+}
+
+#GalleryPages {
+    position: absolute;
+    width: 600px;
+    height: 50px;
+    top: 360px;
+    left: 0px;
+    margin: 0;
+    z-index: 0;
+    background-color: black;
+}
+
+.Page {
+   list-style: none;
+   display: inline;
+   margin: 0px;
+   padding: 10px 15px;
+   font-family: Verdana;
+}
+
+.Page:hover {
+    background-color: gray;
+}
+
+#CurrentPage:hover {
+    background-color: black;
+}
+
+.PageNumber {
+   text-decoration: none;
+   color: white;
+   margin: 0px;
+}
+
+ul {
+    float: right;
+    padding: 0px 20px
+}

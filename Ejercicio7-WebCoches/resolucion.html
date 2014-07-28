@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            a:visited {
+                color: white;
+            }
+            
+            a:link {
+                color: white;
+            }
+            
+            a:active {
+                color: white;
+            }
+            
+            #Contenedor {
+                position: relative;
+                width: 960px;
+                margin: 0 auto 0 auto;
+            }
+            
+            li {
+                list-style: none;
+                display: inline;
+            }
+            
+            li.ElementoDeNavegacion {
+                margin-right: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            
+            li.ElementoDeNavegacion:hover {
+                background-color: #434343;
+            }
+
+            hr {
+                width: 500px;
+                color: white;
+            }
+            
+            figure {
+                margin: 0;
+            }
+
+            #menuPrincipal {
+                width: 70%;
+                margin: 0 auto;
+            }
+            
+            #ColumnaIzquierda {
+                width: 270px;
+                height: 360px;
+                margin: 0;
+                float: left;
+            }
+            
+            #LogoGrande, #LogoChico {
+                margin: 0;                
+            }
+            
+            #InfoColumnaIzquierda {
+                width: 50%;
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            #cocheDeLaGaleria {
+                float: left;
+                width: 650px;
+                height: 400px;
+            }
+            
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+            
+            #seccionInformativa {
+                position: relative;
+                width: 100%;
+                height: 200px;
+            }
+            
+            #articuloModelos {
+                float: left;
+                width: 33%;
+                margin-right: 10px;
+            }
+            
+            #articuloPostVenta {
+                float: left;
+                width: 30%;
+            }
+
+            #articuloFinanciacion {
+                float: right;
+                width: 30%;
+            }
+            
+            #pieDePagina {
+                width: 100%;
+                height: 100px;
+            }
+            
+            #izqDelPieDePagina {
+                width: 25%;
+                float: left;
+            }
+            
+            #menuDelPie {
+                width: 75%;
+                float: right;
+                margin-top: 20px;
+            }
+            
+            .cabeceraDeLosArticulos {
+                text-align: center;
+                background-image: url(img/degradado.png);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!--Contenedor del documento-->
+        <div id="Contenedor">
+            <!--Menu de Navegación Principal-->
+            <nav id="menuPrincipal">
+                <ul>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria1.html" target="base">ITEM 1</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria2.html" target="base">ITEM 2</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria3.html" target="base">ITEM 3</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria4.html" target="base">ITEM 4</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria5.html" target="base">ITEM 5</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria6.html" target="base">ITEM 6</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria7.html" target="base">ITEM 7</a></li>
+                    <li>|</li>
+                    <li class="ElementoDeNavegacion"><a href="resolucion-galeria8.html" target="base">ITEM 8</a></li>
+                </ul>
+            </nav>
+            <!--Separador horizontal-->
+            <hr />
+            <!--Columna izquierda-->
+            <aside id="ColumnaIzquierda">
+                <figure id="LogoGrande">
+                    <img src="img/logo.jpg" alt="Logo de la app"/>
+                </figure>
+                <section>
+                    <p id="InfoColumnaIzquierda"><em>Vehículos exclusivos para personas exclusivas</em></p>
+                </section>
+            </aside>
+            <!--Galería de coches-->
+            <section id="cocheDeLaGaleria">
+                <iframe src="resolucion-galeria1.html" name="base">
+                    <!--Texto a mostrar si el navegador no soporta iframe-->
+                    No se ha podido cargar la galería de imágenes
+                </iframe>
+            </section>
+            <!--Separador horizontal-->
+            <hr />
+            <!--Sección informativa-->
+            <section id="seccionInformativa">
+                <!--Modelos-->
+                <article id="articuloModelos">
+                    <header class="cabeceraDeLosArticulos">
+                        <h2>Modelos</h2>
+                    </header>
+                    <section>
+                        <figure>
+                            <!--Coche de Ocasión-->
+                            <img src="img/ocasion.jpg" alt="Coche de Ocasión"/>
+                        </figure>
+                    </section>
+                </article>
+                <!--Post-Venta-->
+                <article id="articuloPostVenta">
+                    <header class="cabeceraDeLosArticulos">
+                        <h2>Post-Venta</h2>
+                    </header>
+                    <section>
+                        <!--Párrafo informativo-->
+                        <p>El mejor lugar para acudir con tu vehículo, tanto si es nuevo como si se trata de un 
+                            vehículo de ocasión, es nuestra red de puntos de servicio en toda Europa.</p>
+                    </section>
+                </article>
+                <!--Financiación-->
+                <article id="articuloFinanciacion">
+                    <header class="cabeceraDeLosArticulos">
+                        <h2>Financiación</h2>
+                    </header>
+                    <section>
+                        <!--Párrafo informativo-->
+                        <p>Challenge Financial Services le proporciona un amplio abanico de oportunidades para 
+                            que adquiera su coche en las mejores condiciones. Adaptando las caracteristicas de 
+                            financiación a sus necesidades.</p>
+                    </section>
+                </article>
+            </section>
+            <!--Separador horizontal-->
+            <hr />
+            <!--Pie de Página-->
+            <footer id="pieDePagina">
+                <aside id="izqDelPieDePagina">
+                    <figure id="LogoChico">
+                        <!--Logo Pequeño-->
+                        <img src="img/logo-min.jpg" alt="Logo Pequeño"/>
+                    </figure>
+                </aside>
+                <nav id="menuDelPie">
+                    <!--Menú de Navegación-->
+                    <ul>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria1.html" target="base">Item 1</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria2.html" target="base">Item 2</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria3.html" target="base">Item 3</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria4.html" target="base">Item 4</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria5.html" target="base">Item 5</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria6.html" target="base">Item 6</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria7.html" target="base">Item 7</a></li>
+                        <li>|</li>
+                        <li class="ElementoDeNavegacion"><a href="resolucion-galeria8.html" target="base">Item 8</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </body>
+</html>

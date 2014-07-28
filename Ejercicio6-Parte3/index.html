@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 6 - Parte 3 - Maquetar Documento de Posicionamiento</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .list-item {
+                //border-bottom-style: solid;
+                //border-bottom-color: black;
+                //border-bottom-width: 1px;
+                height: 200px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                float: left;
+            }
+            
+            .content {
+                    float: left; 
+                    width: 610px;
+                    height: 200px;
+                    margin-left: 0px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-style: solid; 
+                    border-width: 2px; 
+                    border-color: blue;
+                    overflow: auto;
+                    }
+            
+            .code-sample {
+                    float: left; 
+                    width: 200px;
+                    height: 200px;
+                    margin-left: 10px;
+                    border-style: solid; 
+                    border-width: 2px; 
+                    border-color: red;
+                    text-align: left;
+                    overflow: auto;
+                    }
+        </style>
+    </head>
+    <body>
+    <h1>El posicionamiento explicado en 9 pasos</h1>
+    <ol>
+        <li class="list-item"><h2>POSITION: STATIC</h2>
+            <div>
+                <div class="content">
+                    <pre >
+El posicionamiento por defecto para todos los elementos es position: static,
+lo que  significa que el  elemento no  estará  posicionado y aparecerá donde
+normalmente  debería  hacerlo. Normalmente no deberá  especificarse a no ser
+que deba modificarse una posición previamente definida.</pre>
+                </div>
+                <div class="code-sample">
+                    <pre>
+ #div-1 {
+   position:static
+ }
+                    </pre>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-item"><h2>POSITION: RELATIVE</h2>
+            <div>
+                <div class="content">
+                    <pre>
+En caso de especificarse  position: relative, podrán utilizarse  los valores 
+top o bottom, right  o  left para  posicionar  el  elemento  en  la posición 
+relativa donde inicialmente debería aparecer. En el siguiente ejemplo el div 
+se  posicionará  20 pixeles hacia  abajo y 40px a la  derecha de su posición 
+original.
+
+El espacio que deje libre el div no quedará ocupado por ningún otro elemento.</pre>
+                </div>
+                <div class="code-sample">
+                    <pre>
+ #div-1 {
+   position:relative;
+   top:20px;
+   left:-40px;
+ }
+
+                    </pre>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-item"><h2>POSITION: ABSOLUTE</h2>
+            <div>
+                <div class="content">
+                    <pre>
+Cuando se especifica position:absolute, el elemento será desplazado colocado
+en   función   del   primer  elemento  padre posicionado en que se encuentre 
+(normalmente será el body).
+A diferencia con el  posicionamiento  relativo, los demás elementos ocuparán 
+su posición.
+
+Existen  bug en  IExplore  con  este  tipo de posicionamiento. En el ejemplo 
+anterior, si se  le especificara  un ancho  del 50% (width:50%), el ancho se 
+aplicaría al elemento padre en lugar del elemento en si.</pre>
+                </div>
+                <div class="code-sample">
+                    <pre>
+ #div-1a {
+   position:absolute;
+   top:0;
+   right:0;
+   width:200px;
+ }
+
+
+                    </pre>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-item"><h2>POSITION: RELATIVE + POSITION: ABSOLUTE</h2>
+            <div>
+                <div class="content">
+                    <pre>
+En caso  de definir  position: relative  en el  padre, todos  los  elementos 
+incluidos en  él se posicionarán relativamente tomándolo como referencia (es 
+decir, actuará  como  origen de coordenadas  para sus divs  hijos).  Como se 
+comenta, si  posteriormente a  uno de  sus hijos  se le  indica la propiedad 
+position:  absolute,  se posicionará  en la esquina superior izquierda de su 
+elemento contenedor.</pre></div>
+                <div class="code-sample">
+                    <pre>
+
+
+
+
+
+                    </pre>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-item"><h2>LAYOUT DE 2 COLUMNAS</h2>
+            <div>
+                <div class="content">
+                    <pre>
+Podrá  definirse  un layout  de 2 columnas  combinando  el  posicionamiento 
+absoluto y relativo.
+                    
+                    
+                    
+                    
+                    
+              
+
+      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    </pre></div>
+                <div class="code-sample">
+                    <pre>
+#div-1 {
+  position:relative;
+}
+
+#div-1a {
+  position:absolute;
+  top:0;
+  right:0;
+  width:200px;
+}
+
+#div-1b {
+  position:absolute;
+  top:0;
+  left:0;
+  width:200px;
+}
+
+&lt;!-- CÓDIGO HTML --&gt;
+ &lt;div id=&quot;div-1&quot;&gt;
+   &lt;div id=&quot;div-1a&gt;
+     Columna derecha
+   &lt;/div&gt;
+   &lt;div id=&quot;div-1b&gt;
+     Columna izquierda
+   &lt;/div&gt;
+ &lt;/div&gt;
+                    </pre>
+                </div>
+            </div>
+        </li>
+
+<!--
+
+        <li class="list-item"><h2>2 COLUMNAS CON ALTURA ABSOLUTA</h2>
+            <div>
+                <div class="content">
+                    <pre>
+Una posible solución es fijar una altura absoluta. Sin embargo, no será una
+solución viable  para la mayoría de  diseños, pues normalmente no se conoce 
+ni el  tamaño de la  fuente ni la cantidad  de texto que va a contener cada 
+una de ellas y podría cortarse su contenido.
+</pre></div>
+                <div class="code-sample">
+                    <pre>
+#div-1 {
+  position:relative;
+  height:250px;
+  }
+
+#div-1a {
+  position:absolute;  
+  top:0;
+  right:0;
+  width:200px;
+}
+
+#div-1b {
+  position:absolute;
+  top:0;
+  left:0;
+  width:200px;
+}
+                    </pre>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-item"><h2>FLOAT</h2>
+            <div>
+                <div class="content">
+                    <pre>
+Por lo tanto, el posicionamiento absoluto para definir alturas variables no 
+es óptimo.
+
+La solución consiste en posiconar un  elemento de forma flotante con tal de 
+ubicarlo  lo  más  a  la  derecha  o  lo  más  a la izquierda posible para, 
+posteriormente, incluir texto en él.
+                    </pre></div>
+                <div class="code-sample">
+                    <pre>
+#div-1a {
+  float:left;
+  width:200px;
+}
+
+                    </pre>
+                </div>
+            </div>
+        </li>
+-->        
+    </ol>
+
+<!--    
+    </h1>
+    <h1>8.- FLOAT DE COLUMNAS</h1>
+    <h1>Si se hace flotar una columna a la izquierda, también flotará por defecto la segunda a la izquierda superponiéndose sobre cualquier otro elemento.</h1>
+    <h1>#div-1a {<br /> float:left;<br /> width:150px;<br />}<br />#div-1b {<br /> float:left;<br /> width:150px;<br />}</h1>
+    <h1><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </h1>
+    <h1>9.- FLOAT DE COLUMNAS + CLEAR</h1>
+    <h1>Por lo tanto, después de hacer flotar las columnas deberá &quot;limpiarse&quot; el contenido que ocupan para que los demás elementos se posicionen debajo de ellos.</h1>
+    <h1>#div-1a {<br /> float:left;<br /> width:190px;<br />}<br />#div-1b {<br /> float:left;<br /> width:190px;<br />}<br />#div-1c {<br /> clear:both;<br />}</h1>
+    <h1><br>
+    </h1>
+    <div></div>
+    <h1><br />
+    </h1>
+-->
+</body>
+
+</html>

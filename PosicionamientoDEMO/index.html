@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejercicio de posicionamiento</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+
+        </style>
+    </head>
+    <body>
+         <h1>Posicionamiento en HTML desde el navegador</h1>
+        <h2>Para ver como se posiciona las secciones DIV</h2>
+        <p>Esto es una prueba para ver como se posicionan los elementos <br />
+            en una página que ya contiene parte de código en ells <br />
+            en este caso es un encabezado H1 un H2,un parrafo, una línea y  dos párrafos más de texto</p>
+        <hr />
+        <p>Otro párrafo más en esta ocasión más cortito que el anterior. </p>
+        <p>Vamos a insertar a continuación un div de 500 px por 30 px.que en su interior
+            va a tener un texto.</p>
+        <div style="position: static;
+             border: 1px solid red;
+             background-color: red;
+             width:500px;
+             height:150px;
+             "><p><strong>DIV - 1</strong> Con static la sección está a continuación del elemento html anterior</p>
+            <p>Último párrafo de la sección Static en Rojo ahora viene el cierre de sección div y una línea</p>
+        </div>
+        <p style="color:red">Parrafo separador seccion div1<p>
+        <div style="position: absolute;
+             border: 1px solid green;
+             background-color: green;
+             width:500px;
+             height:150px;
+             top:30px;
+             left:700px;
+             "><p><strong>DIV 2</strong> - Absolute si no decimos nada toma como referencia su posición.
+                Si indicamos top y left coge como referencia la ventana del navegador.</p>
+            <p>Los elementos que siguen a este elemento ocupan su espacio</p>
+        </div>
+        <p style="color:green">parrafo separador seccion div2</p>
+        <div style="position: relative;
+             border: 1px solid buttonface;
+             background-color: buttonface;
+             left:100px;
+             width:500px;
+             height:150px;
+             "><p><strong>DIV - 3</strong> Posicion relativa, desplaza con relación al elemento html anterior (hr) la distancia top y left indicada</p>
+            <p>El resto de elementos que siguen mantienen su posición original. Cierre de div y una línea</p>
+
+        </div>
+        <p style="color:buttonface">parrafo separador seccion div3</p>
+        <div style="position: fixed;
+             border: 1px solid orange;
+             background-color: orange;
+             left:50px;
+             bottom:50px;
+             width:500px;
+             height:100px;
+
+             "><p><strong>DIV - 4</strong> Con fixed Se queda fijo donde le toque o le indiquemos tomando como referencia el navegador</p>
+            <p>Los elementos html que siguen al elemento div ocupan el espacio de la posición</p>
+        </div>
+        <p style="color:orange">parrafo separador sección div4</p>
+        <p>Un párrafo, tres líneas hr y a continuación una cabecera H1 y a continuacion una sección div contenedor</p>
+        <hr />
+        <hr />
+        <hr />
+     
+        <h1>Comportamiento del posicionamiento dentro de una sección div</h1>
+        <div style="border:1px solid black;
+             position:static;
+             width: 800px;
+             height: 1000px;
+             ">
+
+            <div style="position: static;
+                 border: 1px solid red;
+                 background-color: red;
+                 width:500px;
+                 height:150px;
+                 "><p><strong>DIV - 1</strong> Con static la sección está a continuación del elemento html anterior</p>
+                <p>Último párrafo de la sección Static en Rojo ahora viene el cierre de sección div y una línea</p>
+            </div>
+            <p style="color:red">Parrafo separador seccion div1<p>
+            <div style="position: absolute;
+                 border: 1px solid #33ffff;
+                 background-color: #33ffff;
+                 width:500px;
+                 height:150px;
+                 top:230px;
+                 left:700px;
+                 "><p><strong>DIV 2</strong> - Absolute si no decimos nada toma como referencia su posición.
+                    Si indicamos top y left coge como referencia la ventana del navegador.</p>
+                <p>Los elementos que siguen a este elemento ocupan su espacio</p>
+            </div>
+            <p style="color:#33ffff">parrafo separador seccion div2</p>
+            <div style="position: relative;
+                 border: 1px solid buttonface;
+                 background-color: buttonface;
+                 top:20px;
+                 left:20px;
+                 width:500px;
+                 height:150px;
+                 "><p><strong>DIV - 3</strong> Posicion relativa, desplaza con relación al elemento html anterior (hr) la distancia top y left indicada</p>
+                <p>El resto de elementos que siguen mantienen su posición original. Cierre de div y una línea</p>
+
+            </div>
+            <p style="color:buttonface">parrafo separador seccion div3</p>
+            <div style="position: fixed;
+                 border: 1px solid #ffcccc;
+                 background-color: #ffcccc;
+                 top:400px;
+                 left:150px;
+                 width:300px;
+                 height:300px;
+                 "><p><strong>DIV - 4</strong> Con fixed Se queda fijo donde le toque o le indiquemos tomando como referencia 
+                    tenemos que dar dos coordenas de referencia del navegador</p>
+                <p>Los elementos html que siguen al elemento div ocupan el espacio de la posición</p>
+            </div>
+            <p style="color:#ffcccc">parrafo separador sección div4</p>
+
+
+        </div>
+    </body>
+</html>

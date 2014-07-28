@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Ejercicio 6 capas y atributos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-image: url(img/bg.jpg);
+            }
+            
+            #landscape {
+                width: 960px;
+                margin: 0 0 0 0px;
+            }
+            #mari {
+                z-index: 1;
+                float: left;
+                width: auto;
+                
+            }
+            #images {
+                position: absolute;
+                z-index: 2;
+                margin: 0 auto;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="landscape">
+            <h1>Playita bullterriera</h1>
+            <div id="mari">
+                <img src="img/foto1.jpg" alt="foto1" />
+            </div>
+            <div id="images">
+                <img src="img/foto3.jpg" alt="foto3" width="300" height="400"/>
+                <img src="img/foto4.jpg" alt="foto4" width="300" height="400"/>
+            </div>
+        </div>
+    </body>
+</html>

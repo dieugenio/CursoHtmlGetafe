@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Un ejemplo de la propiedad clear</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #Wrapper {
+                width: 100px;
+            }
+            #CapaIzquierda {
+                width: 50px;
+                height: 60px;
+                background-color: blue;
+                float: left;
+            }
+            #CapaDerecha {
+                width: 50px;
+                height: 60px;
+                background-color: yellow;
+                float: right;
+            }
+            #PieDePagina {
+                width: 100px;
+                height: 60px;
+                background-color: brown;
+                clear: both;
+            }
+            .titles {
+                font-size: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Wrapper">
+            <div id="CapaIzquierda">
+                <span class="titles">Izquierda</span>
+            </div>
+            <div id="CapaDerecha">
+                <span class="titles">Derecha</span>
+            </div>
+            <div id="PieDePagina">
+                <span class="titles">Pie de página</span>
+            </div>
+        </div>
+    </body>
+</html>
