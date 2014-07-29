@@ -20,10 +20,14 @@ and open the template in the editor.
 				height: auto;
 				border: 2px dotted black			}
 
-			section {
-				position: absolute;
-				top: 100px;
-				left: 0px;
+			section.articles {
+				float: left;
+			}
+
+			section.multimedia {
+				margin-left: 400px;
+				clear: left;
+				overflow: auto;
 			}
 
 			summary {
@@ -86,16 +90,15 @@ and open the template in the editor.
 			<audio controls>
 				<source src="assets/2014-06-21_50years.mp3" type="audio/mpeg"></source>
 			</audio>
-
 			<iframe width="420"
 					height="315" 
 					src="http://www.youtube.com/embed/dxB2x9QzXb0" 
 					seamless="" 
 					sandbox="allow-same-origin allow-scripts">
 			</iframe>
-		</nav>
+		</section>
 		<section id="articles">
-			<article>
+			<article class="articles">
 				<figure>
 					<img src="assets/exploracion.jpg" alt="Figura de la exploración espacial" />
 				</figure>
