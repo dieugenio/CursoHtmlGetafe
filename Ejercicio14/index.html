@@ -12,35 +12,57 @@ and open the template in the editor.
 		<style>
 			body {
 				position: relative;
-				width: 960px;
+				width: 990px;
 				margin: 20px auto 0 auto;
 			}
 
 			header {
 				height: auto;
-				border: 2px dotted black			}
-
-			section.articles {
-				float: left;
-			}
-
-			section.multimedia {
-				margin-left: 400px;
-				clear: left;
-				overflow: auto;
+				border-bottom: 1px double gray;
+				margin-top: 5px;
 			}
 
 			summary {
+				margin-right: 20px;
 				font-size: 1.2em;
 				top: 20px;
+				text-decoration: none;
 			}
 
-			article {
-				position: relative;
-				height: 180px;
-				width: 960px;
-				margin: 0 auto;
-				border-bottom: 1px dotted black;
+			details {
+				margin-top: 5px;
+				margin-left: 260px;
+				padding-left: 10px;
+				width: 400px;
+				height: 160px;
+				border-left: 1px double black;
+			}
+
+			p {
+				overflow: auto;
+				height: 120px;
+				width: 380px;
+				margin-top: 15px;
+			}
+
+			figure {
+				margin: 5px 0px 0px 0px;
+				padding: 0;
+				float: left;
+				width: 250px;
+				height: 100px;
+			}
+
+			audio {
+				width: 200px;
+			}
+
+			.h1_inline {
+				display: inline;
+			}
+
+			.multimedia_titles {
+				font-size: 1.2em;
 			}
 
 			img {
@@ -49,65 +71,56 @@ and open the template in the editor.
 				margin: 0;
 			}
 
-			details {
-				margin-top: 2s0px;
-				margin-left: 260px;
-				padding-left: 10px;
-				width: 500px;
-				height: 150px;
-				border-left: 1px dotted black;
-			}
-
-			figure {
-				margin: 10px 10px 0px 0px;
-				padding: 0;
+			.section_articles {
+				position: absolute;
+				margin-top: 20px;
 				float: left;
-				width: 250px;
-				height: 100px;
+				width: 650px;
 			}
 
-			iframe {
+			.section_multimedia {
 				position: absolute;
-				top: 850px;
-				clear: both;
+				margin-top: 20px;
+				margin-left: 670px;
+				width: 320px;
+				height: 600px;
+				clear: left;
 			}
 
-			audio {
-				position: absolute;
-				top: 1250;
+			.articles {
+				position: relative;
+				height: 165px;
+				width: 650px;
+				margin: 0 auto;
+				border-bottom: 1px double gray;
 			}
 
-			h1 {
-				display: inline;
+			.multimedia_articles {
+				position: relative;
+				height: 165px;
+				border-bottom: 1px double gray;
 			}
+
 		</style>
 	</head>
 	<body>
 		<header>
-			<h1>La Exploración Espacial</h1>
+			<h1 class="h1_inline">La Exploración Espacial</h1>
 		</header>
-		<section id="multimedia">
-			<audio controls>
-				<source src="assets/2014-06-21_50years.mp3" type="audio/mpeg"></source>
-			</audio>
-			<iframe width="420"
-					height="315" 
-					src="http://www.youtube.com/embed/dxB2x9QzXb0" 
-					seamless="" 
-					sandbox="allow-same-origin allow-scripts">
-			</iframe>
-		</section>
-		<section id="articles">
+		<section class="section_articles">
+			<header>
+				<h1 class="h1_inline">Artículos</h1>
+			</header>
 			<article class="articles">
 				<figure>
 					<img src="assets/exploracion.jpg" alt="Figura de la exploración espacial" />
 				</figure>
-				<details>
+				<details open>
 					<summary>La Exploración Espacial</summary>
-<p>La <strong>exploración</strong> espacial designa los esfuerzos del hombre en estudiar el espacio y sus astros desde el punto de vista científico y de su explotación económica. Estos esfuerzos pueden involucrar tanto seres humanos viajando en naves espaciales como satélites con recursos de telemetría o sondas teleguiadas enviadas a otros planetas (orbitando o aterrizando en la superficie de estos cuerpos celestes).</p>
+<p>La <strong>exploración espacial</strong> designa los esfuerzos del hombre en estudiar el espacio y sus astros desde el punto de vista científico y de su explotación económica. Estos esfuerzos pueden involucrar tanto seres humanos viajando en naves espaciales como satélites con recursos de telemetría o sondas teleguiadas enviadas a otros planetas (orbitando o aterrizando en la superficie de estos cuerpos celestes).</p>
 				</detail>
 			</article>
-			<article>
+			<article class="articles">
 				<figure>
 					<img src="assets/astronauta.jpg" alt="Figura de la exploración espacial" />
 				</figure>
@@ -116,22 +129,50 @@ and open the template in the editor.
 <p>Las personas que pilotan naves espaciales, o son pasajeros en ellas, se llaman astronautas (en Rusia: <em>cosmonautas</em>; en China: <em>taikonautas</em>. Técnicamente se considera astronauta a todo aquel que emprenda un vuelo sub-orbital (sin entrar en órbita) u orbital a como mínimo 100 km de altitud (considerado el límite externo de la atmósfera).</p>
 				</details>
 			</article>
-			<article>
+			<article class="articles">
 				<figure>
 					<img src="assets/johannes-kepler.jpg" alt="Figura de la exploración espacial" />
-				</figure>				<details>
+				</figure>
+				<details>
 					<summary>De la Terre à la Lune</summary>
-<p>El cielo siempre ha atraído la atención y los sueños del hombre. Ya en 1634 se publicó la que se considera primera novela de ciencia ficción, <em>Somnium</em>, de <strong>Johannes Kepler</strong>, que narra un hipotético viaje a la Luna. Más tarde, en 1865, en una famosa obra de ficción titulada <em>"De la Terre à la Lune"</em>, <strong>Julio Verne</strong> escribe sobre un grupo de hombres que viajó hasta la Luna usando un gigantesco cañón.</p>
+<p>El cielo siempre ha atraído la atención y los sueños del hombre. Ya en <time>1634</time> se publicó la que se considera primera novela de ciencia ficción, <cite>Somnium</cite>, de <strong>Johannes Kepler</strong>, que narra un hipotético viaje a la Luna. Más tarde, en <time>1865</time>, en una famosa obra de ficción titulada <cite>De la Terre à la Lune</cite>, <strong>Julio Verne</strong> escribe sobre un grupo de hombres que viajó hasta la Luna usando un gigantesco cañón.</p>
 				</details>
 			</article>
-			<article>
+			<article class="articles">
 				<figure>
 					<img src="assets/le-voyage-dans-la-lune.jpg" alt="Portada de Le voyage dans la lune" />
 				</figure>
 				<details>
 					<summary>Georges Méliès</summary>
-<p>En Francia, <strong>Georges Méliès</strong>, uno de los pioneros del cine, tomaba la novela de Verne para crear <em>"Le voyage dans la Lune"</em> (1902), una de las primeras películas de ciencia ficción en la que describía un increíble viaje a la Luna. En obras como <em>"The War of the Worlds"</em> (1898) y <em>"The First Men in The Moon"</em> (1901), <strong>Herbert George Wells</strong> también se concibieron ideas de exploración del espacio y de contacto con civilizaciones extraterrestres.</p>
+<p>En Francia, <strong>Georges Méliès</strong>, uno de los pioneros del cine, tomaba la novela de Verne para crear <cite>Le voyage dans la Lune</cite> (<time>1902</time>), una de las primeras películas de ciencia ficción en la que describía un increíble viaje a la Luna. En obras como <cite>The War of the Worlds</cite> (<time>1898</time>) y <em>"The First Men in The Moon"</em> (<time>1901</time>), <strong>Herbert George Wells</strong> también se concibieron ideas de exploración del espacio y de contacto con civilizaciones extraterrestres.</p>
 				</details>
+			</article>
+		</section>
+		<section class="section_multimedia">
+			<header>
+				<h1 class="h1_inline">Multimedia</h1>
+			</header>
+			<article id="audio_article" class="multimedia_articles">
+				<header>
+					<span class="multimedia_titles">Audio</span>
+				</header>
+				<ul>
+					<li>2014-06-21_50years.mp3</li>
+				</ul>
+				<audio controls proload="metadata">
+					<source src="assets/2014-06-21_50years.mp3" type="audio/mpeg"></source>
+				</audio>
+			</article>
+			<article id="video_article" class="multimedia_articles">
+				<header>
+					<span class="multimedia_titles">Video</span>
+				</header>
+				<iframe width="320"
+						height="215" 
+						src="http://www.youtube.com/embed/dxB2x9QzXb0" 
+						seamless="" 
+						sandbox="allow-same-origin allow-scripts">
+				</iframe>
 			</article>
 		</section>
 	</body>
