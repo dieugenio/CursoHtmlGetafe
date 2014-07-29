@@ -13,14 +13,12 @@ and open the template in the editor.
 			body {
 				position: relative;
 				width: 960px;
-				margin: 0 auto;
+				margin: 20px auto 0 auto;
 			}
 
 			header {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-			}
+				height: auto;
+				border: 2px dotted black			}
 
 			section {
 				position: absolute;
@@ -47,14 +45,9 @@ and open the template in the editor.
 				margin: 0;
 			}
 
-			header {
-				float: left;
-			}
-
 			details {
-				float: left;
-				margin-top: 10px;
-				margin-left: 10px;
+				margin-top: 2s0px;
+				margin-left: 260px;
 				padding-left: 10px;
 				width: 500px;
 				height: 150px;
@@ -74,13 +67,34 @@ and open the template in the editor.
 				top: 850px;
 				clear: both;
 			}
+
+			audio {
+				position: absolute;
+				top: 1250;
+			}
+
+			h1 {
+				display: inline;
+			}
 		</style>
 	</head>
 	<body>
 		<header>
 			<h1>La Exploración Espacial</h1>
 		</header>
-		<section>
+		<section id="multimedia">
+			<audio controls>
+				<source src="assets/2014-06-21_50years.mp3" type="audio/mpeg"></source>
+			</audio>
+
+			<iframe width="420"
+					height="315" 
+					src="http://www.youtube.com/embed/dxB2x9QzXb0" 
+					seamless="" 
+					sandbox="allow-same-origin allow-scripts">
+			</iframe>
+		</nav>
+		<section id="articles">
 			<article>
 				<figure>
 					<img src="assets/exploracion.jpg" alt="Figura de la exploración espacial" />
@@ -117,8 +131,5 @@ and open the template in the editor.
 				</details>
 			</article>
 		</section>
-
-<iframe width="420" height="315" src=http://www.youtube.com/embed/dxB2x9QzXb0" seamless="" sandbox="allow-same-origin allow-scripts"></iframe>
-
 	</body>
 </html>
