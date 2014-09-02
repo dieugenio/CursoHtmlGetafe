@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio de selectores descendentes</title>
+<style type="text/css">
+/* Todos los párrafos de la página */
+{color:green;}
+
+/* Todos los h1 de la página */
+{color:red;}
+
+/* Todos los h2 de la página */
+{color:orange;}
+
+/* Todos los textos en cursiva de la página */
+{color:fuchsia;}
+
+/* Todos los textos en negrita de la página */
+{color:maroon;}
+
+/* Todos los div */
+{border: solid 2px black;
+	padding:10px;}
+
+/* Sólo los párrafos contenidos en un div */
+{border: solid 2px green;}
+
+/* Sólo los h1 contenidos en un div */
+{border: solid 2px red;}
+
+/* Sólo los h2 contenidos en un div */
+{border: solid 2px orange;}
+
+/* Sólo los textos en cursiva contenidos en un párrafo */
+{border: solid 2px fuchsia;}
+
+/* Sólo los textos en negrita contenidos en un párrafo */
+{border: solid 2px maroon;}
+
+/* Todos los elementos que tengan la clase "destacado" */
+{background-color: yellow;}
+
+/* Sólo los span con la clase "destacado" */
+{border: solid 2px blue;}
+
+/* Sólo los span con la clase "especial" */
+{background-color: black;}
+
+/* Sólo los div con la clase "adicional" */
+{background-color: silver;}
+
+</style>
+</head>
+ 
+<body>
+<h1>Fusce consectetur, <em>leo</em> in feugiat dictum</h1>
+
+<p class="destacado">In hac habitasse platea dictumst. <strong>In sapien eros</strong>, ullamcorper et hendrerit a, <em>vestibulum </em>quis nisi. Dolor pellentesque lacus. <strong>In hac habitasse platea dictumst.</strong> Aenean pretium,   nibh non lectus. <a href="">Curabitur ut libero</a> neque, vel laoreet nulla.</p>
+
+<h2>Aliquam erat volutpat.</h2>
+
+<p>Duis ullamcorper diam nec justo luctus posuere. <strong>Quisque mollis</strong>, velit vit. <em>Cum sociis</em>nascetur ridiculus mus.</p>
+
+<div>
+
+  <h1>Ipsum dolor sit <em>amet</em></h1>
+     
+  <p>Nulla pretium. <strong>Suspendisse gravida</strong>, metus a scelerisque sollicitudin, lacus velit 
+  ultricies nis. <span class="destacado">Etiam sagittis tortor</span> sed arcu <a href="">sagittis tristique</a>.</p>
+     
+  <h2 >Aliquam tincidunt, sem eget volutpat porta</h2>
+     
+  <p>Vivamus velit dui, placerat vel, feugiat in, ornare et, urna.  <a href="">Aenean turpis metus, <em>aliquam non</em>, tristique in</a>, pretium varius, sapien. Suspendisse <span class="especial">porttitor purus ac elit</span>. Suspendisse eleifend odio at dui. </p>
+</div> 
+
+<div class="adicional">
+<h1>Luspendisse in <strong>volutpat.</strong></h1>
+<p>Donec purus ipsum, posuere id, venenatis at, <span class="destacado">placerat ac, lorem</span>. <strong>Curabitur blandit</strong>, eros sed gravida aliquet. </p>
+ 
+ 
+<h2>Sed tempus nunc <em>vitae</em> neque.</h2>
+<p>Ultrices aliquet augue. <a href="">Donec arcu pede, pretium vitae</a>, rutrum aliquet, tincidunt blandit, pede.  </p>
+</div>
+ 
+</body>
+</html>
