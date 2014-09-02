@@ -1,0 +1,52 @@
+/* CSS Document */
+
+@charset { 
+	"utf-8" 
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	padding: 10 20 10 20;
+}
+
+a:hover {
+	color: blue;
+	background-color: white;
+}
+
+article {
+	background-color: white;
+	margin: auto;
+	padding-left: 15px;
+	width: 960px;
+}
+
+body {
+	background-color: cyan;
+}
+
+figure {
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	background-color: blue;
+	height: 40px;
+	margin: auto;
+	padding-left: 15px;
+	width: 960px;
+}
+
+nav li {
+	background-color: blue;
+	/* display: inline; */
+	float: left;
+	list-style: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
