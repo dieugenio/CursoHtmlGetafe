@@ -10,27 +10,24 @@
         margin: 20px;
         border: 1px solid black;
         background-image: url(smile.png);
+        background-repeat: no-repeat;
 	}
     
     div.dos {
         background-repeat: no-repeat;
-        background-position: center;
-        /* También se pueden combinar las posiciones : */
         background-position: right top;
-        /* O especificar la posición en pixeles (left-top) : */
-        background-position: 20px -1px;
     }
 
     div.tres {
-        background-repeat: repeat-x;
+        background-position: left bottom;
     }
 
     div.cuatro {
-        background-repeat: repeat-y;
+        background-position: center;
     }
 
-    div.cuatro {
-        background-repeat: repeat-y;
+    div.cinco {
+        background-position: center bottom;
     }
 
     </style>
@@ -41,5 +38,6 @@
 <div class="dos"></div>
 <div class="tres"></div>
 <div class="cuatro"></div>
+<div class="cinco"></div>
 </body>
 </html>
