@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Propiedades de texto</title>
+        <style type="text/css">
+            .porEm div {
+                font-size: 0.5em;
+            }
+
+            .porPrc div {
+                font-size: 200%;
+            }
+            
+            .textoNormal {
+                font-weight: normal;
+            }
+
+            .textoNegrita {
+                font-weight: bold;
+            }
+
+            .textoItalica {
+                font-style: italic;
+            }
+
+            .textoVariant {
+                font-variant: small-caps;
+            }
+            
+            .textoFont {
+                /* formato: 
+                font: [bold ó italic ó small-caps] [12px] [arial, helvetica, sans-serif] */
+                font: bold 12px aria, helvetica, sans-serif;
+            }
+            
+            .alineacionIzq {
+                text-align: left;
+            }
+
+            .alineacionDer {
+                text-align: right;
+            }
+
+            .alineacionCen {
+                text-align: center;
+            }
+
+            .alineacionJus {
+                text-align: justify;
+            }
+            
+            .altoLineaPeq {
+                width: 200px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+                line-height: 1.2em;
+            }
+
+            .altoLineaMed {
+                width: 200px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+                line-height: 1.5em;
+            }
+
+            .altoLineaGra {
+                width: 200px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+                line-height: 2em;
+            }
+            
+            .textoSinLinea {
+                text-decoration: none;
+            }
+
+            .textoSubrayado {
+                text-decoration: underline;
+            }
+
+            .textoConLineaSuperior {
+                text-decoration: overline;
+            }
+
+            .textoTachado {
+                text-decoration: line-through;
+            }
+            
+            .textoParpadeado {
+                text-decoration: blink;
+            }
+
+            .textoCapital {
+                text-transform: capitalize;
+            }
+
+            .textoMinusculas {
+                text-transform: lowercase;
+            }
+
+            .textoMayusculas {
+                text-transform: uppercase;
+            }
+            
+            .textoIndentado {
+                text-indent: 2em;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <p class="uno">Texto 1</p>
+        <div class="porEm">
+            <p>Texto 2</p>
+            <div class="porEm">
+                <p>Texto 3</p>
+            </div>
+        </div>
+
+        <p class="uno">Texto 4</p>
+        <div class="porPrc">
+            <p>Texto 5</p>
+            <div class="porPrc">
+                <p>Texto 6</p>
+            </div>
+        </div>
+        
+        <p class="textoNormal">Texto normal</p>
+        <p class="textoNegrita">Texto en negrita</p>
+
+        <h1 class="textoNegrita">Cabecera normal</h1>
+        <h1 class="textoNormal">Cabecera sin negrita</h1>
+
+        <p class="textoItalica">Texto en italic</p>
+        <p class="textoVariant">Texto en variant small-caps</p>
+
+        <p class="textoFont">Texto con el font en una sola linea</p>
+        
+        <p class="alineacionIzq">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis tempor orci. Morbi in tellus at nisi ornare tempus quis eu dui. Pellentesque sit amet varius risus. In faucibus faucibus vehicula. Fusce sodales vestibulum commodo. Sed elit augue, bibendum ac eros ut, ullamcorper viverra leo.</p>
+        
+        <p class="alineacionCen">Quisque ullamcorper at massa ac posuere. In hac habitasse platea dictumst. Nulla eu dictum magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce volutpat purus non arcu mollis egestas.</p>
+        
+        <p class="alineacionDer">Vivamus condimentum commodo odio nec porttitor. Etiam non interdum lacus. Duis laoreet et est suscipit tempor. Curabitur sit amet luctus nunc, sit amet bibendum turpis. Sed tincidunt felis non nunc tempus sodales. Fusce convallis tincidunt felis, sit amet aliquet urna efficitur eget. Sed posuere non enim id mollis.</p>
+        
+        <p class="alineacionJus">Quisque aliquet justo lacus, ac laoreet nulla maximus ac. Integer luctus scelerisque tortor, at egestas sem ultrices quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec bibendum venenatis nibh, ut consequat lectus sollicitudin non.</p>
+        
+        <p class="altoLineaPeq">Quisque aliquet justo lacus, ac laoreet nulla maximus ac. Integer luctus scelerisque tortor, at egestas sem ultrices quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec bibendum venenatis nibh, ut consequat lectus sollicitudin non.</p>
+        
+        <p class="altoLineaMed">Quisque aliquet justo lacus, ac laoreet nulla maximus ac. Integer luctus scelerisque tortor, at egestas sem ultrices quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec bibendum venenatis nibh, ut consequat lectus sollicitudin non.</p>
+        
+        <p class="altoLineaGra">Quisque aliquet justo lacus, ac laoreet nulla maximus ac. Integer luctus scelerisque tortor, at egestas sem ultrices quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec bibendum venenatis nibh, ut consequat lectus sollicitudin non.</p>
+        
+        <br style="clear: both;"></p>
+
+        <p><span class="textoSinLinea"><a href="#">Ir a google</a></span></p>
+        <p><span class="textoSubrayado">Texto Subrayado</span></p>
+        <p><span class="textoConLineaSuperior">Texto con linea encima</span></p>
+        <p><span class="textoTachado">Texto Tachado</span></p>
+        <p><span class="textoParpadeado">Texto parpadeando</span></p>
+
+        <p><span class="textoCapital">Texto cada palabra letra en mayuscula</span></p>
+        <p><span class="textoMinusculas">Texto todo EN minusculas</span></p>
+        <p><span class="textoMayusculas">texto en mayusculas</span></p>
+
+        <div><span style="vertical-align: top;">aslkjdfañlsdkjf añsdl fañlsdjk fañsdlf añsld añsl dfñla sdfalñsdj fña lfñal df asdlñkfj añlsdkfj añsdl fñas dñas djkfañlkdj f</span>
+            <img name="" src="" width="100px" height="50px" alt="" style="background-color: blue;">
+            <img name="" src="" width="100px" height="100px" alt="" style="background-color: red;">
+    </div>
+
+    <div class="textoIndentado" style="float: left; width: 400px; margin: 10px; border: 1px solid black">
+        <p>añslkdfj añlsdfañsdl fjña sdfhañsdfñlasd fñasd fñaklsdfj ñalksd flñasdjñfla ksdjñfaklsd fñal sdkjfñ alksdfñalsj dfñal sdjkfñal sdkjfñalsdkfañlsk fjañlsdk fjñalsdk fjañsldk fjañsldkj flañlskdjfañhsd añklsd flaksdhflka sdflasdlf aslñd fñasdf asdf asdf as</p>
+        <p>añslkdfj añlsdfañsdl fjña sdfhañsdfñlasd fñasd fñaklsdfj ñalksd flñasdjñfla ksdjñfaklsd fñal sdkjfñ alksdfñalsj dfñal sdjkfñal sdkjfñalsdkfañlsk fjañlsdk fjñalsdk fjañsldk fjañsldkj flañlskdjfañhsd añklsd flaksdhflka sdflasdlf aslñd fñasdf asdf asdf as</p>
+        <p>añslkdfj añlsdfañsdl fjña sdfhañsdfñlasd fñasd fñaklsdfj ñalksd flñasdjñfla ksdjñfaklsd fñal sdkjfñ alksdfñalsj dfñal sdjkfñal sdkjfñalsdkfañlsk fjañlsdk fjñalsdk fjañsldk fjañsldkj flañlskdjfañhsd añklsd flaksdhflka sdflasdlf aslñd fñasdf asdf asdf as</p>
+    </div>
+    <div class="textoIndentado" style="float: left; width: 400px; margin: 10px; border: 1px solid black">
+        <p>añslkdfj añlsdfañsdl fjña sdfhañsdfñlasd fñasd fñaklsdfj ñalksd flñasdjñfla ksdjñfaklsd fñal sdkjfñ alksdfñalsj dfñal sdjkfñal sdkjfñalsdkfañlsk fjañlsdk fjñalsdk fjañsldk fjañsldkj flañlskdjfañhsd añklsd flaksdhflka sdflasdlf aslñd fñasdf asdf asdf as</p>
+        <p>añslkdfj añlsdfañsdl fjña sdfhañsdfñlasd fñasd fñaklsdfj ñalksd flñasdjñfla ksdjñfaklsd fñal sdkjfñ alksdfñalsj dfñal sdjkfñal sdkjfñalsdkfañlsk fjañlsdk fjñalsdk fjañsldk fjañsldkj flañlskdjfañhsd añklsd flaksdhflka sdflasdlf aslñd fñasdf asdf asdf as</p>
+        <p>añslkdfj añlsdfañsdl fjña sdfhañsdfñlasd fñasd fñaklsdfj ñalksd flñasdjñfla ksdjñfaklsd fñal sdkjfñ alksdfñalsj dfñal sdjkfñal sdkjfñalsdkfañlsk fjañlsdk fjñalsdk fjañsldk fjañsldkj flañlskdjfañhsd añklsd flaksdhflka sdflasdlf aslñd fñasdf asdf asdf as</p>
+    </div>
+
+    </body>
+</html>
