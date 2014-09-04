@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Resultado Final</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                border: 0;
+            }
+            .container {
+                border: 1px solid red;
+                margin: 10px;
+                position: relative;
+                height: 350px;
+                width: 700px;
+            }
+            .tit_izq {
+                border: none;
+                background-color: #fe0000;
+                height: 50px;
+                left: 0;
+                position: absolute;
+                width: 100px;
+            }
+            .tit_cen {
+                background-color: gray;
+                border: none;
+                color: #900;
+                font-family: Helvetica, Arial, sans-serif;
+                font-style: italic;
+                font-size: 2em;
+                font-weight: bold; 
+                height: 50px;
+                left: 201px;
+                position: absolute;
+                text-align: center;
+                top: 0;
+                width: 300px;
+            }
+            .tit_der {
+                border: none;
+                background-color: #990000;
+                height: 50px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100px;
+            }
+            .imagen {
+                border: 1px solid red;
+                bottom: -1px;
+                height: 160px;
+                left: -1px;
+                padding: 20px;
+                position: absolute;
+                width: 160px;
+            }
+            .cont_der {
+                bottom: -1px;
+                height: 160px;
+                padding: 20px;
+                position: absolute;
+                right: -1px;
+                width: 160px;
+            }
+            div, .cont_izq, .cont_der {
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="tit_izq"></div>
+            <div class="tit_cen">Ejercicio de CSS</div>
+            <div class="tit_der"></div>
+            <img class="imagen" src="lapiz.png" alt="lapicito" height="160px" width="160px">
+            <p class="cont_der">Cras vitae ligula vitae leo tempor laoreet. Tuis bibendem prus vitae crci facilis henderit. Duis nune sapien, adipiscing quis lobotis eu, mollis quis massa.</p>
+        </div>
+    </body>
+</html>
