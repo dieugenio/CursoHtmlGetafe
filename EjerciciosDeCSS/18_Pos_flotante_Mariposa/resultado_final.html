@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+    <meta charset="utf-8">
+    <head>
+        <title>Posicionamiento flotante mariposa</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: black;
+                background-image: url(fondoweb.jpg);
+                background-repeat: repeat-y;
+                background-position: center;
+            }
+            h1 {
+                background-color: white;
+                color: green;
+                margin-top: 10px;
+                padding: 10px;
+            }
+            img {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            .contenedor {
+                width: 960px;
+                margin: auto;
+            }
+            .pie {
+                overflow: hidden;
+            }
+            .anterior {
+                float: left;
+            }
+            .siguiente {
+                float: right;
+            }
+            .p2 {
+                clear: left;
+            }
+            .contenido, .pie {
+                background-color: white;
+                margin-top: 10px;
+                overflow: hidden;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <h1>WEB SOBRE NATURALEZA</h1>
+            <div class="contenido">
+                <img src="mariposa.jpg" alt="mariposa" height: 300px; width: 300px;>
+                <p>Sed aliquam lectus non ligula rhoncus aliquet. Integer sed ornare urna. Nulla augue quam, molestie a ante eu, euismod ullamcorper est. Maecenas purus eros, ultricies ut ipsum a, vestibulum dignissim erat. Donec pretium dolor nec odio pharetra placerat. Aliquam erat volutpat. Aenean in iaculis neque. Cras at vehicula lorem. In id turpis bibendum, convallis sem sit amet, varius dolor. Nulla ut arcu id tortor consequat malesuada ac fringilla risus. Cras quis varius orci. Morbi posuere velit erat, sit amet volutpat nisi malesuada eget. Etiam vel pretium nisi. Curabitur semper leo sit amet diam volutpat pretium. Integer ut vehicula libero, sed convallis elit. Pellentesque volutpat turpis ipsum, et tincidunt est efficitur eu.</p>
+                <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at hendrerit erat, ac pharetra nulla. Sed euismod felis vel eros pellentesque porta. Sed iaculis nisl mauris, vitae molestie magna pulvinar a. Ut rhoncus at odio at finibus. Vestibulum volutpat nunc ac neque dictum, sed accumsan mauris pharetra. Nullam facilisis justo id purus venenatis aliquam. Cras ullamcorper in velit sed finibus. Maecenas sed aliquam ipsum. Maecenas malesuada vulputate urna. Sed vestibulum orci iaculis aliquam porttitor.</p>
+            </div>
+            <div class="pie">
+                <div class="anterior"><a href="#">- ANTERIOR -</a></div>
+                <div class="siguiente"><a href="#">- SIGUIENTE- </a></div>
+            </div>
+        </div>
+    </body>
+</html>
