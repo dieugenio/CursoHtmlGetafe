@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+	<meta charset="utf-8">
+	<title>Resultado B</title>
+	<style type="text/css">
+		ul {
+			text-transform: uppercase;
+			list-style-image: url(flecha_roja.png);
+		}
+		ul a {
+			color: red;
+			text-decoration: none;
+		}
+		ul li ul {
+			color: red;
+			list-style-image: url(flecha_naranja.png);
+		}
+		ul li ul a {
+			color: orange;
+		}	</style>
+	<body>
+		<ul>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Noticias</a>
+				<ul>
+					<li><a href="#">Noticias</a>
+					<li><a href="#">Más leídas</a>
+					<li><a href="#">Más valoradas</a>
+				</ul>
+			</li>
+			<li><a href="#">Artículos</a>
+				<ul class="secundario">
+					<li><a href="#">XHTML</a>
+					<li><a href="#">CSS</a>
+					<li><a href="#">JavaScript</a>
+					<li><a href="#">Otros</a>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>
