@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Resultado Final Sin Listas</title>
+        <style type="text/css">
+            * { 
+            	margin:0; 
+            	padding: 0;
+            	font-family: Arial, Helvetica, sans-serif;
+        	}
+        	.contenedor {
+        		width: 960px;
+        		margin: 10px auto;
+        		background-color: #90EE90;
+        	}
+        	.cabecera {
+        		background-color: green;
+        	}
+        	.menu {
+        		background-color: darkgreen;
+        		padding: 10px;
+        	}
+            .menu li {
+                float: left;
+                list-style: none;
+            }
+        	.menu a {
+        		color: white;
+        		background-color: yellow;
+        		font-weight: bold;
+        		margin-left: 10px;
+        		padding: 10px;
+        		text-decoration: none;
+        	}
+        	.menu a:hover {
+        		padding-bottom: 20px;	
+        		position: relative;
+        		top: -10px;
+        	}
+        	.contenido {
+        		background-color: white;
+        		margin: 10px;
+        		padding: 20px;
+        		width: 700px;
+        	}
+        	.publicidad {
+        		position: fixed;
+        		margin-left: 760px;
+        		/* Opcionalmente podría ponerse un top, que
+        		siempre tomará como referencia la parte superior del body */
+        		top: 50px;
+        	}
+        	p {
+        		margin-bottom: 10px;
+        		text-align: justify;
+        		line-height: 20px;
+        	}
+        	h1 {
+        		margin-bottom: 10px;
+        	}
+        	.uno {
+				float: left;
+				margin: 5px 15px 0 0;
+        	}
+        	h2 {
+        		color: black;
+        		margin-bottom: 10px;
+        	}
+        	.dos {
+        		float: right;
+				margin: 0 0 5px 15px;
+        	}
+        	.clientes div {
+        		float: left;
+        		margin-right: 30px;
+        		font-size: 20px;
+        		color: gray;
+        	}
+        	.clientes div a {
+        		color: gray;
+        		text-decoration: none;
+        	}
+        	.clientes img {
+        		vertical-align: middle;
+        		border: none;
+        	}
+        	.invisible {
+        		clear: both;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div class="contenedor">
+	    	<div class="menu">
+	    		<li><a href="#">INICIO</a></li>
+	    		<li><a href="#">QUIÉNES SOMOS</a></li>
+	    		<li><a href="#">QUÉ HACEMOS</a></li>
+	    		<li><a href="#">CONTACTO</a></li>
+	    	</div>
+            <div class="invisible"></div>
+<!--
+            <div class="invisible"></div>
+-->
+			<div class="publicidad"><img src="imagenes/banner.jpg" alt=""></div>
+	    	<div class="contenido">
+	    		<h1>QUIÉNES SOMOS</h1>
+	    		<img class="uno" src="imagenes/perro.jpg" alt="aqui hay un perro">
+	    		<p>Suspendisse euismod ullamcorper elit, ut tristique est sodales eget. Proin at nulla urna. Aenean dapibus feugiat augue at feugiat. Mauris malesuada purus quam. Duis orci urna, commodo a lobortis quis, semper in nisl. In ut molestie ipsum. Sed scelerisque fringilla nisi eget eleifend. Aliquam sit amet ultrices augue, sit amet interdum diam. Curabitur pharetra leo nec felis viverra, et condimentum dolor condimentum. Aenean molestie consectetur dui quis porta. Morbi id imperdiet eros.</p>
+				<p>Quisque interdum fermentum diam, eget euismod odio bibendum et. Duis convallis vel risus sed volutpat. Aenean ligula leo, rutrum vel gravida ut, egestas non erat. Proin in lacus elit. Phasellus facilisis tortor eget enim euismod sollicitudin. Vestibulum porttitor elit in semper vehicula. Nunc congue lacinia lorem, vitae lobortis ante tristique nec. Sed eu velit magna. Integer fermentum justo congue justo ultrices, ut imperdiet orci lobortis. Cras accumsan erat ac purus consequat placerat. Aliquam erat volutpat. Aenean eros nulla, vehicula sit amet condimentum eget, porta pretium leo. Etiam volutpat sed felis vel molestie. Donec tempor lectus in dui suscipit dignissim non ac lacus. Nullam a dolor ornare, vestibulum tortor sed, interdum nisl. Quisque et ante diam.</p>
+				<img class="dos" src="imagenes/gato.jpg" alt="Aqui hay un gato">
+				<p>Suspendisse consequat lorem a pharetra efficitur. Etiam nunc enim, suscipit non accumsan ut, faucibus ac sapien. Nulla eu neque eget turpis tristique tempor. Sed porttitor erat vel ultricies convallis. Ut nec purus at sem fermentum lacinia. Ut finibus dolor et dolor ultrices facilisis. Phasellus finibus cursus risus, a varius metus facilisis vitae. Praesent augue erat, consequat sit amet posuere eu, tincidunt in felis. Mauris et ligula at magna iaculis luctus aliquam et ante. Pellentesque augue mauris, mollis non metus nec, mattis ullamcorper felis. Cras quis lorem ac justo convallis placerat.</p>
+				<p>Vestibulum urna mauris, vestibulum nec pellentesque ac, vehicula at ex. Suspendisse blandit orci ex, in aliquet magna semper eu. Nam euismod ligula tellus. Sed dapibus leo auctor, tincidunt quam id, hendrerit magna. Integer urna massa, vulputate in malesuada ac, facilisis a est. Vivamus iaculis semper erat et bibendum. Aliquam tincidunt est nec dolor malesuada rhoncus. Vivamus a metus non dolor feugiat blandit eu at neque. Cras diam nisl, blandit in egestas ac, volutpat ut ipsum. Integer malesuada lectus tincidunt purus euismod congue.</p>
+				<div class="clientes">
+					<h2>Nuestros clientes</h2>
+					<div><a href="#">Carrefour<img src="imagenes/carrefour.jpg" alt=""></a>
+					</div>
+					<div><a href="#">Hipercor<img src="imagenes/hipercor.jpg" alt=""></a>
+					</div>
+					<div><a href="#">Alcampo<img src="imagenes/Alcampo.gif" alt=""></a>
+					</div>
+				</div>
+				<div class="invisible"></div>
+			</div>
+    	</div>
+    </body>
+</html>

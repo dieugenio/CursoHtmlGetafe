@@ -1,36 +1,37 @@
+
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<title>Resultado Final</title>
 		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
 			ul {
 				border: 1px solid gray;
 				border-bottom: none;
-				list-style: none;
+				list-style-image: url(imagenes/flecha-inactiva.png);
+				list-style-position: inside;
 				width: 180px;
 			}
 			ul li {
 				border-bottom: 1px solid gray;
 				border-top: 1px solid white;
-				background: lightgray;
-				list-style-image: url(imagenes/flecha-activa.png);
-				list-style-position: inside;
 			}
-			li a {
+			ul li a {
 				background-color: lightgray;
 				color: black;
 				display: block;
 				padding: 2px 0 2px 0;
 				text-decoration: none;
 			}
-
 			ul li a:hover {
 				background-color: gray;
 			}
 			ul li:hover {
 				list-style-image: url(imagenes/flecha-activa.png);
-				list-style-position: inside;
 			}
 		</style>
 	</head>
