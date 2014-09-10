@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+table, th, td { 
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+th { background-color:silver;}
+.eurodolar, .dolaryen, .libradolar, .yeneuro {
+	text-align: left;
+	padding-left:20px;
+	background-color:lightblue;
+	background-image: url(imagenes/euro.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	}
+.dolaryen{
+	background-image:url(imagenes/dolar.png);}
+.libradolar{
+	background-image:url(imagenes/libra.png);}
+.yeneuro{
+	background-image:url(imagenes/yen.png);}
+.fondoamarillo td{ background-color: lightyellow;}
+tr:hover td {
+background: orange;
+}
+</style>
+</head>
+
+<body>
+<div>
+algo de texto
+<table>
+  <tr>
+    <th>Cambio</th>
+    <th>Compra</th>
+    <th>Venta</th>
+    <th>Máximo</th>
+    <th>Mínimo</th>
+  </tr>
+  <tr class="fondoamarillo">
+    <th class="eurodolar">Euro/Dolar</th>
+    <td>1.2524</td>
+    <td>1.2527</td>
+    <td>1.2839</td>
+    <td>1.2488</td>
+  </tr>
+  <tr>
+    <th class="dolaryen">Dolar/Yen</th>
+    <td>119.01</td>
+    <td>119.05</td>
+    <td>119.82</td>
+    <td>119.82</td>
+  </tr>
+  <tr class="fondoamarillo">
+    <th class="libradolar">Libra/Dolar</th>
+    <td>1.8606</td>
+    <td>1.8611</td>
+    <td>1.8651</td>
+    <td>1.8522</td>
+  </tr>
+  <tr>
+    <th class="yeneuro">Yen/Euro</th>
+    <td>0.6711</td>
+    <td>0.6705</td>
+    <td>0.6676</td>
+    <td>0.6713</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio con tablas</title>
+        <style type="text/css">
+            * { 
+            	font-family: Arial, Helvetica, sans-serif;
+            	margin:0; 
+            	padding: 0; 
+            }
+            table, th, td {
+            	border: 1px solid black;
+            	border-collapse: collapse;
+            }
+            td, th {
+            	font-size: 0.9em;
+            	padding: 10px 5px;
+            	text-align: center;
+            }
+            .titulo-euro, .titulo-dolar, .titulo-libra, .titulo-yen {
+            	background-color: lightcyan;
+            	background-repeat: no-repeat;
+            	background-position: left;
+            	padding-left: 1em;
+            	text-align: left;
+            }
+
+            .titulo-euro {
+            	background-image: url(imagenes/euro.png);
+            }
+            .titulo-dolar {
+            	background-image: url(imagenes/dolar.png);
+            }
+            .titulo-libra {
+            	background-image: url(imagenes/libra.png);
+            }
+            .titulo-yen {
+            	background-image: url(imagenes/yen.png);
+            }
+            .titulo-tabla {
+            	background-color: lightgray;
+            }
+            .fila-impar {
+            	background-color: yellow;
+            }
+            .fila-par {
+            	background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body>
+    	<table>
+			<tr class="titulo-tabla">
+				<th scope="col">Cambio</th>
+				<th scope="col">Compra</th>
+				<th scope="col">Venta</th>
+				<th scope="col">Máximo</th>
+				<th scope="col">Mínimo</th>
+			</tr>
+			<tr class="fila-impar">
+				<th class="titulo-euro" scope="row">Euro/Dolar</th>
+				<td>1.2524</td>
+				<td>1.2527</td>
+				<td>1.2539</td>
+				<td>1.2488</td>
+			</tr>
+			<tr class="fila-par">
+				<th class="titulo-dolar" scope="row">Dolar/Yen</th>
+				<td>119.01</td>
+				<td>119.05</td>
+				<td>119.82</td>
+				<td>119.82</td>
+			</tr>
+			<tr class="fila-impar">
+				<th class="titulo-libra" scope="row">Libra/Dolar</th>
+				<td>1.8606</td>
+				<td>1.8611</td>
+				<td>1.8651</td>
+				<td>1.8522</td>
+			</tr>
+			<tr class="fila-par">
+				<th class="titulo-yen" scope="row">Yen/Euro</th>
+				<td>0.6711</td>
+				<td>0.6705</td>
+				<td>0.6676</td>
+				<td>0.6713</td>
+			</tr>
+    	</table>
+    </body>
+</html>
