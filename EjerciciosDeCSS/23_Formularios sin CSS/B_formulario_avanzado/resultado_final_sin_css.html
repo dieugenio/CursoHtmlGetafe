@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8">
+      <title>Información sobre el producto</title>
+   </head>
+   <body>
+      <form action="">
+         <!-- Sustituimos p por fieldset
+         <p><strong>Información sobre el producto</strong></p> -->
+         <fieldset>
+            <legend>Datos básicos</legend>
+            <label for="nombre">Nombre</label><br>
+            <input id="nombre" type="text" name="nombre"><br><br>
+            <label for="comentarios">Descripción</label> <br>
+            <textarea id="comentarios" name="comentarios" cols="70" rows="6"></textarea><br><br>
+            <label>Foto</label>
+            <input type="file" name="foto"><br><br>
+            <input id="visitas" type="checkbox" name="visitas">
+            <label for="visitas">Añadir contador de visitas</label><br><br>
+         </fieldset>
+         <!-- Sustituimos p por fieldset
+         <p>Datos económicos</p> -->
+         <fieldset>
+            <legend>Datos Económicos</legend>
+            <label for="precio">Precio</label> 
+            <input id="precio" type="text" name="precio">€&nbsp;&nbsp;&nbsp;
+            <label for="impuesto">Impuestos</label>
+            <select id="impuesto" name="impuesto">
+               <option value="i4">4%</option>
+               <option value="i7">7%</option>
+               <option value="i16">16%</option>
+               <option value="i25">25%</option>
+            </select><br><br>
+            <label>Promoción</label><br>
+            <input type="radio" name="promo" value="ninguno" checked id="ninguno"><label for="ninguno">Ninguno</label><br>
+            <input type="radio" name="promo" value="gratuito" id="gratuito"><label for="gratuito">Transporte gratuito<br>
+            <input type="radio" name="promo" value="descuento" id="descuento"><label for="descuento">Descuento 5%<br><br>
+         </fieldset>
+         <input type="submit" value="Guardar cambios">
+         <input type="reset" value="Borrar los datos introducidos">
+      </form>
+   </body>
+</html>

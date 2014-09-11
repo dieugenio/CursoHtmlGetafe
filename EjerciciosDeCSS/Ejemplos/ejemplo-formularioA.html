@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Formularios A</title>
+		<style type="text/css">
+			select {
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			Nombre <br>
+			<input name="nombre" type="text"><br>
+			Apellidos <br>
+			<input name="apellidos" type="text"><br>
+			Contraseña <br>
+			<input name="contrasena" type="password"><br>
+			DNI <br>
+			<input name="dni" type="text"><br>
+			Ciudad:
+			<select name="ciudad" multiple="multiple" dir="">
+				<option value="ba">Barcelona</option>
+				<option value="ma" selected="selected">Madrid</option>
+				<option value="se">Sevilla</option>
+				<option value="va">Valencia</option>
+			</select><br>
+			Sexo <br>
+			Hombre <input type="radio" name="sexo" value="m" checked><br>
+			Mujer <input type="radio" name="sexo" value="f"><br>
+			Incluir mi foto <input type="file" name=""><br>
+			<input type="checkbox" name="boletin" value="" checked>Suscribirme al boletín de novedades <br>
+			<textarea name="comentarios" rows="10" cols="30"> Escribe aquí tus comentarios</textarea><br>
+			<input type="submit" value="Cambiar cambios">
+			<input type="reset" value="Descartar cambios">
+		</form>
+	</body>
+</html>
