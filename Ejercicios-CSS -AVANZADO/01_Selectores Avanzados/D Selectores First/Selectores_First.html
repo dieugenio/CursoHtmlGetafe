@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Documento sin título</title>
+		<style type="text/css">
+		*{ margin:0; padding:0;}
+		/*ESCRIBE A PARTIR DE AQUÍ, USANDO ÚNICA Y EXCLUSIVAMENTE LOS SELECTORES FIRST-LETTER, FIRST-LINE O FIRST-CHILD. */
+		h1:first-letter {
+			color: red;
+			font-family: Arial, helvetica, sans-serif;
+			text-transform: uppercase;
+		}
+		p:first-letter {
+			background-color: green;
+			color: white;
+			font-family: Arial, helvetica, Sans-serif;
+			font-size: 30px;
+			margin-right: 2px;
+			padding: 0 5px 0 5px;
+			text-transform: uppercase;
+			vertical-align: 5px;
+		}
+		div:first-child {
+			border: 5px solid red;
+			padding: 10px;
+		}
+		div:first-child a {
+			border: 1px solid black;
+		}
+		p em:first-child, a>em {
+			background-color: yellow;
+		}
+		div>p:first-child {
+			background-color: lightgray;
+		}
+		a:first-child {
+			color: red;
+		}
+		</style>
+	</head>
+
+	<body>
+
+	<div>
+	    <h1>bibendum <em>feugiat</em></h1>
+	    <p>Lorem <em>ipsum</em> dolor sit amet, <a href="#">consectetur <em>adipiscing</em></a> elit. Nam adipiscing metus metus, at faucibus sem <em>elementum</em> sed. <a href="#">Nulla<em> ligula</em> enim</a>, dictum non tortor sit amet,<a href="#"> posuere laoreet leo</a>.</p>
+	</div>
+	<h1>amet <em>sapien</em> vel tellus</h1>
+	<div>
+	  <p>Praesent sit amet sapien vel tellus <em>bibendum </em>feugiat. Pellentesque at metus elit. Vivamus sollicitudin justo ut augue <a href="#">auctor accumsan</a> in eu ante.  Sed non mi in lorem <a href="#">pharetra <em>fermentum</em></a> vulputate a lacus. In vitae sapien vitae lorem <em>fermentum</em> mollis.</p>
+	    <p>Sed non mi in lorem pharetra <em>fermentum</em> vulputate a lacus.  Vivamus sollicitudin justo ut augue auctor<a href="#"> accumsan in eu ante</a>. <em>Praesent</em> sit amet sapien vel tellus bibendum feugiat. Pellentesque at metus elit. In vitae sapien vitae lorem fermentum mollis.</p>
+	</div>
+
+	<div>
+	    <p>Vivamus sollicitudin justo ut augue auctor accumsan in eu ante.  Sed non mi in <a href="#">lorem pharetra</a> fermentum <em>vulputate</em> a lacus. <a href="#">Praesent sit amet </a>sapien vel tellus bibendum feugiat. <a href="#">Pellentesque at metus </a>elit. In vitae sapien vitae lorem fermentum<em> mollis.</em></p>
+	    <p>In vitae sapien vitae lorem fermentum mollis.
+	     <a href="#">Sed non</a> mi in lorem pharetra fermentum vulputate a lacus.  <em>Vivamus</em> sollicitudin justo ut augue auctor accumsan in eu ante. <em>Praesent </em>sit amet sapien vel tellus bibendum feugiat. <a href="#"><em>Pellentesque</em> at metus elit.</a></p>
+	</div>
+	</body>
+</html>
