@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{ font-family:Arial, Helvetica, sans-serif;}
+
+:lang(en):before{
+	content: "ENGLISH";
+	color: gray;
+	display: block;
+	}
+:lang(es):before{
+	content: "ESPAÑOL";
+	color: gray;
+	display: block;
+	}
+:lang(it):before{
+	content: "ITALIANO";
+	color: gray;
+	display: block;
+	}
+p:after {
+	content: url(linea_separadora.jpg);
+	display: block;
+	}
+:lang(es){
+	color: darkred;
+	}
+:lang(it){
+	color: darkgreen;
+	}
+</style>
+</head>
+
+<body>
+<p lang="en">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<p lang="es">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+<p lang="it">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
+</body>
+</html>

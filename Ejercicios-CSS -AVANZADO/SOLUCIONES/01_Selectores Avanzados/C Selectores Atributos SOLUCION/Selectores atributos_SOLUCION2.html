@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+/*ESCRIBE A PARTIR DE AQUÍ, USANDO ÚNICA Y EXCLUSIVAMENTE SELECTORES DE HIJO DIRECTO, ADYACENTES O DE ATRIBUTOS*/
+div > a{ 
+text-decoration:none;
+padding:0 10px 0 10px;
+font-weight:bold;
+}
+a+a{border-left: 5px solid gray;}
+a[href="index.html"] {
+	color:red;
+	}
+a[href="que.html"] {
+	color:green;
+	}
+a[href="contacto.html"] {
+	color:orange;
+	}
+	
+div+div { 
+	border: 5px solid blue;
+	padding:10px;
+	margin:10px;
+	}
+h1+h2 { color: gray;}
+p+p { background-color: yellow;}
+</style>
+
+</head>
+
+<body>
+
+<div>
+	<a href="index.html">INICIO</a>
+	<a href="quienes.html" >QUIÉNES SOMOS</a>
+	<a href="que.html">QUÉ HACEMOS</a>
+	<a href="contacto.html">CONTACTO</a>
+</div>
+
+<div>
+    <h1> Titular principal <span>Grande</span> </h1>
+    <h2> Subtítulo </h2>
+    <p> In tempor faucibus ullamcorper non aliquet turpis. Maecenas odio nunc, convallis a fringilla at, dignissim vel lacus. Etiam<a href="#"> scelerisque </a>est eget felis aliquam vitae vestibulum mi elementum. Erat eros, hendrerit sed ultricies in, posuere sed felis. </p>
+</div>
+  
+<div>  
+    <h2> Titular secundario </h2>
+    <p>Praesent luctus massa at tellus tincidunt sodales. Morbi vel tortor tellus, eu tincidunt lectus. Praesent cursus scelerisque nibh, vel accumsan enim dictum eu.<a href="#"> Nulla facilisi.</a></p>
+    <p>Vivamus cursus risus sit amet diam vulputate commodo. In dictum viverra placerat. <a href="#">Curabitur</a> ullamcorper purus lacinia diam fringilla id facilisis dolor sagittis. Nulla ipsum dui, tristique id pretium ac, fermentum non risus. Tempus elit, sit amet sollicitudin ligula euismod quis. </p>
+</div>
+
+</body>
+</html>
