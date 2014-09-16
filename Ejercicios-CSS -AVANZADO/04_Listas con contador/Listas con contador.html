@@ -1,34 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin título</title>
-</head>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Listas Con contador A</title>
+        <style>
+            a {
+                text-decoration: none;
+            }
+            ul {
+                list-style: none;
+                counter-reset: elemento 0;
+            }
+            li a {
+                color: red;
+            }
+            li ul li a {
+                color: green;
+            }
+            li ul li ul li a {
+                color: blue;
+            }
+            li:before {
+                content: counters(elemento, ".") " ";
+                counter-increment: elemento 1;
+                color: red;
+                font-weight: bold;
+            }
 
-<body>
-<ul>
-	<li><a href="#">Inicio</a></li>
-	<li><a href="#">Noticias</a>
-    	<ul>
-        	<li><a href="#">Recientes</a></li>
-   			<li><a href="#">Más leídas</a></li>
-   			<li><a href="#">Más valoradas</a></li>
-        </ul>
-    </li>
-	<li><a href="#">Artículos</a>
-    	<ul>
-        	<li><a href="#">XHTML</a></li>
-			<li><a href="#">CSS</a>
+        </style>
+    </head>
+    <body>
+        <ul>
+        	<li><a href="#">Inicio</a></li>
+        	<li><a href="#">Noticias</a>
             	<ul>
-                    <li><a href="#">Recientes</a></li>
-                    <li><a href="#">Más leídas</a></li>
-                    <li><a href="#">Más valoradas</a></li>
-		        </ul
-            ></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">Otros</a></li>
+                	<li><a href="#">Recientes</a></li>
+           			<li><a href="#">Más leídas</a></li>
+           			<li><a href="#">Más valoradas</a></li>
+                </ul>
+            </li>
+        	<li><a href="#">Artículos</a>
+            	<ul>
+                	<li><a href="#">XHTML</a></li>
+        			<li><a href="#">CSS</a>
+                    	<ul>
+                            <li><a href="#">Recientes</a></li>
+                            <li><a href="#">Más leídas</a></li>
+                            <li><a href="#">Más valoradas</a></li>
+        		        </ul
+                    ></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Otros</a></li>
+                </ul>
+            </li>
         </ul>
-    </li>
-</ul>
-</body>
+    </body>
 </html>
