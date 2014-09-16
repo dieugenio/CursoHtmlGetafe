@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio Counter</title>
+    <style type="text/css">
+      * { 
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      div.contenido {
+        width: 650px;
+      }
+
+      /* ESCRIBE A PARTIR DE AQUÍ */
+      body {
+        counter-reset: tema 0 figura 0;
+      }
+
+      h1 {
+        color: gray;
+      }
+
+      h2 {
+        color: green;
+      }
+
+      .contenido h1 {
+        color: red;
+      }
+
+      .contenido h1:before {
+        content: "Tema " counter(tema) ". ";
+        counter-increment: tema 1;
+      }
+
+      .figura {
+        color: blue;
+        float: right;
+        margin: 0 0 0 5px;
+      }
+
+      .figura:after {
+        content: "FIGURA " counter(figura);
+        counter-increment: figura 1;
+        display: block;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Ejercicio con Contadores</h1>
+    <div class="contenido">
+      <h1>Mauris facilisis enim nisi.</h1>
+      <h2>Fusce sollicitudin imperdiet risus at vehicula.</h2>
+      <div class="figura">
+      	<img src="img/figura1.jpg" />
+      </div>
+      <p>Aenean venenatis placerat odio et consequat. Nulla facilisi. Quisque hendrerit, nibh at placerat porta, ante est adipiscing lectus, vitae lobortis purus lorem a erat. Nunc massa metus, ullamcorper ac eleifend sit amet, interdum vitae dui. Mauris vulputate nisl neque, ac molestie libero commodo vitae. Duis ullamcorper odio ut turpis tristique porta. Nullam mollis, diam nec pulvinar tincidunt, massa sapien dictum urna, in mattis leo dui a tellus. Ut ante orci, mattis ac lacus id, vulputate hendrerit arcu. Vestibulum viverra at sem iaculis mattis.Sed porttitor nunc lacus, sit amet ullamcorper turpis placerat vulputate.  Praesent id pretium nulla, nec eleifend ligula.	</p>
+      	<h2>Donec accumsan sodales et pellentesque.</h2>
+      <div class="figura">
+      	<img src="img/figura2.jpg" />
+      </div>
+      <p>In sed nisi lorem. Donec iaculis consequat urna, id congue est facilisis et. Pellentesque ornare volutpat sem a dapibus. Etiam sollicitudin vitae leo ut suscipit. Nam dignissim odio erat, eu dignissim massa porta tempor. Maecenas imperdiet mi felis, vitae convallis ante accumsan in. Fusce commodo, arcu sit amet mattis hendrerit, nulla felis elementum orci, ut tempus nibh dui non magna. Vivamus quis ipsum at sapien consectetur volutpat. Donec et venenatis augue.Nunc commodo leo pretium tempus tincidunt.   Donec viverra odio neque, quis aliquam est fermentum sed. Vivamus aliquet mauris nibh, consequat semper tellus faucibus molestie. Donec pulvinar auctor nisl.</p>
+      <h1>Proin nec felis sollicitudin</h1>
+      <h2>Quisque dignissim, diam quis tempus lacinia.</h2>
+      <div class="figura">
+      	<img src="img/figura3.jpg" />
+      </div>
+      <p>Integer sed laoreet nisl. Aenean id adipiscing nisl. Vestibulum non ultricies massa. Morbi accumsan metus in mi dapibus, et pulvinar erat fermentum. Vivamus semper sem lacus, non pharetra erat porttitor ac. Aenean venenatis placerat odio et consequat. Nulla facilisi. Quisque hendrerit, nibh at placerat porta, ante est adipiscing lectus, vitae lobortis purus lorem a erat. Nunc massa metus, ullamcorper ac eleifend sit amet, interdum vitae dui. Mauris vulputate nisl neque, ac molestie libero commodo vitae.  Nullam mollis, diam nec pulvinar tincidunt, massa sapien dictum urna, in mattis leo dui a tellus. Ut ante orci, mattis ac lacus id, vulputate hendrerit arcu.</p>
+    </div>
+
+  </body>
+</html>
