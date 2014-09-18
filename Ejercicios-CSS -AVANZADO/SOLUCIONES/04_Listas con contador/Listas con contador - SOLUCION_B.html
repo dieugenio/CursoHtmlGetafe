@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+ul { 
+	list-style:none;
+	counter-reset: numero;
+	color: green;
+	}
+li:before {
+	content:  counters(numero,".") " - ";
+	counter-increment:numero 1;
+	font-weight:bold;
+	}
+ul li a{text-decoration: none;
+	color: red}
+ul li ul li a {color:green;}
+ul li ul li ul li a {color: blue;}
+li:first-letter{color: red;	}
+abbr:after {
+	content: " (" attr(title)")";
+	font-style: italic;
+	}
+ul li ul li ul li a:after {
+	content:"-->" attr(href);
+	color: gray;
+	font-style: italic;
+	}
+</style>
+</head>
+
+<body>
+<ul>
+	<li><a href="#">Inicio</a></li>
+	<li><a href="#">Noticias</a>
+    	<ul>
+        	<li><a href="#">Recientes</a></li>
+   			<li><a href="#">Más leídas</a></li>
+   			<li><a href="#">Más valoradas</a></li>
+        </ul>
+    </li>
+	<li><a href="#">Artículos</a>
+    	<ul>
+        	<li><a href="#"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
+			<li><a href="#"><abbr title="Cascade Style Sheets">CSS</abbr></a>
+            	<ul>
+                    <li><a href="http://www.w3c.es/Divulgacion/GuiasReferencia/CSS21/">Recientes</a></li>
+                    <li><a href="http://www.w3schools.com/cssref/default.asp">Más leídas</a></li>
+                    <li><a href="http://www.mclibre.org/consultar/amaya/css/css_pseudoclases.html">Más valoradas</a></li>
+		        </ul
+            ></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Otros</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

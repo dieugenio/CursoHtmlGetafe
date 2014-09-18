@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor {
+	width: 900px;
+	height: 700px;
+	background-color: darkblue;
+	margin: auto;
+	position: relative;
+}
+ul li {
+	list-style: none;
+	background-color: lightblue;
+	width: 100px;
+	padding: 20px;
+	border-bottom: 2px solid darkblue;
+}
+ul li div {	
+	background-color: yellow;
+	width: 650px;
+	position: absolute;
+	top: 50px;
+	left: 200px;
+	text-align: center;
+	display: none;
+}
+ul li:hover div { 
+display: block; }
+
+
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="menu">
+    <ul>
+      <li> FOTO 1
+        <div> <img src="img/conil.jpg" /> </div>
+      </li>
+      <li> FOTO 2
+        <div> <img src="img/rota.jpg" /> </div>
+      </li>
+      <li> FOTO 3
+        <div><img src="img/madridcentro.jpg" /></div>
+      </li>
+      <li> FOTO 4
+        <div><img src="img/madridrio.jpg" /></div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

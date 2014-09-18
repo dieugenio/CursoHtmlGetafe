@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+* { margin:0; padding:0;}
+div {
+	float: left;
+	margin-left: 20px;
+}
+label {
+	display: block;
+	margin-top:20px;
+	}
+[type="submit"] {
+	float: left;
+	clear: both;
+	margin: 20px 0 0 20px;
+	padding:5px;
+	}
+input { 
+	width:200px;
+	padding:5px;
+	}
+div input:focus { outline: 3px solid orange;}
+textarea { 
+	width:200px;
+	height:50px;
+	padding:5px;
+	}
+textarea:focus { outline: 3px solid orange;}
+</style>
+</head>
+
+<body>
+<form>
+	<div>
+        <label class="obligatorio">Nombre</label> 
+        <input type="text" tabindex="1" />
+        <label class="obligatorio">Código Postal</label> 
+        <input type="text" tabindex="4" />
+        <label>Teléfono Fijo</label> 
+        <input type="text" tabindex="7" />
+    </div>
+    <div>
+    	<label class="obligatorio">Apellidos</label> 
+        <input type="text" tabindex="2" />
+        <label>Población</label> 
+        <input type="text" tabindex="5" />
+		<label class="obligatorio">Teléfono Móvil</label> 
+        <input type="text" tabindex="8" />
+    </div>
+    <div>
+        <label>Email</label> 
+        <input type="text" tabindex="3" />
+        <label>Dirección</label> 
+        <textarea tabindex="6"></textarea>
+	</div>
+    <input type="submit" value="ENVIAR FORMULARIO"/>
+</form>
+</body>
+</html>
