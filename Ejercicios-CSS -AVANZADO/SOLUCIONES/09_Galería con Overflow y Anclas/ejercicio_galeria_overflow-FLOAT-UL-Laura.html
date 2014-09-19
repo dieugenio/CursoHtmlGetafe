@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+.contenedor {
+	margin: 10px auto;
+	width: 900px;
+	height: 650px;
+	background-color: gray;
+	/* con el el float left ul no es necesario el position
+	position: relative;*/
+}
+ul {
+	list-style: none;
+	/*otra manera de posicionar las imágenes*/
+	float: left;
+}
+ul li {
+	background-color: #ccc;
+	width: 70px;
+	height: 20px;
+	margin-top: 2px;
+	font-weight: bold;
+	padding: 2px;
+}
+ul li a {
+	text-decoration: none;
+	color: black;
+	/*para que el enlace sea toda la zona del li*/
+	display: block;
+}
+ul li:hover {
+	background-color: pink;
+}
+.contenido {
+	/*position: absolute;
+	top: 1px;
+	left:120px;*/
+	text-align: center;
+	height: 650px;
+	width: 700px;
+	overflow: hidden;
+}
+.contenido div {
+	height: 650px;
+	padding-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="contenedor">
+  <div class="menu">
+    <ul>
+      <li><a href="#foto1">FOTO 1</a></li>
+      <li><a href="#foto2">FOTO 2</a></li>
+      <li><a href="#foto3">FOTO 3</a></li>
+      <li><a href="#foto4">FOTO 4</a></li>
+    </ul>
+  </div>
+  <div class="contenido">
+    <div id="foto1"> <img src="img/conil.jpg" width="401" height="600" /> </div>
+    <div id="foto2"> <img src="img/rota.jpg" width="401" height="600" /> </div>
+    <div id="foto3"> <img src="img/madridrio.jpg" width="600" height="401" /> </div>
+    <div id="foto4"> <img src="img/madridcentro.jpg" width="600" height="429" /> </div>
+  </div>
+</div>
+</body>
+</html>

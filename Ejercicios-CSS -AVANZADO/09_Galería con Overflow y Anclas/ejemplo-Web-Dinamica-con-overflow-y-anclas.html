@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo Web dinámica con Overflow y Anclas</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.contenedor {
+				 border: 2px solid red;
+				 width: 400px;
+				 height: 100px;
+				 overflow: hidden;
+			 }
+			.contenedor div {
+				 height: 100px;
+				 background-color: yellow;
+			 }
+			 ul {
+			 	padding: 40px;
+			 }
+
+ 		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#uno">TEXTO 1</a></li>
+			<li><a href="#dos">TEXTO 2</a></li>
+			<li><a href="#tres">TEXTO 3</a></li>
+		</ul>
+		<div class="contenedor">
+			<div id="uno">
+				<h1>Texto 1</h1>
+			</div>
+			<div id="dos">
+				<h2>Texto 2</h2>
+			</div>
+			<div id="tres">
+				<h3>Texto 3</h3>
+			</div>
+		</div>
+	</body>
+</html>
