@@ -3,22 +3,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin título</title>
-<style type="text/css">
-p {
-	outline:1px solid red;
-	padding-left: 40px;
-	height: 40px;
-	line-height: 40px;
-	background-image: url(eltiempo.jpg);
-	background-repeat: no-repeat;
-}
-</style>
+	<style type="text/css">
+		p {
+			outline:1px solid red;
+			padding-left: 40px;
+			height: 40px;
+			line-height: 40px;
+			background-image: url(eltiempo.jpg);
+			background-repeat: no-repeat;
+		}
+
+/*		#madrid { background-position: 0 0;}
+		#barcelona { background-position: 0 -40px;}
+		#sevilla { background-position: 0 -80px;}
+		#jerez { background-position: 0 -120px;}
+*/
+	/*También se puede utilizar la propiedad background-position-y:
+	*/
+		#barcelona { background-position-y: -40px; }
+		#servilla { background-position-y: -80px; }
+		#jerez { background-position-y: -120px; }
+	</style>
 </head>
 
 <body>
-<p id="madrid">Madrid: soleado, máx: 35º, mín: 23º</p>
-<p id="barcelona">Barcelona: nublado, máx: 25º, mín: 13º</p>
-<p id="sevilla">Sevilla: muy nublado, máx: 22º, mín: 10º</p>
-<p id="jerez">Jerez: tormentas, máx: 23º, mín: 11º</p>
+	<h1>Ejemplo con eltiempo.jpg</h1>
+	<p id="madrid">Madrid: soleado, máx: 35º, mín: 23º</p>
+	<p id="barcelona">Barcelona: nublado, máx: 25º, mín: 13º</p>
+	<p id="sevilla">Sevilla: muy nublado, máx: 22º, mín: 10º</p>
+	<p id="jerez">Jerez: tormentas, máx: 23º, mín: 11º</p>
 </body>
 </html>

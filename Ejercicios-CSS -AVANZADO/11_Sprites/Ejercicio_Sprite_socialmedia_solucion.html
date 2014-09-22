@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ejercicio Sprite Socialmedia</title>
+	<style type="text/css">
+		a {
+			display: block;
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: bold;
+			padding-bottom: 20px;
+			text-decoration: none;
+		}
+
+		a img {
+			background-image: url(socialsprite.png);
+			background-repeat: no-repeat;
+			color: black;
+			height: 30px;
+			vertical-align: middle;
+			width: 30px;
+		}
+
+		a:hover {
+			color: gray;
+		}
+
+		a#facebook img { background-position: 0 0; }
+		a#twitter img { background-position: -30px 0; }
+		a#linkedin img { background-position: -60px 0; }
+		a#youtube img { background-position: -90px 0; }
+
+		a#facebook:hover img { background-position: 0 -30px; }
+		a#twitter:hover img { background-position: -30px -30px }
+		a#linkedin:hover img { background-position: -60px -30px; }
+		a#youtube:hover img { background-position: -90px -30px; }
+
+	</style>
+</head>
+
+<body>
+	<h1>Mis redes sociales</h1>
+	<a id="facebook" href="http://www.facebook.es"><img src="pixel.png"/>FACEBOOK</a>
+	<a id="twitter" href="http://www.twitter.es"><img src="pixel.png"/>TWITTER</a>
+	<a id="linkedin" href="http://www.linkedin.es"><img src="pixel.png"/>LINKEDIN</a>
+	<a id="youtube" href="http://www.youtube.es"><img src="pixel.png"/>YOUTUBE</a>
+</body>
+</html>
