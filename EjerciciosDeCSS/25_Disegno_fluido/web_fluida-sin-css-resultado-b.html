@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Web fluida sin CSS Resultado B</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, Sans-serif;
+            }
+            body {
+                background-color: lightcyan;
+            }
+            #contenedor {
+                background-color: blue;
+                margin: 10px auto;
+                max-width: 1000px;
+                max-height: 600px;
+            }
+            #cabecera {
+                background-image: url(images/fondo_cabecera.png);
+                background-repeat: none;
+                position: relative;
+                height: 150px;
+            }
+            #cabecera img
+            {
+              margin: 10px 0 10px 10px;
+            }
+            #cabecera a {
+                color: lightcyan;
+                font-size: 20px;
+                font-weight: bold;
+                position: absolute;
+                text-decoration: none;
+                right: 10px;
+                bottom: 10px;
+             }
+             a {
+                text-decoration: none;
+             }
+             #menu {
+                background-color: darkblue;
+                min-width: 110px;
+                float: left;
+                width: 20%;
+             }
+             #menu ul li {
+                list-style: none;
+                border-bottom: 2px solid gray;
+             }
+             #menu ul li a {
+                text-decoration: none;
+                color: white;
+                padding: 10px 0px 10px 10px;
+                display: block;
+             }
+             #menu ul li a:hover {
+                background-color: blue;
+             }
+             #menu img {
+                width: 100%;
+             }
+             #contenido {
+                background-color: white;
+                float: left;
+                width: 80%;
+             }
+             #principal {
+                float: left;
+                width: 56%;
+                padding: 10px 2% 10px 2%;
+             }
+             #principal img {
+                height: 100%;
+                width: 100%;
+             }
+             #secundario {
+                float: left;
+                min-width: 200px;
+                width: 38%;
+                padding: 20px 2% 10px 0;
+             }
+             #pie {
+                background-color: blue;
+                clear: left;
+                color: white;
+                padding: 10px;
+                text-align: center;
+             }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+          <div id="cabecera">
+              <img src="images/logo.png" />
+              <a href="">OFERTAS SEMANA SANTA</a>
+          </div>
+          <div id="menu">
+            <ul>
+              <li><a href="">INICIO</a></li>
+              <li><a href="">SERVICIOS</a></li>
+              <li><a href="">PRECIOS</a></li>
+              <li><a href="">CONTACTO</a></li>
+            </ul>
+            <img src="images/burbujas.jpg" />
+          </div>
+          <div id="contenido">
+                <div id="principal">
+                    <h1>Titular Principal</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare est eros, quis laoreet neque tempus eu. Proin at tempor nibh, eu pulvinar augue. Mauris scelerisque viverra mi, a pretium sapien posuere in. Cras dignissim consequat turpis non rutrum. Fusce a augue vitae dolor faucibus adipiscing. Aliquam vitae ante metus. Nulla quis nisl ut tortor viverra mollis.</p>
+                    <img src="images/balneario.jpg" />
+                </div>
+                <div id="secundario">
+                  <h2>Titular secundario</h2>
+                    <p>Maecenas quis dapibus nunc. In non diam odio. Quisque dictum lorem enim. Praesent non condimentum nunc.  Proin leo nisi, iaculis et ullamcorper at, venenatis eu dolor. Integer eu mattis urna, sit amet dapibus lectus. Mauris nec ullamcorper mi. Curabitur in pretium est.</p>
+                    <p>Duis sed varius sapien. Pellentesque gravida eget sem sed ultrices. Morbi laoreet urna eget sapien pellentesque, eu hendrerit mi ultricies. Nam cursus at erat quis iaculis. Phasellus a enim id tellus fermentum venenatis non et tortor. Nulla enim augue, facilisis nec tellus ut, facilisis ultrices felis.</p>
+                </div>
+          </div>
+          <p id="pie"> © Balneario de Chulilla - 2001 - Aviso Legal - Política de Privacidad</p>
+        </div>
+    </body>
+</html>
