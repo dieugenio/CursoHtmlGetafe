@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo pseudoclase not</title>
+		<style type="text/css">
+		p {
+			width: 200px;
+		}
+			p:not(.especial) {
+				color: white;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Titular Principal</h1>
+		<p>Parrafo -1</p>
+		<p class="especial">Parrafo -2</p>
+		<p>Parrafo -3</p>
+		<div style="border: 1px solid blue;">
+			<h1>Titular en una capa</h1>
+			<p>Parrafo 1</p>
+			<p>Parrafo 2</p>
+			<p id="pepe">Parrafo 3</p>
+			<p>Parrafo 4</p>
+			<p class="especial">Parrafo 5</p>
+			<p>Parrafo 6</p>
+			</div>
+	</body>
+</html>

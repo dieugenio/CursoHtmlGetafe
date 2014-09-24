@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo pseudoclase nth-last-of-type</title>
+		<style type="text/css">
+			p:nth-last-of-type(1) {
+				color: red;
+				background-color: yellow;
+			}
+			p:nth-last-of-type(1):after {
+				content: " --> p:nth-last-of-type(1)";
+				font-weight: bold;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Titular Principal</h1>
+		<p>Parrafo -1</p>
+		<p>Parrafo -2</p>
+		<p>Parrafo -3</p>
+		<div style="border: 1px solid blue;">
+			<h1>Titular en una capa</h1>
+			<p>Parrafo 1</p>
+			<p>Parrafo 2</p>
+			<p>Parrafo 3</p>
+			<p>Parrafo 4</p>
+			<p>Parrafo 5</p>
+			<p>Parrafo 6</p>
+			</div>
+	</body>
+</html>

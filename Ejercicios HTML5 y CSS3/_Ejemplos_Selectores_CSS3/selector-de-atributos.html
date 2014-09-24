@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo selector de atributos</title>
+		<style type="text/css">
+/*			Que empiecen por "ver" */
+			a[href^="ver"] {
+				color: red;
+			}
+
+			[href^="ver"] {
+				color: red;
+			}
+
+			[href^=ver] {
+				color: red;
+			}
+/*			Que terminen en "proximos.html" */
+			a[href$="proximos.html"] {
+				color: green;
+			}
+
+			[href$="proximos.html"] {
+				color: green;
+			}
+/*			Que contengan "cursos" */
+			a[href*="cursos"] {
+				color: orange;
+			}
+
+			[href*="cursos"] {
+				color: orange;
+			}
+
+			[href*=cursos] {
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+		<li><a href="index.html">INICIO</a></li>
+		<li><a href="ver-instalaciones.html">VER INSTALACIONES</a></li>
+		<li><a href="ver-profesores.html">VER PROFESORES</a></li>
+		<li><a href="ver-cursos.html">VER CURSOS REALIZADOS</a></li>
+		<li><a href="cursos-proximos.html">PRÓXIMOS CURSOS </a></li>
+		<li><a href="talleres-proximos.html">PRÓXIMOS TALLERES</a></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio tablas</title>
+<style type="text/css">
+  *{
+  	margin:0;
+  	padding:0;
+  }
+
+  table, th, td {
+  	border: 1px solid black;
+  	padding:5px;
+  	font-family:"Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  table {
+  	border-collapse: collapse; 
+  }
+  th {
+    background-color: lightblue;
+  }
+  tr:first-child th {
+    background-color: silver;
+  }
+  tr:nth-child(2n) {
+    background-color: yellow;
+  }
+  tr:nth-child(2) th {
+    background-image: url(imagenes/euro.png);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    padding-left: 20px;
+  }
+  tr:nth-child(3) th {
+    background-image: url(imagenes/dolar.png);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    padding-left: 20px;
+  }
+  tr:nth-child(4) th {
+    background-image: url(imagenes/libra.png);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    padding-left: 20px;
+  }
+  tr:nth-child(5) th {
+    background-image: url(imagenes/yen.png);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    padding-left: 20px;
+  }
+
+</style>
+</head>
+
+<body>
+<table>
+  <tr>
+    <th>Cambio</th>
+    <th>Compra</th>
+    <th>Venta</th>
+    <th>Máximo</th>
+    <th>Mínimo</th>
+  </tr>
+  <tr>
+    <th>Euro/Dolar</th>
+    <td>1.2524</td>
+    <td>1.2527</td>
+    <td>1.2839</td>
+    <td>1.2488</td>
+  </tr>
+  <tr>
+    <th>Dolar/Yen</th>
+    <td>119.01</td>
+    <td>119.05</td>
+    <td>119.82</td>
+    <td>119.82</td>
+  </tr>
+  <tr>
+    <th>Libra/Dolar</th>
+    <td>1.8606</td>
+    <td>1.8611</td>
+    <td>1.8651</td>
+    <td>1.8522</td>
+  </tr>
+  <tr>
+    <th>Yen/Euro</th>
+    <td>0.6711</td>
+    <td>0.6705</td>
+    <td>0.6676</td>
+    <td>0.6713</td>
+  </tr>
+</table>
+
+</body>
+</html>

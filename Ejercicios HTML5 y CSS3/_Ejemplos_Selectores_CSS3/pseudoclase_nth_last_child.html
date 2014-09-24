@@ -2,11 +2,15 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<title>Ejemplo pseudoelemento last-child</title>
+		<title>Ejemplo pseudoclase nth-last-child</title>
 		<style type="text/css">
-			p:last-child {
+			p:nth-last-child(2) {
 				color: red;
 				background-color: yellow;
+			}
+			p:nth-last-child(2):after {
+				content: " --> nth-last-child(2)";
+				font-weight: bold;
 			}
 		</style>
 	</head>
