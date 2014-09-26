@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+label {
+	display: block;
+}
+input:valid {
+border: 1px solid green;
+}
+input:invalid {
+border: 1px solid red;
+}
+input{ box-shadow: none;}
+</style>
+</head>
+
+<body>
+<form id="formulario">
+  <fieldset>
+    <legend>DATOS DE USUARIO</legend>
+    <label for="usuario"> Usuario: </label>
+    <input type="text" id="usuario" name="usuario" autofocus/>
+    <label for="contrasena"> Contraseña: </label>
+    <input type="password" id="contrasena" name="contrasena" autocomplete="off"/>
+    <label for="telefono"> Teléfono: </label>
+    <input type="tel" id="telefono" name="telefono"/>
+    <label> Correo electrónico: </label>
+    <input type="email" placeholder="usuario@correoweb.com"  name="correo" />
+  </fieldset>
+  <fieldset>
+    <legend>COMPRAR BILLETE</legend>
+    <label for="pasajeros"> Número de pasajeros</label>
+    <input type="number" min="1" id="pasajeros" name="pasajeros"/>
+    <label for="origen"> Origen </label>
+    <input type="text" list="ciudades" id="origen" name="origen" />
+    <datalist id="ciudades">
+      <option value="Alcobendas"></option>
+      <option value="Alcorcón"></option>
+      <option value="Getafe"></option>
+      <option value="Leganés"></option>
+      <option value="Madrid"></option>
+      <option value="Móstoles"></option>
+    </datalist>
+    <label for="destino"> Destino </label>
+    <input type="text" list="ciudades" id="destino" name="destino" />
+    <label for="f-ida"> Fecha de Ida </label>
+    <input type="date" id="f-ida" name="f-ida" />
+    <label for="f-vuelta"> Fecha de Vuelta </label>
+    <input type="date" id="f-vuelta" name="f-vuelta" />
+  </fieldset>
+  <input type="submit"/>
+</form>
+</body>
+</html>
