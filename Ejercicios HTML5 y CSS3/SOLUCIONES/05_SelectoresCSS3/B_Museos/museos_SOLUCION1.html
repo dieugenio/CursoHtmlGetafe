@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hoteles</title>
+<style type="text/css">
+* {margin:0; padding:0;}
+table, th, td {	border: 1px solid black;}
+table {	border-collapse: collapse; }
+
+/* Los elementos cuyo href termine en ".html" */
+[href$=".html"]{color:gray;}
+/* Los elementos cuyo href contenga "museo" */
+[href*="museo"] {color:red;}
+/* Los elementos cuyo href empiece por "museo" */
+[href^="museo"] {color:green;}
+/* Los elementos cuyo href termine en ".com" */
+[href$=".com"] {color:red;}
+/* Los elementos cuyo alt empiece por "Fachada" */
+[alt^="Fachada"] {margin:15px;}
+/* La primera fila de la tabla */
+tr:first-child { 
+	background-color:gray;
+	color:white;}
+/* Las columnas impares */
+tr+tr th,td:nth-child(2n+1) { background-color:lightgray;}
+/* Cualquier elemento que no sea un enlace */
+:not(a) {color: darkgreen;}
+/* Los enlaces precedidos por un h1 */
+h1~a{
+	color: orange;
+	margin-right:30px;}
+/* Los párrafos pares */
+p:nth-of-type(2n) {color:gray;}
+/* Los h2 impares */
+h2:nth-of-type(2n+1) {color:blue;}
+/* Los h2 pares */
+h2:nth-of-type(2n){color:red;}
+ 
+</style>
+</head>
+
+<body>
+<ul>
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="museos.html">MUSEOS</a></li>
+    <li><a href="eventos.html">EVENTOS</a></li>
+    <li><a href="contacto.html">CONTACTO</a></li>
+</ul>
+
+<h1>MUSEOS</h1>
+<table border="1">
+  <tr>
+    <th>&nbsp;</th>
+    <th>EDIFICIO</th>
+    <th>DIRECCIÓN</th>
+    <th>TELÉFONO</th>
+    <th>WEB</th>
+  </tr>
+  <tr>
+    <th>REINA SOFÍA</th>
+    <td><img src="imagenes/museos/reinasofia.jpg" alt="Fachada del Museo Reina Sofía"/></td>
+    <td>Calle  Santa Isabel</td>
+    <td>917 74 10 00</td>
+    <td><a href="http://www.museoreinasofia.es/">museoreinasofia.es</a></td>
+  </tr>
+  <tr>
+    <th>EL PRADO</th>
+    <td><img src="imagenes/museos/elprado.jpg" alt="Fachada del Museo de El Prado" /></td>
+    <td>Paseo del Prado</td>
+    <td>913 30 28 00</td>
+    <td><a href="https://www.museodelprado.es/">museodelprado.es</a></td>
+  </tr>
+  <tr>
+    <th><abbr title="CÍRCULO DE BELLAS ARTES">CBA</abbr></th>
+    <td><img src="imagenes/museos/circulobellasartes.jpg" alt="Fachada del Círculo de Bellas Artes" /></td>
+    <td>Calle Alcalá</td>
+    <td>913 60 54 00</td>
+    <td><a href="http://www.circulobellasartes.com">circulobellasartes.com</a></td>
+  </tr>
+</table>
+<h1>Monumentos</h1>
+<a href="#alcala">Puerta de Alcalá</a> 
+<a href="#debod">Templo de Debod</a> 
+<a href="#palacio">Palacio Real</a> 
+<a href="#banco">Banco de España</a> 
+
+<h2 id="alcala">Puerta de Alcalá</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum mi vitae rhoncus iaculis. Praesent sed tempus augue. Nullam pellentesque sed tellus egestas faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus venenatis lorem vitae ullamcorper.</p>
+
+<h2 id="debod">Templo de Debod</h2>
+<p> Aenean bibendum mi vitae rhoncus iaculis. Nullam pellentesque sed tellus egestas faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus venenatis lorem vitae ullamcorper. Aliquam turpis orci, pulvinar eget euismod nec, auctor in sapien. Fusce non nulla tempor, gravida tellus a, lobortis urna. Proin ac purus eu augue tempus accumsan vitae nec magna.</p>
+
+<h2 id="palacio">Palacio Real</h2>
+<p> Praesent sed tempus augue. Nullam pellentesque sed tellus egestas faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus venenatis lorem vitae ullamcorper. Aliquam turpis orci, pulvinar eget euismod nec, auctor in sapien. Fusce non nulla tempor, gravida tellus a, lobortis urna. Proin ac purus eu augue tempus accumsan vitae nec magna.</p>
+
+<h2 id="banco">Banco de España</h2>
+<p>Fusce non nulla tempor, gravida tellus a, lobortis urna. Nullam pellentesque sed tellus egestas faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus venenatis lorem vitae ullamcorper. Aliquam turpis orci, pulvinar eget euismod nec, auctor in sapien. Proin ac purus eu augue tempus accumsan vitae nec magna.</p>
+</body>
+</html>
+
