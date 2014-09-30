@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo A - Animation</title>
+		<style type="text/css">
+			img {
+				/* Sombra alrededor de la imágen */
+				/* Una sola animación de 5 segundos */
+				animation: parpadeo 5s;
+				-webkit-animation: parpadeo 5s;
+			}
+			@keyframes parpadeo {
+				from {box-shadow: 0 0 10px blue;}
+				to {box-shadow: 0 0 50px blue;}
+			}
+			@-webkit-keyframes parpadeo {
+				from {box-shadow: 0 0 10px blue;}
+				to {box-shadow: 0 0 50px blue;}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="../_Fondos y efectos/bird.png" alt="">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo D - Animation</title>
+		<style type="text/css">
+			img {
+				/* Sombra alrededor de la imágen */
+				/* Una única animación que se detenga al final */
+				animation: parpadeo 5s forwards;
+				-webkit-animation: parpadeo 5s forwards;
+			}
+			@keyframes parpadeo {
+				0% {box-shadow: 0 0 10px blue;}
+				50% {box-shadow: 0 0 50px blue;}
+				100% {box-shadow: 0 0 10px blue;}
+			}
+			@-webkit-keyframes parpadeo {
+				0% {box-shadow: 0 0 10px blue;}
+				50% {box-shadow: 0 0 50px blue;}
+				100% {box-shadow: 0 0 10px blue;}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="../_Fondos y efectos/bird.png" alt="">
+		</div>
+	</body>
+</html>

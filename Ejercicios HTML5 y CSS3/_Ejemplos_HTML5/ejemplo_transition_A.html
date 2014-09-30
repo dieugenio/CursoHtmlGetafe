@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Prueba con Transform</title>
+		<style type="text/css">
+			h1 {
+				width: 200px;
+				background-color: cyan;
+			}
+			.uno { 
+				transition: width 10s linear;
+			 }
+			.dos {
+				transition: width 10s ease;
+			 }
+			.tres { 
+				transition: width 10s ease-in; 
+			}
+			.cuatro { 
+				transition: width 10s ease-out; 
+			}
+			.cinco { 
+				transition: width 10s ease-in-out; 
+			}
+			div:hover h1 { 
+				width: 1000px; 
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1 class="uno">linear</h1>
+
+			<h1 class="dos">ease</h1>
+
+			<h1 class="tres">ease-in</h1>
+
+			<h1 class="cuatro">ease-out</h1>
+
+			<h1 class="cinco">ease-in-out</h1>
+
+		</div>
+	</body>
+</html>

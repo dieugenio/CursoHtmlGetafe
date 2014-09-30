@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Casa Rural. Solución</title>
+	<style type="text/css">
+		* {
+			margin: 0; 
+			padding: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.contenedor {
+			border: 2px solid green;
+			margin-top:100px;
+			position:relative;
+			height: 300px;
+			width: 400px;
+			background-color: green;
+			color: white;
+			overflow: hidden;
+			}
+		img.uno {
+			position:absolute;
+			top:0;
+			clip: rect(0px 400px 150px 0px);
+			/*-webkit-animation: subir 1s forwards;*/
+			-webkit-animation: subir2 2s 5;
+		}
+		img.dos {
+			position:absolute;
+			top:0;
+			clip: rect(150px 400px 300px 0px);
+			/*-webkit-animation: bajar 1s forwards;*/
+			-webkit-animation: bajar2 2s 5;
+		}
+		div.texto {
+			width: 200px;
+			margin: auto;
+			/*-webkit-animation: agrandar 1s forwards;*/
+			-webkit-animation: agrandar2 2s 5;
+		}
+		h1 {
+			padding-top: 100px;
+		}
+		@-webkit-keyframes subir {
+			from { margin-top: 0px; }
+			to { margin-top: -150px; }
+		}
+		@-webkit-keyframes subir2 {
+			0% { margin-top: 0px; }
+			50% { margin-top: -150px; }
+			100% { margin-top: 0px; }
+		}
+		@-webkit-keyframes bajar {
+			from { margin-top: 0px;}
+			to { margin-top: 150px;}
+		}
+		@-webkit-keyframes bajar2 {
+			0% { margin-top: 0px;}
+			50% { margin-top: 150px;}
+			100% { margin-top: 0px;}
+		}
+		@-webkit-keyframes agrandar {
+			from { 
+				transform: scale(1,1);
+				opacity: 0;
+			}
+			to { 
+				transform: scale(1.5,1.5) translateY(-30px);
+				opacity: 1;
+			}
+		}
+		@-webkit-keyframes agrandar2 {
+			0% { 
+				transform: scale(1,1);
+				opacity: 0;
+			}
+			50% { 
+				transform: scale(1.5,1.5) translateY(-30px);
+				opacity: 1;
+			}
+			100% { 
+				transform: scale(1,1) translateY(30px);
+				opacity: 0;
+			}
+		}
+	</style>
+	</head>
+
+	<body>
+		<div class="contenedor">
+		    <div class="texto">
+			    <h1>Casa rural</h1>
+			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris suscipit ipsum ut massa dapibus ultrices. In elit mauris, adipiscing eget. </p>
+		    </div>
+		    <img class="uno" src="casarural.jpg" width="400" height="300" />
+		    <img class="dos" src="casarural.jpg" width="400" height="300" />
+		</div>
+	</body>
+</html>
