@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejemplo Slider con Animation</title>
+		<style type="text/css">
+			div {
+				width:200px;
+				height:200px;
+				border: 1px solid gray;
+				background-image: url(madrid.jpg);
+				-webkit-animation: desplazamiento 10s 1s linear infinite;
+			}
+
+			@-webkit-keyframes desplazamiento {
+				0% { background-position-x: 0px;}
+				10% { background-position-x: -200px;}
+				20% { background-position-x: -200px;}
+				30% { background-position-x: -400px;}
+				40% { background-position-x: -400px;}
+				50% { background-position-x: -600px;}
+				60% { background-position-x: -600px;}
+				70% { background-position-x: -800px;}
+				80% { background-position-x: -800px;}
+				90% { background-position-x: -1000px;}
+				100% { background-position-x: -1000px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		</div>
+	</body>
+</html>

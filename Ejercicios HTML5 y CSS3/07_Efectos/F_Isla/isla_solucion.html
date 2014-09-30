@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Ejercicio basado en un ejemplo de Cali Rojas http://www.lewebmonster.com">www.lewebmonster.com -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Documento sin título</title>
+		<style type="text/css">
+			body {
+				background-color: linear(lightblue, cyan);
+				background-attachment: fixed;
+			}
+			div {
+				-webkit-animation: cloudsmove 5s linear infinite;
+				background-color: linear(lightblue, cyan);
+				background-image: url(images/nubes.png);
+				border: 1px solid gray;
+				border-radius: 25px;
+				box-shadow: 4px 4px 4px 5px blue;
+				height: 400px;
+				margin: auto;
+				position: relative;
+				text-align: center;
+				width: 1000px;
+			}
+			@-webkit-keyframes cloudsmove {
+				to { background-position-x: 800px;}
+			}
+			img {
+				position: relative;
+				top: 0px;
+				margin: auto;
+				-webkit-animation: floatland 5s linear infinite;
+			}
+			@-webkit-keyframes floatland {
+				0% { top: -10px; }
+				50% { top: 50px; }
+				100% { top: -10px; }
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="images/flotante.png"/>
+		</div>
+	</body>
+</html>

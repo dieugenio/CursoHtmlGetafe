@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejemplo Slider con Animation</title>
+		<style type="text/css">
+			div {
+				width:200px;
+				height:200px;
+				border: 1px solid gray;
+				background-image: url(madrid.jpg);
+				-webkit-animation: desplazamiento 10s 1s linear infinite;
+			}
+
+			@-webkit-keyframes desplazamiento {
+				to { background-position-x: -1000px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		</div>
+	</body>
+</html>

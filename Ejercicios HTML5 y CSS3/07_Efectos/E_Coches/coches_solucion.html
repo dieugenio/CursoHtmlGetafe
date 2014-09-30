@@ -4,19 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Documento sin título</title>
     <style type="text/css">
+        body {
+            background-image: linear-gradient(lightgray, white);
+            background-attachment: fixed;
+        }
         ul li {
-        	border: 2px solid gray;
-        	list-style: none;
-        	position: absolute;
+        	/*border: 2px solid gray;*/
+            height: 150px;
+            list-style: none;
+            position: absolute;
         	width: 180px;
-        	height: 150px;
     	}
         ul li div {
-        	margin-top:0px;
-            box-shadow: 0 0 3px 2px gray;
-            padding: 1px 1px;
-            opacity: 0;
             background-color: white;
+            box-shadow: 0 0 3px 2px gray;
+        	margin-top:0px;
+            opacity: 0;
     	}
         ul li:hover div {
             -webkit-animation: rebote 1s forwards;
@@ -24,8 +27,8 @@
 
         @-webkit-keyframes rebote {
             0% {margin-top:0; animation-timing-function:ease-in;}
-            25% {margin-top:160px; opacity: 0.5; animation-timing-function:ease-out;}
-            50% {margin-top:130px; opacity: 1; animation-timing-function:ease-in;}
+            25% {margin-top:200px; opacity: 0.5; animation-timing-function:ease-out;}
+            50% {margin-top:120px; opacity: 1; animation-timing-function:ease-in;}
             95% {margin-top:160px; opacity: 1; animation-timing-function:ease-out;}
             100% {margin-top:160px; opacity: 1; animation-timing-function:ease; }
         }
