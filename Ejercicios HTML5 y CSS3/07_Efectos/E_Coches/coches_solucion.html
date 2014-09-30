@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Documento sin título</title>
+    <style type="text/css">
+        ul li {
+        	border: 2px solid gray;
+        	list-style: none;
+        	position: absolute;
+        	width: 180px;
+        	height: 150px;
+    	}
+        ul li div {
+        	margin-top:0px;
+            box-shadow: 0 0 3px 2px gray;
+            padding: 1px 1px;
+            opacity: 0;
+            background-color: white;
+    	}
+        ul li:hover div {
+            -webkit-animation: rebote 1s forwards;
+        }
+
+        @-webkit-keyframes rebote {
+            0% {margin-top:0; animation-timing-function:ease-in;}
+            25% {margin-top:160px; opacity: 0.5; animation-timing-function:ease-out;}
+            50% {margin-top:130px; opacity: 1; animation-timing-function:ease-in;}
+            95% {margin-top:160px; opacity: 1; animation-timing-function:ease-out;}
+            100% {margin-top:160px; opacity: 1; animation-timing-function:ease; }
+        }
+        ul li.azul {
+        	left: 0px;
+        	top: 320px;
+    	}
+        ul li.negro {
+        	left: 190px;
+        	top: 320px;
+    	}
+        ul li.gris {
+        	left: 380px;
+        	top: 320px;
+    	}
+        ul li.rojo {
+        	left: 570px;
+        	top: 320px;
+    	}
+        ul li.blanco {
+        	left: 760px;
+        	top: 320px;
+    	}
+    </style>
+</head>
+
+<body>
+    <h1>Mapas de imágenes usando la propiedad display</h1>
+    <ul>
+      <li class="azul">
+        	<div> 
+                <h2>Coche Azul</h2>
+                <p>Aenean sed placerat lorem. Integer tempor mollis quam</p>
+            </div>
+        </li>
+      <li class="negro">
+            <div> 
+                <h2>Coche Negro</h2>
+                <p>Mauris gravida velit sed ligula aliquam feugiat.</p>
+            </div>
+        </li>
+      <li class="gris">
+            <div> 
+                <h2>Coche Gris</h2>
+                <p>Fusce imperdiet dui in 	ullamcorper adipiscing.</p>
+            </div>
+        </li>
+      <li class="rojo"> 
+            <div> 
+                <h2>Coche Rojo</h2>
+                <p>Sed feugiat elit eu augue accumsan porttitor nec et ipsum.</p>
+            </div>
+        </li>
+        <li class="blanco"> 
+            <div> 
+                <h2>Coche Blanco</h2>
+                <p>Vivamus eleifend scelerisque mi nec ultricies.</p>
+            </div>
+        </li>
+    </ul>
+    <img src="coches.png" />
+</body>
+</html>
