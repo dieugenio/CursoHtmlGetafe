@@ -1,0 +1,82 @@
+@charset "utf-8";
+#wrapper {
+	max-width: 700px;
+	background-image: url(../images/basin_bg_tab.jpg);
+}
+#header h1 {
+	font-size: 363%;
+	padding-left: 0;
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+/* Main navigation */
+#nav {
+	width: 660px;
+	height: 45px;
+}
+#nav li a {
+	width: 120px;
+	margin: 0 1px;
+	padding: 10px 5px;
+}
+#nav li:last-child a {
+	margin-left: 1px;
+}
+/* Inline images */
+.floatleft {
+	float: left;
+	margin: 3px 12px 3px 0;
+}
+.floatright {
+	float: right;
+	margin: 3px 0 3px 12px;
+}
+.floatleft, .floatright {
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+/* Background images for individual sections */
+#sake {
+	background-position:440px bottom;
+	background-repeat:no-repeat;
+	background-image: url(../images/sake_tab.jpg);
+}
+#sake p {
+	width:400px;
+}
+/* Alternate rules for screen widths in the range 481-680 px */
+@media only screen and (min-width: 481px) and (max-width: 680px) {
+	#header h1 {
+		font-size: 300%;
+		padding-top:7px;
+	}
+	#nav {
+		width: 396px;
+		height: 85px;
+	}
+	#nav li a {
+		margin-bottom: 2px;
+	}
+	#nav li:nth-child(4) a {
+		margin-left: 66px;
+	}
+	.floatleft, .floatright {
+		float: none;
+		margin: 10px auto;
+	}
+	#sake {
+		background-position:360px bottom;
+	}
+	#sake p {
+		width:320px;
+	}
+}
+/* Border for screens wider than 702px */
+@media only screen and (min-width: 702px) {
+	#wrapper {
+		border-left: #594431 solid 1px;
+        border-right: #594431 solid 1px;
+	}
+}

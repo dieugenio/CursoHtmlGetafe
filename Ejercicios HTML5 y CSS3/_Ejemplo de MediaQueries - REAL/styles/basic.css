@@ -1,0 +1,122 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #EEF2EF;
+	color: #000;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 100%;
+}
+#wrapper {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	background-image: url(../images/basin_bg_phone.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #B4C4BA;
+}
+#header h1 {
+	font-size: 225%;
+	color:#003;
+	margin: 0;
+	padding-left: 40px;
+	text-align: center;
+}
+
+/* Basic styles */
+h1, h2, h3 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+h2, h3 {
+	font-size: 160%;
+	color: #003;
+	margin-top: 0;
+}
+h3 {
+	font-size:140%;
+}
+a {
+	color:#91784F;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover, a:active, a:focus {
+	color:#B59D77;
+	text-decoration:underline;
+}
+
+.floatleft, .floatright {
+	width: 95%;
+	max-width: 400px;
+	display: block;
+	margin: auto auto 1.5em;
+}
+
+/* Main navigation */
+#nav {
+	list-style-type: none;
+	padding: 0;
+	font-weight: bold;
+	font-size: 107%;
+	width: 308px;
+	height: 95px;
+	margin: 0 auto 5px auto;
+}
+#nav li {
+	float: left;
+}
+#nav li a {
+	display: block;
+	width:136px;
+	padding: 5px 2px;
+	margin: 0 6px 2px 6px;
+	text-align:center;
+	text-decoration: none;
+	color: #FFF;
+	background-color: #003;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#nav a:hover, #nav a:active, #nav a:focus {
+	background-color:#26267F;
+}
+#nav li:last-child a {
+	margin-left: 76px;
+}
+
+/* Content containers */
+.content-medium, .aside {
+	background-color:#fff;
+	padding:20px;
+	margin: 10px;
+	font-size:88%;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+.content-medium {
+	margin-top: 5px;
+}
+.aside {
+	padding:10px;
+}
+#dining {
+	background-image: url(../images/chef.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding-top:140px;
+}
+
+/* Footer */
+#footer {
+	color: #FFF;
+	background-color: #003;
+	padding: 5px 30px;
+	clear:both;
+}
+#footer p {
+	font-size: 88%;
+	margin: 0 0 5px 0;
+}

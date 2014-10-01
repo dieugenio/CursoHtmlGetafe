@@ -1,0 +1,270 @@
+@charset "utf-8";
+/* Basic rules for all devices */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #EEF2EF;
+	color: #000;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 100%;
+}
+#wrapper {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	background-image: url(../images/basin_bg_phone.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #B4C4BA;
+}
+#header h1 {
+	font-size: 225%;
+	color:#003;
+	margin: 0;
+	padding-left: 40px;
+	text-align: center;
+}
+
+/* Basic styles */
+h1, h2, h3 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+h2, h3 {
+	font-size: 160%;
+	color: #003;
+	margin-top: 0;
+}
+h3 {
+	font-size:140%;
+}
+a {
+	color:#91784F;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover, a:active, a:focus {
+	color:#B59D77;
+	text-decoration:underline;
+}
+
+.floatleft, .floatright {
+	width: 95%;
+	max-width: 400px;
+	display: block;
+	margin: auto auto 1.5em;
+}
+
+/* Main navigation */
+#nav {
+	list-style-type: none;
+	padding: 0;
+	font-weight: bold;
+	font-size: 107%;
+	width: 308px;
+	height: 95px;
+	margin: 0 auto 5px auto;
+}
+#nav li {
+	float: left;
+}
+#nav li a {
+	display: block;
+	width:136px;
+	padding: 5px 2px;
+	margin: 0 6px 2px 6px;
+	text-align:center;
+	text-decoration: none;
+	color: #FFF;
+	background-color: #003;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#nav a:hover, #nav a:active, #nav a:focus {
+	background-color:#26267F;
+}
+#nav li:last-child a {
+	margin-left: 76px;
+}
+
+/* Content containers */
+.content-medium, .aside {
+	background-color:#fff;
+	padding:20px;
+	margin: 10px;
+	font-size:88%;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+.content-medium {
+	margin-top: 5px;
+}
+.aside {
+	padding:10px;
+}
+#dining {
+	background-image: url(../images/chef.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding-top:140px;
+}
+
+/* Footer */
+#footer {
+	color: #FFF;
+	background-color: #003;
+	padding: 5px 30px;
+	clear:both;
+}
+#footer p {
+	font-size: 88%;
+	margin: 0 0 5px 0;
+}
+
+/* Rules for tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	#wrapper {
+		max-width: 700px;
+		background-image: url(../images/basin_bg_tab.jpg);
+	}
+	#header h1 {
+		font-size: 363%;
+		padding-left: 0;
+		padding-top: 10px;
+		margin-bottom: 0px;
+	}
+	/* Main navigation */
+	#nav {
+		width: 660px;
+		height: 45px;
+	}
+	#nav li a {
+		width: 120px;
+		margin: 0 1px;
+		padding: 10px 5px;
+	}
+	#nav li:last-child a {
+		margin-left: 1px;
+	}
+	/* Inline images */
+	.floatleft {
+		float: left;
+		margin: 3px 12px 3px 0;
+	}
+	.floatright {
+		float: right;
+		margin: 3px 0 3px 12px;
+	}
+	.floatleft, .floatright {
+		-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+		-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+		box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	}
+	
+	/* Background images for individual sections */
+	#sake {
+		background-position:440px bottom;
+		background-repeat:no-repeat;
+		background-image: url(../images/sake_tab.jpg);
+	}
+	#sake p {
+		width:400px;
+	}
+}
+/* Alternate rules for screen widths in the range 481-680 px */
+@media only screen and (min-width: 481px) and (max-width: 680px) {
+	#header h1 {
+		font-size: 300%;
+		padding-top:7px;
+	}
+	#nav {
+		width: 396px;
+		height: 85px;
+	}
+	#nav li a {
+		margin-bottom: 2px;
+	}
+	#nav li:nth-child(4) a {
+		margin-left: 66px;
+	}
+	.floatleft, .floatright {
+		float: none;
+		margin: 10px auto;
+	}
+	#sake {
+		background-position:360px bottom;
+	}
+	#sake p {
+		width:320px;
+	}
+}
+/* Border for screens wider than 702px */
+@media only screen and (min-width: 702px) {
+	#wrapper {
+		border-left: #594431 solid 1px;
+        border-right: #594431 solid 1px;
+	}
+}
+
+/* Rules for desktops */
+@media only screen and (min-width: 769px) {
+	#wrapper {
+		width: 980px;
+		background-image: url(../images/basin_bg.jpg);
+	}
+	#header h1 {
+		font-size: 413%;
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+	}
+	/* Navigation menu */
+	#nav {
+		width: auto;
+		height: 45px;
+		margin: 0 auto 15px 35px;
+	}
+	#nav li a {
+		width: 160px;
+		padding: 10px;
+		margin: 0 1px;
+	}
+	#nav li:last-child a {
+		margin-left: 1px;
+	}
+	/* Main content and sidebar */
+	.content-medium, .aside {
+		margin: 20px;
+	}
+	.content-medium {
+		float: left;
+		width: 640px;
+		margin-top: 5px;
+		display: inline; /* Fixes double-margin bug in IE 6 & 7 */
+	}
+	.aside {
+		margin-left: 720px;
+	}
+	/* Inline images */
+	.floatleft {
+		float: left;
+		margin: 3px 12px 3px 0;
+	}
+	.floatright {
+		float: right;
+		margin: 3px 0 3px 12px;
+	}
+	/* Drop shadows */
+	.floatleft, .floatright, .content-medium, .aside {
+		-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+		-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+		box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	}
+	/* Background images for individual sections */
+	#sake {
+		background-image: url(../images/sake.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom;
+		padding-bottom: 140px;
+	}
+}

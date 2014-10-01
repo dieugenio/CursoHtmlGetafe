@@ -1,0 +1,61 @@
+@charset "utf-8";
+#wrapper {
+	width: 980px;
+	background-image: url(../images/basin_bg.jpg);
+	border-left: #594431 solid 1px;
+    border-right: #594431 solid 1px;
+}
+#header h1 {
+	font-size: 413%;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}
+/* Navigation menu */
+#nav {
+	width: auto;
+	height: 45px;
+	margin: 0 auto 15px 35px;
+}
+#nav li a {
+	width: 160px;
+	padding: 10px;
+	margin: 0 1px;
+}
+#nav li:last-child a {
+	margin-left: 1px;
+}
+/* Main content and sidebar */
+.content-medium, .aside {
+	margin: 20px;
+}
+.content-medium {
+	float: left;
+	width: 640px;
+	margin-top: 5px;
+	display: inline; /* Fixes double-margin bug in IE 6 & 7 */
+}
+.aside {
+	margin-left: 720px;
+}
+/* Inline images */
+.floatleft {
+	float: left;
+	margin: 3px 12px 3px 0;
+}
+.floatright {
+	float: right;
+	margin: 3px 0 3px 12px;
+}
+/* Drop shadows */
+.floatleft, .floatright, .content-medium, .aside {
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+/* Background images for individual sections */
+#sake {
+	background-image: url(../images/sake.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding-bottom: 140px;
+}
