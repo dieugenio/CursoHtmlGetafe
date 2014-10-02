@@ -5,71 +5,232 @@
 		<title>Phone Gap | Home</title>
 		<link rel="stylesheet" href="styles/normalize.css" type="text/css">
 		<style type="text/css">
+			* {
+				font-family: 'adobe-clean','HelveticaNeue', Helvetica, Arial, sans-serif;
+			}
+			h1, h2 {
+				font-weight: 200;
+				margin-right: 20px;
+			}
 			body {
 				background-image: url(imagenes/bg_texture.jpg);
 			}
 			header {
 				width: auto;
-				/* quitar luego */
-				outline: 1px solid yellow;
 				height: 50px;
 				background-color: #111;
+				position: fixed;
 			}
 			nav {
 				width: 1140px;
-				outline: 1px solid green;
 				height: 50px;
 				margin: auto;
 			}
-			nav li {
+			nav ul {
+				margin: 0;
+				padding: 0;
+				float: left;
+			}
+			nav ul li {
 				list-style: none;
 				display: inline-block;
+				height: 50px;
+				margin: 0;
+				padding: 0;
 			}
-			nav li a {
+			nav ul li a {
+				color: white;
+				float: left;
+				font-family: 'adobe-clean','HelveticaNeue', Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				height: 16px;
+				padding: 16px 25px 18px 25px;
+				text-decoration: none;
+				text-shadow: 1px 1px 3px black;
+				transition: background 0.5s;
+			}
+			nav ul li .logo-phone-gap {
+				height: 50px;
+				width: 130px;
+				background-image: url(imagenes/icons.png);
+				background-repeat: no-repeat;
+				background-size: 110px 31px;
+				background-position: 5px 10px;
+				padding: 0;
+			}
+			nav ul li a:hover {
+				background-color: lightblue;
+			}
+			.icono_descarga a {
+				background-image: url(imagenes/descargar.png);
+				background-repeat: no-repeat;
+				background-position: 5px 5px;
+				background-color: #209dc2;
+				border-radius: 5px;
+				border: 1px solid #41627c;
+				color: white;
+				float: right;
+				height: 30px;
+				margin-top: 10px;
+				width: 80px;
+				text-shadow: 1px -1px 2px gray;
+				transition: background 0.5s;
+			}
+			.icono_descarga a span {
+				display: inline-block;
+				float: right;
+				margin-top: 10px;
+				margin-right: 10px;
+				font-size: 0.8em;
+			}
+			.icono_descarga a:hover {
+				background-color: #47BFE0;
+			}
+			article.video {
+				width: 1140px;
+				padding-top: 50px;
+				margin: auto;
+			}
+			article.video section.contenido {
+				margin: 0;
+				width: 60%;
+				float: left;
+				height: 300px;
+			}
+			article.video aside.video_aside {
+				margin: 0;
+				width: 40%;
+				float: right;
+				height: 300px;
+			}
+			article.video section.botones {
+				clear: both;
+			}
+			.video .video_aside .video_frame {
+				height: 260px;
+				margin: 10px;
+				border: 5px solid black;
+				border-radius: 8px 8px 8px 8px;
+				background-color: white;
+				position: relative;
+			}
+			.video .video_aside .video_frame .video_label {
+				position: absolute;
+				top: 60%;
+				left: 36%;
+				color: white;
+				font-size: 24px;
+			}
+			.video .video_aside .video_frame .video_label a {
 				color: white;
 				text-decoration: none;
-				float: left;
-				padding: 2px 10px 2px 10px;
+				font-family: serif;
 			}
-			nav ul {
-				float: left;
+			.video .video_aside .video_frame .video_content {
+				height: 245px;
+				background-color: #27A1C5;
+				background-image: url(imagenes/hero_tile.png);
+				margin: 5px;
+				border: 3px solid black;
+				border-radius: 5px 5px 5px 5px;
+				transition: background 0.5s;
 			}
-			nav li a:hover {
-				background-color: lightblue;
-				color: #111;
+			.video .video_aside .video_frame .video_content a {
+				text-decoration: none;
+				color: white;
+				display: block;
+				height: 100%;
+				width: 100%;
+				display: table;
 			}
-			nav figure {
-				float: left;	
-				vertical-align: center;
-			}
-			.icono_descarga {
-				outline: 1px solid red;
-				margin-top: 10px;
-				background-image: url(imagenes/sprite.png);
+			.video .video_aside .video_frame .video_content a span {
+				display: table-cell;
+				background-image: url(imagenes/play.png);
 				background-repeat: no-repeat;
-				background-position: -775px -55px;
-				width: 40px;
-				height: 40px;
-				float: right;
+				background-position: center;
 			}
-		</style>	
+			.video .video_aside .video_frame .video_content:hover {
+				background-color: #0C0C0C;
+			}
+			.video .install_gap {
+				float: left;
+				display: table;
+				height: 40px;
+				border-radius: 5px;
+				border: 1px solid #41627c;
+				background-image: linear-gradient(#5cb7d2, #219dc2);
+				margin-right: 20px;
+			}
+			.video .getting_started_guides {
+				float: left;
+				display: table;
+				height: 40px;
+				border: 1px solid #85939e;
+				border-radius: 5px;
+				background-image: linear-gradient(white, lightgray);
+			}
+			.video .install_gap a {
+				display: table-cell;
+				vertical-align: middle;
+				padding: 0 10px 0 10px;
+				text-decoration: none;
+				text-shadow: 1px -1px 2px gray;
+				color: white;
+			}
+			.video .getting_started_guides a {
+				display: table-cell;
+				vertical-align: middle;
+				padding: 0 10px 0 10px;
+				text-decoration: none;
+				text-shadow: 1px 1px 2px white;
+				color: black;
+			}
+			.video .install_gap a:hover {
+				color: white;
+				background-color: #54c2e2;
+				border-radius: 5px;
+			}
+			.video .getting_started_guides a:hover {
+				color: #47BFE0;
+				background-image: linear-gradient(white, #cfd8da);
+				border-radius: 5px;
+			}
+
+		</style>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<figure id="logo">
-					<img src="imagenes/icons.png" alt="">
-				</figure>
 				<ul>
+					<li><a class="logo-phone-gap" href="#"></a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Developer</a></li>
+					<li><a href="#">Enterprise</a></li>
 					<li><a href="#">Community</a></li>
 					<li><a href="#">Apps</a></li>
-					<li><a href="#">Support</a></li>
 				</ul>
-				<span class="icono_descarga">asdfadfsdd</span>
+				<div class="icono_descarga"><a href="#"><span>Install</span></a></div>
 			</nav>
 		</header>
+		<article class="video">
+			<section class="contenido">
+				<h1>Easily create apps using the web technologies you know and love: HTML, CSS, and JavaScript</h1>
+				<h2>PhoneGap is a free and open source framework that allows you to create mobile apps using standardized web APIs for the platforms you care about.</h2>
+				<div id="botones"></div>
+			</section>
+			<aside class="video_aside">
+				<div class="video_frame">
+					<div class="video_label"><a href="#">Watch Intro</a></div>
+					<div class="video_content"><a href="#"><span></span></a>
+					</div>
+				</div>
+			</aside>
+			<section class="botones">
+				<div class="install_gap"><a href="">Install Phone Gap &#9654;</a></div>
+				<div class="getting_started_guides"><a href="#">Getting Started Guides &#9654;</a></div>
+				<div class="video_footer"></div>
+			</section>
+		</article>
 
 	</body>
 </html>
