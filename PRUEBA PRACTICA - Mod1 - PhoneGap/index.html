@@ -154,7 +154,7 @@
 			.video .video_aside .video_frame .video_content:hover {
 				background-color: #0C0C0C;
 			}
-			.install_gap {
+			.blue_button {
 				float: left;
 				display: table;
 				height: 40px;
@@ -163,7 +163,7 @@
 				background-image: linear-gradient(#5cb7d2, #219dc2);
 				margin-right: 20px;
 			}
-			.getting_started_guides {
+			.white_button {
 				float: left;
 				display: table;
 				height: 40px;
@@ -171,7 +171,7 @@
 				border-radius: 5px;
 				background-image: linear-gradient(white, lightgray);
 			}
-			.install_gap a {
+			.blue_button a {
 				display: table-cell;
 				vertical-align: middle;
 				padding: 0 10px 0 10px;
@@ -179,7 +179,7 @@
 				text-shadow: 1px -1px 2px gray;
 				color: white;
 			}
-			.getting_started_guides a {
+			.white_button a {
 				display: table-cell;
 				vertical-align: middle;
 				padding: 0 10px 0 10px;
@@ -187,18 +187,18 @@
 				text-shadow: 1px 1px 2px white;
 				color: black;
 			}
-			.install_gap a:hover {
+			.blue_button a:hover {
 				color: white;
 				background-color: #54c2e2;
 				border-radius: 5px;
 			}
-			.getting_started_guides a:hover {
+			.white_button a:hover {
 				color: #47BFE0;
 				background-image: linear-gradient(white, #cfd8da);
 				border-radius: 5px;
 			}
 			.separator {
-				height: 50px;
+				height: 20px;
 				clear: both;
 				width: 100%;
 				background-color: rgba(0,0,0,0.0);
@@ -233,8 +233,7 @@
 				background-size: 180px auto;
 				background-position: 30px 65px;
 			}
-			#wrap_deploy_bg2 span, #wrap_deploy_bg4 span
-			{
+			#wrap_deploy_bg2 span, #wrap_deploy_bg4 span {
 				color: white;
 				display: inline-block;
 				font-size: 0.9em;
@@ -253,6 +252,7 @@
 				background-position: 10px 10px;
 			}
 			.adobe_content {
+				box-shadow: 0px 0px 3px black;
 				width: 1140px;
 				margin: auto;
 				display: table;
@@ -276,7 +276,7 @@
 				width: 40%;
 				line-height: 1.5em;
 			}
-			.adobe_content .adobe_title .install_gap {
+			.adobe_content .adobe_title .blue_button {
 				margin-top: 30px;
 			}
 			.adobe_bg1 {
@@ -295,8 +295,84 @@
 				font-size: 1em;
 				line-height: 1.5em;
 			}
+			.in_the_cloud_content {
+				box-shadow: 0px 0px 3px black;
+				width: 1140px;
+				margin: auto;
+				display: table;
+				height: 360px;
+				background-image: url(imagenes/cloud.jpg);
+				color: white;
+				-webkit-animation: cloudmove 20s linear infinite;
+			}
 
-			
+			@-webkit-keyframes cloudmove {
+				to { background-position-x: -600px; }
+			} 
+
+			.robot_in_the_cloud {
+				text-align: center;
+				display: table-cell;
+				width: 40%;
+				vertical-align: center;
+				background-position: 50% 40%;
+				background-size: 300px 255px;
+				background-repeat: no-repeat;
+				background-image: url(imagenes/graphic_build_bot.png);
+				-webkit-animation: robotmove 3s linear infinite;
+			}
+			@-webkit-keyframes robotmove {
+				0% { background-position-y: 50px;}
+				50% { background-position-y: 60px; }
+				100% { background-position-y: 50px; }
+			}
+
+			.title_in_the_cloud {
+				margin-top: 50px;
+				text-align: left;
+				vertical-align: top;
+				width: 60%;
+				line-height: 1.2em;
+			}
+
+			.platforms_in_the_cloud {
+				background-image: url(imagenes/platforms.png);
+				background-repeat: no-repeat;
+				height: 48px;
+			}
+
+			.apps_created_with_content {
+				width: 1140px;
+				margin: auto;
+			}
+
+			.apps_created_with_content .row {
+				display: table;
+				width: 100%;
+			}
+
+			.apps_created_with_content .col {
+				margin: 5px;
+				display: table-cell;
+				width: 33%;
+				height: 140px;
+				border-radius: 2px;
+				box-shadow: 0 0 2 black;
+				border: 1px solid transparent;
+				text-align: left;
+				display: table-cell;
+				vertical-align: top;
+				background-repeat: no-repeat;
+			}
+
+			#col1 { background-image: url(imagenes/healthtap.jpg); }
+			#col2 { background-image: url(imagenes/healthtap.jpg); }
+			#col3 { background-image: url(imagenes/healthtap.jpg); }
+			#col4 { background-image: url(imagenes/healthtap.jpg); }
+			#col5 { background-image: url(imagenes/healthtap.jpg); }
+			#col6 { background-image: url(imagenes/healthtap.jpg); }
+
+
 		</style>
 	</head>
 	<body>
@@ -318,8 +394,8 @@
 				<h1>Easily create apps using the web technologies you know and love: HTML, CSS, and JavaScript</h1>
 				<h2>PhoneGap is a free and open source framework that allows you to create mobile apps using standardized web APIs for the platforms you care about.</h2>
 				<div id="botones">
-					<div class="install_gap"><a href="">Install Phone Gap &#9654;</a></div>
-					<div class="getting_started_guides"><a href="#">Getting Started Guides &#9654;</a></div>
+					<div class="blue_button"><a href="">Install Phone Gap &#9654;</a></div>
+					<div class="white_button"><a href="#">Getting Started Guides &#9654;</a></div>
 				</div>
 			</section>
 			<aside class="video_aside">
@@ -348,7 +424,7 @@
 			<section class="adobe_title">
 				<h2>Adobe PhoneGap Enterprise</h2>
 				<p>Enterprise mobile application development and management across channels and platforms</p>
-				<div class="install_gap">
+				<div class="blue_button">
 					<a href="#">Get More Info</a>
 				</div>
 			</section>
@@ -358,6 +434,40 @@ CHANNEL MARKETING</span></section>
 MANAGEMENT</span></section>
 			<section class="adobe_bg3"><span class="adobe_bg_footer">ENTERPRISE
 SUPPORT & TRAINING</span></section>
+		</article>
+
+		<div class="separator"></div>
+
+		<article class="in_the_cloud_content">
+			<section class="robot_in_the_cloud">
+			</section>
+			<section class="title_in_the_cloud">
+				<h2>Package mobile apps in the cloud</h2>
+				<p>PhoneGap Build takes the pain out of compiling PhoneGap apps. Get app-store ready apps without the headache of maintaining native SDKs. Our PhoneGap Build service does the work for you by compiling in the cloud.</p>
+				<div class="platforms_in_the_cloud"></div>
+				<div class="blue_button">
+					<a href="#">Try it Now! &#9654;</a>
+				</div>
+				<div class="white_button">
+					<a href="#">Find out more &#9654;</a>
+				</div>
+			</section>
+		</article>
+
+		<div class="separator"></div>
+
+		<article class="apps_created_with_content">
+			<h2>Apps created with PhoneGap</h2>
+			<section class="row">
+				<div class="col" id="col1">aa</div>
+				<div class="col" id="col2">bb</div>
+				<div class="col" id="col3">cc</div>
+			</section>
+			<section class="row">
+				<div class="col" id="col4">dd</div>
+				<div class="col" id="col5">ee</div>
+				<div class="col" id="col6">ff</div>
+			</section>
 		</article>
 
 
