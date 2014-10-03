@@ -8,33 +8,39 @@
 			* {
 				font-family: 'adobe-clean','HelveticaNeue', Helvetica, Arial, sans-serif;
 			}
-			h1, h2 {
+			section.contenido h1, section.contenido h2 {
 				font-weight: 200;
 				margin-right: 20px;
+				line-height: 1.5;
 			}
+			section.contenido h2 {
+				line-height: 1.4;
+			}
+
 			body {
 				background-image: url(imagenes/bg_texture.jpg);
 			}
 			header {
-				width: auto;
-				height: 50px;
 				background-color: #111;
+				height: 50px;
 				position: fixed;
+				width: 100%;
+				z-index: 1;
 			}
 			nav {
-				width: 1140px;
 				height: 50px;
 				margin: auto;
+				width: 1140px;
 			}
 			nav ul {
+				float: left;
 				margin: 0;
 				padding: 0;
-				float: left;
 			}
 			nav ul li {
-				list-style: none;
 				display: inline-block;
 				height: 50px;
+				list-style: none;
 				margin: 0;
 				padding: 0;
 			}
@@ -50,13 +56,13 @@
 				transition: background 0.5s;
 			}
 			nav ul li .logo-phone-gap {
-				height: 50px;
-				width: 130px;
 				background-image: url(imagenes/icons.png);
 				background-repeat: no-repeat;
 				background-size: 110px 31px;
 				background-position: 5px 10px;
+				height: 50px;
 				padding: 0;
+				width: 130px;
 			}
 			nav ul li a:hover {
 				background-color: lightblue;
@@ -79,69 +85,65 @@
 			.icono_descarga a span {
 				display: inline-block;
 				float: right;
+				font-size: 0.8em;
 				margin-top: 10px;
 				margin-right: 10px;
-				font-size: 0.8em;
 			}
 			.icono_descarga a:hover {
 				background-color: #47BFE0;
 			}
 			article.video {
-				width: 1140px;
-				padding-top: 50px;
 				margin: auto;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				width: 1140px;
 			}
 			article.video section.contenido {
+				float: left;
+				height: 350px;
 				margin: 0;
 				width: 60%;
-				float: left;
-				height: 300px;
 			}
 			article.video aside.video_aside {
+				background-position: 0 20px;
+				background-image: url(imagenes/pantalla.png);
+				background-repeat: no-repeat;	
+				float: right;
+				height: 350px;
 				margin: 0;
 				width: 40%;
-				float: right;
-				height: 300px;
-			}
-			article.video section.botones {
-				clear: both;
 			}
 			.video .video_aside .video_frame {
-				height: 260px;
-				margin: 10px;
-				border: 5px solid black;
-				border-radius: 8px 8px 8px 8px;
-				background-color: white;
+				margin-top: 33px;
+				margin-left: 8px;
 				position: relative;
 			}
 			.video .video_aside .video_frame .video_label {
-				position: absolute;
-				top: 60%;
-				left: 36%;
 				color: white;
 				font-size: 24px;
+				left: 36%;
+ 				position: absolute;
+				top: 60%;
 			}
 			.video .video_aside .video_frame .video_label a {
+				font-family: serif;
 				color: white;
 				text-decoration: none;
-				font-family: serif;
 			}
 			.video .video_aside .video_frame .video_content {
-				height: 245px;
 				background-color: #27A1C5;
 				background-image: url(imagenes/hero_tile.png);
+				height: 240px;
+				width: 423px;
 				margin: 5px;
-				border: 3px solid black;
-				border-radius: 5px 5px 5px 5px;
 				transition: background 0.5s;
 			}
 			.video .video_aside .video_frame .video_content a {
 				text-decoration: none;
 				color: white;
-				display: block;
+				display: table;
 				height: 100%;
 				width: 100%;
-				display: table;
 			}
 			.video .video_aside .video_frame .video_content a span {
 				display: table-cell;
@@ -152,7 +154,7 @@
 			.video .video_aside .video_frame .video_content:hover {
 				background-color: #0C0C0C;
 			}
-			.video .install_gap {
+			.install_gap {
 				float: left;
 				display: table;
 				height: 40px;
@@ -161,7 +163,7 @@
 				background-image: linear-gradient(#5cb7d2, #219dc2);
 				margin-right: 20px;
 			}
-			.video .getting_started_guides {
+			.getting_started_guides {
 				float: left;
 				display: table;
 				height: 40px;
@@ -169,7 +171,7 @@
 				border-radius: 5px;
 				background-image: linear-gradient(white, lightgray);
 			}
-			.video .install_gap a {
+			.install_gap a {
 				display: table-cell;
 				vertical-align: middle;
 				padding: 0 10px 0 10px;
@@ -177,7 +179,7 @@
 				text-shadow: 1px -1px 2px gray;
 				color: white;
 			}
-			.video .getting_started_guides a {
+			.getting_started_guides a {
 				display: table-cell;
 				vertical-align: middle;
 				padding: 0 10px 0 10px;
@@ -185,17 +187,116 @@
 				text-shadow: 1px 1px 2px white;
 				color: black;
 			}
-			.video .install_gap a:hover {
+			.install_gap a:hover {
 				color: white;
 				background-color: #54c2e2;
 				border-radius: 5px;
 			}
-			.video .getting_started_guides a:hover {
+			.getting_started_guides a:hover {
 				color: #47BFE0;
 				background-image: linear-gradient(white, #cfd8da);
 				border-radius: 5px;
 			}
+			.separator {
+				height: 50px;
+				clear: both;
+				width: 100%;
+				background-color: rgba(0,0,0,0.0);
+			}
+			.wrap_deploy {
+				width: 100%;
+				background-color: rgba(0,0,0,0.1);
+			}
 
+			.wrap_deploy_content {
+				width: 1140px;
+				margin: auto;
+				display: table;
+				height: 240px;
+			}
+			.wrap_deploy_content div {
+				text-align: center;
+				display: table-cell;
+				width: 20%;
+				vertical-align: middle;
+				background-size: 100px 200px;
+				background-repeat: no-repeat;
+			}
+
+			#wrap_deploy_bg1 {
+				background-image: url(imagenes/diagram_web_tech.svg);
+				background-size: 220px auto;
+				background-position: 10px 10px;
+			}
+			#wrap_deploy_bg2, #wrap_deploy_bg4 {
+				background-image: url(imagenes/flecha.png);
+				background-size: 180px auto;
+				background-position: 30px 65px;
+			}
+			#wrap_deploy_bg2 span, #wrap_deploy_bg4 span
+			{
+				color: white;
+				display: inline-block;
+				font-size: 0.9em;
+				line-height: 1.2em;
+				text-align: left;
+				width: 140px;
+			}
+			#wrap_deploy_bg3 {
+				background-image: url(imagenes/diagram_package.svg);
+				background-size: 220px auto;
+				background-position: 10px 10px;
+			}
+			#wrap_deploy_bg5 {
+				background-image: url(imagenes/diagram_devices.svg);
+				background-size: 220px auto;
+				background-position: 10px 10px;
+			}
+			.adobe_content {
+				width: 1140px;
+				margin: auto;
+				display: table;
+				height: 240px;
+				background-color: #2d3033;
+				color: white;
+			}
+			.adobe_content section {
+				text-align: center;
+				display: table-cell;
+				width: 20%;
+				vertical-align: bottom;
+				background-position: 50% 40%;
+				background-size: 120px 120px;
+				background-repeat: no-repeat;
+			}
+			.adobe_content .adobe_title {
+				text-align: left;
+				vertical-align: top;
+				padding: 20px;
+				width: 40%;
+				line-height: 1.5em;
+			}
+			.adobe_content .adobe_title .install_gap {
+				margin-top: 30px;
+			}
+			.adobe_bg1 {
+				background-image: url(imagenes/ent-features-1.png);
+			}
+			.adobe_bg2 {
+				background-image: url(imagenes/ent-features-2.png);
+			}
+			.adobe_bg3 {
+				background-image: url(imagenes/ent-features-3.png);
+			}
+			.adobe_bg_footer {
+				display: inline-block;
+				padding: 10px 25px 20px 25px;
+				margin-bottom: -10px;
+				font-size: 1em;
+				line-height: 1.5em;
+			}
+
+			
 		</style>
 	</head>
 	<body>
@@ -216,21 +317,49 @@
 			<section class="contenido">
 				<h1>Easily create apps using the web technologies you know and love: HTML, CSS, and JavaScript</h1>
 				<h2>PhoneGap is a free and open source framework that allows you to create mobile apps using standardized web APIs for the platforms you care about.</h2>
-				<div id="botones"></div>
+				<div id="botones">
+					<div class="install_gap"><a href="">Install Phone Gap &#9654;</a></div>
+					<div class="getting_started_guides"><a href="#">Getting Started Guides &#9654;</a></div>
+				</div>
 			</section>
 			<aside class="video_aside">
-				<div class="video_frame">
+ 				<div class="video_frame">
 					<div class="video_label"><a href="#">Watch Intro</a></div>
-					<div class="video_content"><a href="#"><span></span></a>
-					</div>
+					<div class="video_content"><a href="#"><span></span></a></div>
 				</div>
-			</aside>
-			<section class="botones">
-				<div class="install_gap"><a href="">Install Phone Gap &#9654;</a></div>
-				<div class="getting_started_guides"><a href="#">Getting Started Guides &#9654;</a></div>
-				<div class="video_footer"></div>
+ 			</aside>
+		</article>
+
+		<div class="separator"></div>
+
+		<article class="wrap_deploy">
+			<section class="wrap_deploy_content">
+				<div id="wrap_deploy_bg1"></div>
+				<div id="wrap_deploy_bg2"><span>Wrap your app with <strong>PhoneGap</strong></span></div>
+				<div id="wrap_deploy_bg3"></div>
+				<div id="wrap_deploy_bg4"><span>Deploy to <strong>mobile platforms!</strong></span></div>
+				<div id="wrap_deploy_bg5"></div>
 			</section>
 		</article>
+
+		<div class="separator"></div>
+
+		<article class="adobe_content">
+			<section class="adobe_title">
+				<h2>Adobe PhoneGap Enterprise</h2>
+				<p>Enterprise mobile application development and management across channels and platforms</p>
+				<div class="install_gap">
+					<a href="#">Get More Info</a>
+				</div>
+			</section>
+			<section class="adobe_bg1"><span class="adobe_bg_footer">INTEGRATE CROSS
+CHANNEL MARKETING</span></section>
+			<section class="adobe_bg2"><span class="adobe_bg_footer">MOBILE APPLICATION
+MANAGEMENT</span></section>
+			<section class="adobe_bg3"><span class="adobe_bg_footer">ENTERPRISE
+SUPPORT & TRAINING</span></section>
+		</article>
+
 
 	</body>
 </html>
