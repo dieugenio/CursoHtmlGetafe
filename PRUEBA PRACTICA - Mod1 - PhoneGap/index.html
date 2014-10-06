@@ -349,29 +349,46 @@
 			.apps_created_with_content .row {
 				display: table;
 				width: 100%;
+				border-spacing: 10px;
 			}
 
 			.apps_created_with_content .col {
-				margin: 5px;
-				display: table-cell;
-				width: 33%;
-				height: 140px;
-				border-radius: 2px;
-				box-shadow: 0 0 2 black;
-				border: 1px solid transparent;
-				text-align: left;
-				display: table-cell;
-				vertical-align: top;
 				background-repeat: no-repeat;
+				background-size: 550px;
+				border-radius: 15px;
+				border: 1px solid transparent;
+				box-shadow: 0 0 4px 1px gray;
+				display: table-cell;
+				height: 140px;
+				margin: 5px;
+				padding: 0;
+				text-align: left;
+				vertical-align: top;
+				width: 33%;
+			}
+
+			.apps_created_with_content #col1 a {
+				opacity: 0;
+				color: white;
+				display: inline-block;
+				border-radius: 15px;
+				border: 1px solid transparent;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+			}
+
+			.apps_created_with_content .col:hover a {
+				opacity: 1;
+				background-color: #54c2e2;
 			}
 
 			#col1 { background-image: url(imagenes/healthtap.jpg); }
-			#col2 { background-image: url(imagenes/healthtap.jpg); }
-			#col3 { background-image: url(imagenes/healthtap.jpg); }
-			#col4 { background-image: url(imagenes/healthtap.jpg); }
-			#col5 { background-image: url(imagenes/healthtap.jpg); }
-			#col6 { background-image: url(imagenes/healthtap.jpg); }
-
+			#col2 { background-image: url(imagenes/bbc.jpg); }
+			#col3 { background-image: url(imagenes/untapped2.jpg); }
+			#col4 { background-image: url(imagenes/rormix-banner.png); }
+			#col5 { background-image: url(imagenes/browserquest.jpg); }
+			#col6 { background-image: url(imagenes/myheartcamera.jpg); }
 
 		</style>
 	</head>
@@ -459,14 +476,19 @@ SUPPORT & TRAINING</span></section>
 		<article class="apps_created_with_content">
 			<h2>Apps created with PhoneGap</h2>
 			<section class="row">
-				<div class="col" id="col1">aa</div>
-				<div class="col" id="col2">bb</div>
-				<div class="col" id="col3">cc</div>
+				<div class="col" id="col1">
+					<a href="#">
+						<span class="apps_title">HealthTap - find doctors and free answers</span>
+						<span class="apps_label">by HealthTap</span>
+					</a>
+				</div>
+				<div class="col" id="col2"></div>
+				<div class="col" id="col3"></div>
 			</section>
 			<section class="row">
-				<div class="col" id="col4">dd</div>
-				<div class="col" id="col5">ee</div>
-				<div class="col" id="col6">ff</div>
+				<div class="col" id="col4"></div>
+				<div class="col" id="col5"></div>
+				<div class="col" id="col6"></div>
 			</section>
 		</article>
 
