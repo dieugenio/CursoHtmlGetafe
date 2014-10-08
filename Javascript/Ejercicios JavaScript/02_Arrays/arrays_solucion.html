@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Arrays</title>
+		<script>
+			var estaciones = ['Primavera','Verano','Otoño','Invierno'];
+			var puntosCardinales = new Array('Norte','Sur','Este','Oeste');
+
+			var puntosCardinales2 = new Array();
+			puntosCardinales2[0] = 'Norte';
+			puntosCardinales2[1] = 'Sur';
+			puntosCardinales2[2] = 'Este';
+			puntosCardinales2[3] = 'Oeste';
+
+			var puntosCardinales3 = new Array();
+			// Añadir elementos al final
+			puntosCardinales3.push('NORTE','SUR');
+			puntosCardinales3.push('ESTE','OESTE');
+
+			var puntosCardinales4 = new Array();
+			// Añadir elementos al final
+			puntosCardinales4.unshift('NORTE','SUR');
+			puntosCardinales4.unshift('ESTE','OESTE');
+
+			document.write('Catálogo de moda: ' + estaciones[2] + '-' + estaciones[3] + '<br>');
+			document.write('Puntos cardinales (1) : ' + puntosCardinales[0] + ',' +
+puntosCardinales[1] + ',' + 
+puntosCardinales[2] + ',' + 
+puntosCardinales[3] + '<br>');
+
+			document.write('Puntos cardinales (2) : ' + puntosCardinales2[0] + ',' +
+puntosCardinales2[1] + ',' + 
+puntosCardinales2[2] + ',' + 
+puntosCardinales2[3] + '<br>');
+
+			document.write('Puntos cardinales (3) : ' + puntosCardinales3[0] + ',' +
+puntosCardinales3[1] + ',' + 
+puntosCardinales3[2] + ',' + 
+puntosCardinales3[3] + '<br>');
+
+			document.write('Puntos cardinales (4) : ' + puntosCardinales4[0] + ',' +
+puntosCardinales4[1] + ',' + 
+puntosCardinales4[2] + ',' + 
+puntosCardinales4[3] + '<br>');
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
