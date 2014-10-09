@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var estado=new Array() ;
+			estado[0]='Alabama';
+			estado[1]='Arizona';
+			estado[2]='Arkansas';
+			estado[3]='California'; 
+			estado[4]='Colorado';
+			estado[5]='Connecticut';
+			estado[6]='Florida';
+			estado[7]='Georgia';
+			estado[8]='Kansas';
+			estado[9]='Kentucky';
+			//Eliminar estados California, Colorado y Connecticut
+			estado.splice(3,3);
+			console.log(estado);
+
+			//A continuación, de Georgia, añadir Illinois, Indiana y Iowa
+			estado.splice(5,0,'Illinois','Indiana','Iowa');
+			console.log(estado);
+
+			//Sustituir Alabama por Alaska
+			estado.splice(0,1,'Alaska');
+			console.log(estado);
+
+		</script>
+	</body>
+</html>
