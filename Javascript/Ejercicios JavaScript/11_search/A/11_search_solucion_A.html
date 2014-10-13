@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ES">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var telefono='169-123-123';
+			//var exp_regular=/PON AQUÍ TU REGEX/;
+			var exp_regular=/\b\d{3}\b[ -]\b\d{3}\b[ -]\b\d{3}\b/  // ^[X-Z]-?\d{7}-?[A-Z]$
+			if(telefono.search(exp_regular)==-1) {
+			 document.write('INCORRECTO');
+			}
+			else {
+			 document.write('OK');
+			}
+		</script>
+	</body>
+</html>

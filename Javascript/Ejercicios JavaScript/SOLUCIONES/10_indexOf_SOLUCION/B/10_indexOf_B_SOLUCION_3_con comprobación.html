@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script>
+
+do{
+	var correo= prompt('Escriba su correo electrónico:','');
+	var arroba= correo.indexOf('@');
+}while(arroba==-1)
+
+document.write('Tu nombre de usuario es: ');
+document.write(correo.slice(0,arroba));
+document.write('<br>');
+document.write('Tu gestor de correo es: ');
+document.write(correo.slice(arroba+1));
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
