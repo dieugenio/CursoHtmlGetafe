@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array con For</title>
+<style type="text/css">
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+var nombremes=['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Juliio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+var j=0; i=0;
+while ((j>=0&&j<4)){
+	if (j==0){document.write('<br/>Primer Trimestre<br/>');}
+    if (j==1){document.write('<br/>Segundo Trimestre<br/>');}
+    if (j==2){document.write('<br/>Tercer Trimestre<br/>');}
+    if (j==3){document.write('<br/>Cuarto Trimestre<br/>');}
+	
+
+    while (i>=(3*j)&&i<3*(j+1)) {
+      document.write(nombremes[i]+'<br/>');
+	  i++;
+    }
+	j++;	 
+}
+</script>
+</body>
+</html>

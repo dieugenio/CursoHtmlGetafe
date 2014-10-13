@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>indexOf B</title>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<script>
+			var correo = prompt('Escriba su correo electrónico').toLowerCase();
+			var corte = correo.indexOf('@');
+			if(corte==-1) {
+				alert('El email introducido NO ES VÁLIDO. Introduzca un correo de gmail válido');
+			} else {
+				var largo = correo.length;
+				var usuario = correo.slice(0,corte);
+				var gestor = correo.slice(corte+1);
+
+				document.write('Tu nombre de usuario es: ' + usuario + '<br>');
+				document.write('Tu gestor de correo es: ' + gestor);
+			}
+		</script>
+	</body>
+</html>
