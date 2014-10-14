@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Match A Solucion</title>
+	</head>
+	<body>
+		<script>
+			var texto = 'el teléfono fíjo de la empresa es 956123123, el fax es 34-956222333 y el móvil es el 34622444555';
+
+			var exp_reg_telefonos = /^[3-4]?\b\d{9}\b$/g;
+			var telefonos = texto.match(exp_reg_telefonos);
+
+			alert(telefonos);
+
+		</script>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Regex Solucion B</title>
+	</head>
+	<body>
+		<script>
+			var telefono1='666 123 123';
+			var telefono2='666-123-123';
+			var telefono3='666123123';
+			var telefono4='666 12 12 12';
+			var telefono5='666-12-12-12';
+			var telefono6='666121212';
+			//var exp_regular=/PON AQUÍ TU REGEX/;
+			// ^[X-Z]-?\d{7}-?[A-Z]$
+
+			var exp_regular=/^\d{3}[ -]?\d{3}[ -]?\d{3}$|^\d{3}[ -]?\d{2}[ -]?\d{2}[ -]?\d{2}$/;
+
+			var telefono;
+			for(tel=1;tel<=6;tel++) {
+				switch(tel) {
+					case 1:
+						telefono = telefono1;
+						break;
+					case 2:
+						telefono = telefono2;
+						break;
+					case 3:
+						telefono = telefono3;
+						break;
+					case 4:
+						telefono = telefono4;
+						break;
+					case 5:
+						telefono = telefono5;
+						break;
+					case 6:
+						telefono = telefono6;
+						break;
+				}
+				if(telefono.search(exp_regular)==-1) {
+					document.write('Teléfono ' + tel + ' (' + telefono + ') INCORRECTO');
+				}
+				else {
+					document.write('Teléfono ' + tel + ' (' + telefono + ') OK');
+				}
+				document.write('<br>');
+			}
+
+			// if(telefono1.search(exp_regular)==-1) {
+			//  document.write('Teléfono 1 ' + telefono1 + ' INCORRECTO');
+			// }
+			// else {
+			//  document.write('Teléfono 1 ' + telefono1 + ' OK');
+			// }
+			// document.write('<br>');
+
+		</script>
+</html>
