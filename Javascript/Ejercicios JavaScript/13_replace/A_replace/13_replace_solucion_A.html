@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var fecha='31/12/2015';
+			
+			var regExpFecha = /\//g;
+
+			var fecha2 = fecha.replace(regExpFecha,'-');
+			var fecha3 = fecha2.replace( fecha2.slice(6,10), fecha2.slice(8,10) );
+
+			document.write(fecha.replace(regExpFecha,' ')+'<br>');
+			document.write(fecha2+'<br>');
+			document.write(fecha3+'<br>');
+
+		</script>
+	</body>
+</html>

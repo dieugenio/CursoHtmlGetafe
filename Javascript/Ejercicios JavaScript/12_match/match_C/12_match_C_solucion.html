@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Match C Solucion</title>
+	</head>
+	<body>
+		<script>
+			var texto = 'la web de María Begoña es www.maria-bego.com, la de Manuel Rodríguez García es http://manuel-rguez.es y la de Peter O\'Donnel Smith es http://www.peter.co.uk';
+
+			var expRegNames = /([A-Z]\S+[ ])+/g;
+			var expRegWebs = /((\bhttps?:\/\/)|(\bwww\.))[^, ]+/g;
+			var nombres = texto.match(expRegNames);
+			var webs = texto.match(expRegWebs);
+
+			// Mejor alternativa a for(i=0...)
+			document.write('Estos son mis compañeros de trabajo:<br>');
+			for(i in nombres){
+				document.write('- ' + nombres[i] + '<br>');
+			}
+			document.write('Estos son sus webs:<br>');
+			for(j in webs){
+				document.write('- ' + webs[j] + '<br>');
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Match B Solucion</title>
+	</head>
+	<body>
+		<script>
+			var texto = 'el email de Cristina y María es cristina@gmail.com, el de Manuel es manuel@hotmail.es y el de Peter es peter@outlook.co.uk';
+
+			var expRegNames = /[A-Z][\wáéíóú]+/g;
+			var expRegEmails = /[a-z]*(\@[\w]+(\.\w+)*)/g;
+			var nombres = texto.match(expRegNames);
+			var emails = texto.match(expRegEmails);
+
+			// Mejor alternativa a for(i=0...)
+			document.write('Estos son mis compañeros de trabajo:<br>');
+			for(i in nombres){
+				document.write('- ' + nombres[i] + '<br>');
+			}
+			document.write('Estos son sus correos electrónicos:<br>');
+			for(j in emails){
+				document.write('- ' + emails[j] + '<br>');
+			}
+
+		</script>
+	</body>
+</html>

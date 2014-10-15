@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script>
+var texto='el teléfono fijo de la empresa es 956123123, el fax es +34-956222333 y el móvil es el 34 622444555 ';
+var exp_regular=/\b[+]?(\d{1,3})?[- ]?\d{9}\b/g;
+
+var telefonos = texto.match(exp_regular);
+
+var i=0;
+
+for(i in telefonos){
+	document.write(telefonos[i]+'<br\>');
+	}
+/*
+while(i<telefonos.length){
+	document.write(telefonos[i]+'<br\>');
+	i++;
+	}
+*/
+/*for(var i=0; i<telefonos.length; i++){
+	document.write(telefonos[i]+'<br\>');
+	}*/
+</script>
+</head>
+
+<body>
+</body>
+</html>

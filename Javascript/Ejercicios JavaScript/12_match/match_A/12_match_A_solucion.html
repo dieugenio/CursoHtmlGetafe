@@ -6,12 +6,24 @@
 	</head>
 	<body>
 		<script>
-			var texto = 'el teléfono fíjo de la empresa es 956123123, el fax es 34-956222333 y el móvil es el 34622444555';
+			var texto = 'el teléfono fíjo de la empresa es 956123123, el fax es 34-956222333 y el móvil es el 34 622444555';
 
-			var exp_reg_telefonos = /^[3-4]?\b\d{9}\b$/g;
+			var exp_reg_telefonos = /\b[+]?(\d{1,3})?[- ]?\b\d{9}\b/g;
 			var telefonos = texto.match(exp_reg_telefonos);
 
-			alert(telefonos);
+			// Mejor alternativa a for(i=0...) 
+			for(i in telefonos){
+				document.write('Teléfono ' + (i+1) + ' : ' + telefonos[i] + '<br>');
+			}
+
+			// if(telefonos.length>0) {
+			// 	for(i=0;i<telefonos.length;i++){
+			// 		document.write('Teléfono ' + (i+1) + ' : ' + telefonos[i] + '<br>');
+			// 	}
+
+			// } else {
+			// 	document.write('No se encontraron números telefónicos en el texto<br>')
+			// }
 
 		</script>
 </html>

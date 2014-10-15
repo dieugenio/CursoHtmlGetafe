@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script>
+var texto='la web de María Begoña es www.maria-bego.com , la de Manuel Rodríguez García es http://manuel-rguez.es y la de Peter Smith es http://www.peter.co.uk'
+
+var regex_companeros= /[A-Z][a-z]+/g;
+
+var lista_companeros= texto.match(regex_companeros);
+
+document.write('Estos son mis compañeros:<br\>');
+for(i in lista_companeros){
+	document.write('- '+lista_companeros[i]+'<br\>');
+}
+
+
+
+/*
+var regex_correos=/[-\w\.]+@[A-z0-9]+(\.[A-z]+)+/g;
+var lista_correos=texto.match(regex_correos);
+
+document.write('<br\>Estas son sus webs:<br\>');
+
+for(i in lista_correos){
+	document.write('- '+lista_correos[i]+'<br\>');
+}
+*/
+</script>
+</head>
+
+<body>
+</body>
+</html>
