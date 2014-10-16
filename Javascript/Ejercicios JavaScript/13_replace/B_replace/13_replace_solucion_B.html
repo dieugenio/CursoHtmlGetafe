@@ -7,15 +7,12 @@
 	<body>
 		<script>
 			var texto ='Mis compañeros de la organización son María Begoña, Andrés Suárez y Ángela Cigüeñas.';
-			var letras   = ['Á','É','Í','Ó','Ú','á','é','í','ó','ú','ñ','ü'];
-			var remplazos= ['A','E','I','O','U','a','e','i','o','u','n','u'];
-			//var laLetra, elReemplazo
-			for(i in letras){
-				while(texto.indexOf(letras[i])>=0){
-			 		texto = texto.replace(/letras[i]/g, remplazos[i]);
-				}
-			}
+			var letras     = [/[áäà]/g,/[éëè]/g,/[íïì]/g,/[óöò]/g,/[úüù]/g,/ñ/g];
+			var reemplazos = ['a','e','i','o','u','n'];
 			texto = texto.toLowerCase();
+			for(i in letras){
+		 		texto = texto.replace(letras[i], reemplazos[i]);
+			}
 			document.write(texto + '<br>');
 		</script>
 	</body>
