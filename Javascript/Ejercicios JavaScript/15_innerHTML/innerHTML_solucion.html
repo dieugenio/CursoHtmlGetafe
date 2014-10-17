@@ -22,14 +22,17 @@
 			normales[i].style.backgroundColor = 'yellow';
 		}
 
-		var enlaces = document.getElementsByTagName('a');
-		for(i=0;i<enlaces.length;i++){
-			enlaces[i].innerHTML = 'Enlace '+(i+1);
-		}
+		// var enlaces = document.getElementsByTagName('a');
+		// for(i=0;i<enlaces.length;i++){
+		// 	enlaces[i].innerHTML = 'Enlace '+(i+1);
+		// }
 
-		// var parrafos = document.getElementsByTagName('p');
-		// parrafos[parrafos.length-1].style.color = 'red';
-		// parrafos[parrafos.length-1].innerHTML = 'EL PIE DE LA PÁGINA';
+		var enlaces = document.getElementsByTagName('a');
+		var j = 0;
+		for(i in enlaces){
+			j++;
+			enlaces[i].innerHTML = 'Enlace '+j;
+		}
 
 		var parrafos = document.getElementsByTagName('p');
 		with(parrafos[parrafos.length-1]) {
