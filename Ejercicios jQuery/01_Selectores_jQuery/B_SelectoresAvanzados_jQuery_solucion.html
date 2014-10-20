@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio de selectores</title>
+<script src="jquery.js"></script>
+<script>
+  $(document).ready(function() {
+  	
+    // El primer h1 será de color naranja
+    $('h1:first').css({ color: 'orange'})
+
+    // El enlace con el href="index.html" será de color rojo
+    $('[href="index.html"]').css({ color: 'red'});
+
+    // El label que contenga la palabra "Contraseña" será de color 'fuchsia'
+    $('label:contains("Contraseña")').css({ color: 'fuchsia'});
+
+    // Los href que empiecen por "experiencia" serán de color verde
+    $('[href^="experiencia"]').css({ color: 'green'});
+
+    // Los input con el atributo "required" tendrán un borde rojo de 2 píxeles
+    $('input:required').css({ border: '2px solid red'});
+
+    // Los input cuyo name contenga la palabra "nombre" tendrán un fondo amarillo
+    $('input[name*="nombre"]').css({ backgroundColor: 'yellow'});
+
+    // Los ítems de lista impares tendrán un fondo rosa
+    $('ul li:even').css({ backgroundColor: 'pink'});
+
+    // Los ítems de lista pares tendrán un fondo azul claro
+    $('ul li:odd').css({ backgroundColor: 'lightBlue'});
+
+    //Los strong que contengan la palabra "Ipsum" tendrán un color azul
+    $('strong:contains("Ipsum")').css({ color: 'blue'});
+
+    // Los dos primeros em tendrán un color marrón
+    $('em:lt(2)').css({ color: 'brown'});
+
+  });
+</script>
+</head>
+
+<body>
+<h1>Luspendisse in <em>volutpat</em></h1>
+<div id="menu">
+<ul>
+	<li><a href="index.html">INICIO</a></li>
+	<li><a href="experienciaformador.html">EXPERIENCIA COMO FORMADOR</a></li>
+	<li><a href="experienciadisenador.html">EXPERIENCIA COMO DISEÑADOR</a></li>
+	<li><a href="experienciafotografo.html">EXPERIENCIA COMO FOTÓGRAFO</a></li>
+	<li><a href="contacto.html">CONTACTO</a></li>
+</ul>
+<form>
+    <div>
+        <label>Apellidos y nombre</label>
+      <input type="text" name="apellidosynombre" />
+    </div>
+	<div>
+        <label>Nombre de Usuario</label>
+        <input type="text" name="nombreusuario" required="required" />
+    </div>
+    <div>
+    <label>Contraseña</label>
+    <input type="text" name="contrasena" required />
+    </div>
+    <div>
+    <label>Cósdigo Postal</label>
+    <input type="text" name="cp" />
+    </div>
+  	<input type="submit" value="ENVIAR DATOS" />
+</form>
+
+</div>
+<div id="contenido"><h1>Ipsum <em>dolor</em> sit <em>amet</em></h1>
+  
+
+     
+  <p><strong>Lorem Ipsum </strong>nulla pretium. <strong>Suspendisse gravida</strong>, metus a scelerisque <em>sollicitudin</em>, lacus velit 
+  <strong>ultricies</strong> nis. <span class="destacado">Etiam sagittis <strong>tortor</strong></span> sed arcu <a href="">sagittis tristique</a>.</p>
+</div>
+</body>
+</html>
