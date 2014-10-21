@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+$('h1').prepend('¡¡ Qué bien me lo paso con ');
+$('h1').append(' !!');
+$('h1').after('<h1>Es tremendamente fácil</h1>');
+$('h1').css({color:'blue', border:'1px solid black'});
+$('h1+h1').css({color:'green'});
+$('h2').text('Se me pasa el tiempo volando');
+$('h2').css({color:'red', 'text-shadow':'15px 15px 3px gray'});
+
+
+//Mismo código, pero simplificado:
+/*
+$('h1')
+.prepend('¡¡ Qué bien me lo paso con ')
+.append(' !!')
+.after('<h1>Es tremendamente fácil</h1>')
+.css({color:'blue', border:'1px solid black'});
+$('h1+h1').css({color:'green', border:'1px solid black'});
+$('h2')
+.text('Se me pasa el tiempo volando')
+.css({color:'red', 'text-shadow':'15px 15px 3px gray'});
+*/
+
+});
+
+</script>
+</head>
+
+<body>
+<h1>jQUERY</h1>
+<h2> Me encanta </h2>
+
+</body>
+</html>
