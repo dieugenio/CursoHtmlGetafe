@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo con Each de jQuery</title>
+		<script src="jquery.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+		<script>
+			$(function() {
+				var cuantos = 0;
+				$('a').each(function(i) {
+					cuantos++;
+					document.write( 'Enlace ' + cuantos + ': ' + $(this).attr('title') + '<br>');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><a href="http://www.elmundo.com" title="Diario El Mundo">El Mundo</a></li>
+			<li><a href="http://www.elpais.com" title="Diario El País">El País</a></li>
+			<li><a href="http://www.abc.es" title="Diario ABC">ABC</a></li>
+		</ul>
+	</body>
+</html>

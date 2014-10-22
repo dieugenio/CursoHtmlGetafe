@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo ATTR</title>
+		<script src="../../jquery.js"></script>
+		<script>
+			// comentamos la llamada al metodo ready del documento y sustituimos
+			// por la forma corta, (más abajo): $(function() {...}) 
+			// $(document).ready(function(){
+			// });
+			$(function() {
+				// Mostramos un alert con el atributo src del elemento img
+				$('img').attr('src', 'enfadado.jpg');
+			});
+		</script>
+	</head>
+	<body>
+		<img src="feliz.jpg" alt="carita feliz">
+		<img src="enfadado.jpg" alt="carita enfadada">
+	</body>
+</html>
