@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready(function() {
+
+$('#azul').mouseover( function(){
+	$('h1').css('background','blue');
+})
+$('#rojo').mouseover( function(){
+	$('h1').css('background','red');
+})
+$('#verde').mouseover( function(){
+	$('h1').css('background','green');
+})
+$('#amarillo').mouseover( function(){
+	$('h1').css('background','yellow');
+})
+$('#naranja').mouseover( function(){
+	$('h1').css('background','orange');
+})
+});
+</script>
+<body>
+<ul>
+	<li id="azul">Azul</li>
+    <li id="rojo">Rojo</li>
+    <li id="verde">Verde</li>
+    <li id="amarillo">Amarillo</li>
+    <li id="naranja">Naranja</li>
+</ul>
+<h1>CAMBIAR EL COLOR DE FONDO DE ESTE TEXTO</h1>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Documento sin título</title>
+		<script src="jquery.js"></script>
+		<script>
+		$(function() {
+			var boton=$('input[value="Mostrar producto"]');
+			boton.hover(mostrarProducto, quitarProducto);
+			function mostrarProducto() {
+				$('div').html("<img src='bici.jpg' alt='Aqui va una bicicleta'>");
+			}
+			function quitarProducto() {
+				$('div').html('');
+			}
+		})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Mostrar producto"/>
+		<div></div>
+	</body>
+</html>
