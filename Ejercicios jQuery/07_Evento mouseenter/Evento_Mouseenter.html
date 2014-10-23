@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery.js"></script>
+<title>Documento sin título</title>
+<script>
+	$(function() {
+		$('li').mouseleave( 
+			function() { 
+				$(this).css('backgroundColor', '');
+			}
+		);
+		$('li:contains("Azul")').mouseenter( 
+			function() { 
+				$(this).css('backgroundColor', 'blue');
+			}
+		);
+		$('li:contains("Rojo")').mouseenter( 
+			function() { 
+				$(this).css('backgroundColor', 'red');
+			}
+		);
+		$('li:contains("Verde")').mouseenter( 
+			function() { 
+				$(this).css('backgroundColor', 'green');
+			}
+		);
+		$('li:contains("Amarillo")').mouseenter( function() { 
+			$(this).css('backgroundColor', 'yellow');
+		});
+		$('li:contains("Naranja")').mouseenter( function() { 
+			$(this).css('backgroundColor', 'orange');
+		});
+	});
+</script>
+</head>
+<body>
+<ul>
+	<li>Azul</li>
+	<li>Rojo</li>
+	<li>Verde</li>
+	<li>Amarillo</li>
+	<li>Naranja</li>
+</ul>
+</body>
+</html>

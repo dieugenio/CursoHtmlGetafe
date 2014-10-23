@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Documento sin título</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(function() {
+				$('input').focus( 
+					function() {
+						$(this).attr('value','');
+					}
+				);
+
+				$('#usuario').blur( 
+					function() { 
+						if($(this).attr('value')=='') {
+							$(this).attr('value', 'usuario');
+						}
+					}
+				);
+
+				$('#contrasena').blur( 
+					function() { 
+						var valor=$(this).attr('value');
+						if(valor=='') {
+							$(this).attr('value', 'contraseña');
+						}
+					}
+				);
+
+			});
+		</script>
+	</head>
+	<body>
+		<form>
+		    <input type="text" id="usuario" value="usuario"/>
+		    <input type="text" id="contrasena" value="contraseña"/>
+		    <input type="submit"/>
+		</form>
+	</body>
+</html>
