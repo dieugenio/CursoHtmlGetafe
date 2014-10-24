@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+	<head>
+	<meta charset="utf-8">
+		<title>Documento sin título</title>
+		<style type="text/css">
+			div{ 
+				background-color: cyan;
+				width: 400px;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script>
+			$(function(){
+				$('#mostrar').attr('disabled','disabled');
+
+				$('#mostrar').click( function() {
+					$('div').show(500);
+					$(this).attr('disabled','disabled');
+					$('#esconder').removeAttr('disabled');
+				})
+
+				$('#esconder').click( function() {
+					$('div').hide(500);
+					$(this).attr('disabled','disabled');
+					$('#mostrar').removeAttr('disabled');
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<button id="esconder">ESCONDER</button>
+		<button id="mostrar">MOSTRAR</button>
+		<div>
+			<h1>Efectos Hide y Show</h1>
+			<p>Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, vehicula nec eleifend ut, ullamcorper porta dolor. Aenean urna quam, eleifend a eros in, pellentesque hendrerit risus. Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Aliquam erat volutpat. Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+		</div>
+	</body>
+</html>

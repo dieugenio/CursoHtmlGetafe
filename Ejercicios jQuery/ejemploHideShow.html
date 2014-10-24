@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo Hide y Show</title>
+		<style type="text/css">ç
+			h1 {
+				background-color: red;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script>
+		$(function() {
+			$('h1').hide();
+			$('#uno').show(10000, 'swing');
+			$('#dos').show(10000, 'linear');
+		})
+		</script>
+	</head>
+	<body>
+		<h1 id="uno">TITULAR UNO</h1>
+		<h1 id="dos">TITULAR DOS</h1>
+	</body>
+</html>

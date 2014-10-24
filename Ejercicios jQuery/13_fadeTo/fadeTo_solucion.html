@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio FadeTo</title>
+		<script src="jquery.js"></script>
+		<script>
+		$(function() {
+			$('img').mouseover(function() {
+				$(this).stop().fadeTo(200,0.2);
+			});
+			$('img').mouseout(function() {
+				$(this).stop().fadeTo(200,1);
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<h1>Efecto fadeTo con mouseout y mouseover</h1>
+		<img src="facebook.gif" />
+		<img src="twitter.gif" />
+		<img src="linkedin.gif" />
+		<img src="pinterest.gif" />
+	</body>
+</html>

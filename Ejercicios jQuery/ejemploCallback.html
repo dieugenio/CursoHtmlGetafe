@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo Callback</title>
+		<style type="text/css">
+			h1 {
+				color: black;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script>
+			$(function() {
+				$('h1').hide(5000,'swing', function() {
+					$('h1').css('color','red');
+					$('h1').show(5000);
+				} );
+			})
+		</script>
+	<!--
+	-->
+	</head>
+	<body>
+		<h1 id="uno">TITULAR UNO</h1>
+	</body>
+</html>
