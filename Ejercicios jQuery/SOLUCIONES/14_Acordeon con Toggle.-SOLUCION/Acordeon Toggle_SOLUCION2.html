@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+
+*{
+	padding:0;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+p {	
+color:teal;
+line-height:26px;}
+div{
+	background:lightblue;
+	width:490px;
+	padding:15px;
+	}
+h1{
+	color:white;
+	background:teal;
+	width:500px;
+	padding:5px 5px 5px 15px;
+	margin-top:10px;
+	}
+img { 
+	float: left;
+	margin: 0 10px 5px 0;}
+button {
+	padding:20px;
+	font-weight:bold;
+	color:teal;
+	}
+</style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+$('#efecto_toggle').click( function(){
+	$('#primero').toggle(1000);
+});
+$('#efecto_slidetoggle').click( function(){
+	$('#segundo').slideToggle(1000);
+});
+$('#efecto_fadetoggle').click( function(){
+	$('#tercero').fadeToggle(1000);
+});
+$('button').click(function(){
+	$('div').slideToggle(1000);
+});
+
+});
+</script>
+</head>
+
+<body>
+<h1 id="efecto_toggle">Mostrar efecto <em>toggle</em></h1>
+<div id="primero">
+<img src="elefante.jpg" />
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Aliquam erat volutpat. Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, tristique felis et aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+<h1 id="efecto_slidetoggle">Mostrar efecto <em>slideToggle</em></h1>
+<div id="segundo">
+<img src="perro.jpg" />
+<p> Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Aliquam erat volutpat.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, vehicula nec eleifend ut, ullamcorper porta dolor. Aenean urna quam, eleifend a eros in, pellentesque hendrerit risus. Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+<h1 id="efecto_fadetoggle">Mostrar efecto <em>fadeToggle</em></h1>
+<div id="tercero">
+<img src="hipo.jpg" />
+<p>Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per nostra, per inceptos himenaeos.Aliquam erat volutpat. Aenean, eleifend a eros in, pellentesque hendrerit risus.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+<button>COMPRIMIR / EXPANDER TODOS</button>
+
+</body>
+</html>

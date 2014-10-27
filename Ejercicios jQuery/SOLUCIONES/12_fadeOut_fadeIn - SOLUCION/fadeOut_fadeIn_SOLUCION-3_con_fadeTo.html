@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+div{
+	background:yellow;
+	width:500px;
+	}
+</style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('#esconderdiv').click ( function(){
+	$('div').fadeTo('slow',0.2);
+});
+
+$('#mostrardiv').click ( function(){
+	$('div').fadeTo('slow',0.8);
+});
+
+
+});
+</script>
+</head>
+
+<body>
+<button id="esconderdiv">ESCONDER DIV</button>
+<button id="mostrardiv">MOSTRAR DIV</button>
+<div>
+<h1>Efectos fadeOut y fadeIn</h1>
+<p>Aliquam erat volutpat. Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, vehicula nec eleifend ut, ullamcorper porta dolor. Aenean urna quam, eleifend a eros in, pellentesque hendrerit risus. Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+</body>
+</html>

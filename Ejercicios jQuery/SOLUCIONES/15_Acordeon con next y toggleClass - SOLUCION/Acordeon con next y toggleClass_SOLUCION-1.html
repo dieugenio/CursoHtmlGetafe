@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+
+*{
+	padding:0;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+p {	
+color:teal;
+line-height:26px;}
+div{
+	background:lightblue;
+	width:490px;
+	padding:15px;
+	}
+h1{
+	color:white;
+	background:teal;
+	width:500px;
+	padding:5px 5px 5px 15px;
+	margin-top:10px;
+	}
+img{
+	float:left; 
+	margin: 0 10px 5px 0;
+	}
+button {
+	padding:20px;
+	font-weight:bold;
+	color:teal;
+	}
+.oculto { display:none; }
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+    
+$('h1').click(function(){
+   $(this).next().toggleClass('oculto');
+});
+$('#comprimir').click(function(){
+   $('div').addClass('oculto');
+});
+$('#expandir').click(function(){
+   $('div').removeClass('oculto');
+});
+	
+	
+});
+</script>
+
+</head>
+
+<body>
+<h1>Mostrar ELEFANTE</h1>
+<div>
+<img src="elefante.jpg" />
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Aliquam erat volutpat. Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, tristique felis et aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+<h1>Mostrar PERRO</h1>
+<div>
+<img src="perro.jpg" />
+<p> Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Aliquam erat volutpat.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, vehicula nec eleifend ut, ullamcorper porta dolor. Aenean urna quam, eleifend a eros in, pellentesque hendrerit risus. Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+<h1>Mostrar HIPOPÓTAMO</h1>
+<div>
+<img src="hipo.jpg" />
+<p>Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per nostra, per inceptos himenaeos.Aliquam erat volutpat. Aenean, eleifend a eros in, pellentesque hendrerit risus.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+<br />
+<button id="comprimir">COMPRIMIR TODOS</button>
+<button id="expandir">EXPANDIR TODOS</button>
+</body>
+</html>

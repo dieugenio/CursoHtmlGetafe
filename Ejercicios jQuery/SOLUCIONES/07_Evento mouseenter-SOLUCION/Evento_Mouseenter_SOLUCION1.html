@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+$('li:contains("Azul")').mouseenter( function(){
+	$('li:contains("Azul")').css('color','blue');	
+});
+$('li:contains("Rojo")').mouseenter( function(){
+	$('li:contains("Rojo")').css('color','red');	
+});
+$('li:contains("Verde")').mouseenter( function(){
+	$('li:contains("Verde")').css('color','green');	
+});
+$('li:contains("Amarillo")').mouseenter( function(){
+	$('li:contains("Amarillo")').css('color','yellow');	
+});
+$('li:contains("Naranja")').mouseenter( function(){
+	$('li:contains("Naranja")').css('color','orange');	
+});
+
+
+$('li').mouseleave( function(){
+	$('li').css('color','');	
+});
+	
+});
+</script>
+</head>
+<body>
+<ul>
+	<li>Azul</li>
+  <li>Rojo</li>
+  <li>Verde</li>
+  <li>Amarillo</li>
+  <li>Naranja</li>
+</ul>
+</body>
+</html>

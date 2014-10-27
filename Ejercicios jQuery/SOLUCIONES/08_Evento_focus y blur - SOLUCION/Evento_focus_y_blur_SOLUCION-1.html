@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+
+$('#usuario').focus( function () {
+	$(this).attr('value','');
+});
+
+$('#usuario').blur( function () {
+	$(this).attr('value','usuario');
+});
+
+$('#contrasena').focus( function () {
+	$(this).removeAttr('value');
+});
+$('#contrasena').blur( function () {
+	$(this).attr('value','contraseña');
+});
+
+
+
+});
+</script>
+
+</head>
+
+<body>
+<form>
+    <input type="text" id="usuario" value="usuario"/>
+    <input type="text" id="contrasena" value="contraseña"/>
+    <input type="submit"/>
+</form>
+</body>
+</html>

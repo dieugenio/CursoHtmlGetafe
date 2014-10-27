@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+function tapar(){
+	$(this).stop().fadeTo('fast',0.2);
+}
+function mostrar(){
+	$(this).stop().fadeTo('fast',1);
+}
+$('img').hover(tapar,mostrar );
+
+});
+</script>
+
+</head>
+
+<body>
+<h1>Efecto fadeTo con Mouseout y Mouseover</h1>
+<img src="facebook.gif" />
+<img src="twitter.gif" />
+<img src="linkedin.gif" />
+<img src="pinterest.gif" />
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+div{ 
+	background-color: cyan;
+	width: 400px;
+	}
+</style>
+<script src="jquery.js"></script>
+<script>
+$( function() {
+	
+$('#esconder').click( function(){
+	$('div').hide('slow');
+});
+$('#mostrar').click( function(){
+	$('div').show('slow');
+});
+
+});
+</script>
+</head>
+
+<body>
+<button id="esconder">ESCONDER</button>
+<button id="mostrar">MOSTRAR</button>
+<div>
+<h1>Efectos Hide y Show</h1>
+<p>Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, vehicula nec eleifend ut, ullamcorper porta dolor. Aenean urna quam, eleifend a eros in, pellentesque hendrerit risus. Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Aliquam erat volutpat. Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+</div>
+
+</body>
+</html>

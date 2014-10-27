@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+<script src="jquery-1.8.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+//Toggle Antiguo (funciona sólo en versiones anteriores a jquery 1.9)
+$('.boton').toggle(
+    function() {
+    	$('.panel').fadeOut('slow');
+			$('.boton').text('MOSTRAR');
+			
+    } ,
+    function() {
+      $('.panel').fadeIn('slow');
+			$('.boton').text('OCULTAR');
+    }
+);
+
+//Toggle Actual (funciona sólo en versiones posteriores a jquery 1.8)
+$('.boton').click( function(){
+	$('.panel').toggle('slow');
+});
+
+//Alternativa al Toggle Antiguo (funciona en cualquier versión de jquery 1.8)
+var i=true;
+$('.boton').click(function(){
+	if (i==true){
+    	$('.panel').fadeOut('slow');
+			$('.boton').text('MOSTRAR');
+			i=false;
+  }else{
+      $('.panel').fadeIn('slow');
+			$('.boton').text('OCULTAR');
+			i=true;
+  }
+});
+
+
+//Alternativa al Toggle Antiguo (funciona sólo en versiones posteriores a jquery 1.8)
+var i=true;
+$('.boton').click(function(){
+	$('.panel').toggle('slow')
+	if (i==true){
+			$('.boton').text('MOSTRAR');
+			i=false;
+  }else{
+			$('.boton').text('OCULTAR');
+			i=true;
+  }
+});
+
+});
+</script>
+<body>
+<h1 class="boton">OCULTAR</h1>
+<div class="panel">Este es el panel</div>
+</body>
+</html>
