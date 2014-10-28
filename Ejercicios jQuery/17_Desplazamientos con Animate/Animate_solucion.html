@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio con Animate</title>
+		<style type="text/css">
+			img {
+				position: absolute;
+				top: 200px;
+				left: 0;
+				opacity: 0.2;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#mover').click( function() {
+					// $('img').css({position:'absolute', top:'200px', left: 0, opacity: 0.2});
+					$('img').animate({top: 0, left:'200px', opacity: 1}, 'slow');
+					$('img').animate({top: '200px', left:'400px'}, 'slow');
+					$('img').animate({top: '200px', left: 0, opacity: 0.2}, 'slow');
+					// $('img').css({position:'absolute', top:'200px', left: 0, opacity: 0.2});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="mover">MOVER PÁJARO</button>
+		<br />
+		<img src="bird.png"/>
+	</body>
+</html>

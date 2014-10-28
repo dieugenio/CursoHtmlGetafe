@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo Animate</title>
+		<style>
+			h1 {
+				background-color: gray;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// $('#uno').animate({width:'500px'})
+				// 		 .css({backgroundColor:'yellow'})
+				// 		 .animate({width:'1500px'}, 1000)
+				// 		 .animate({height:'500px'}, 800);
+				$('#uno').animate({width:'500px', fontSize:'3em'},1500, function(){
+$('#uno').css({backgroundColor:'yellow'})
+				})
+						 .animate({width:'1500px'}, 1000)
+						 .animate({height:'500px'}, 800);
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="uno">TITULAR UNO</h1>
+		<h1 id="dos">TITULAR DOS</h1>
+	</body>
+</html>
