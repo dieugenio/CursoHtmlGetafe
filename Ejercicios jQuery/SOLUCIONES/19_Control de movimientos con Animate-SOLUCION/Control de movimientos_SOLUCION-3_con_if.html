@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+img { 
+	position:absolute;
+	left:0;
+	top:0;
+	}
+div{
+	position:relative; 
+	z-index:1;}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+
+var posicion;
+
+$('#izquierda').click( function(){
+	posicion=parseInt($('img').css('left'),10);
+	
+	if($('img').is(':animated')){
+		$('img').stop();
+	}
+	if(posicion>0){
+		$('img').animate({left:'-=100px'},'slow');
+	}
+});	
+
+$('#derecha').click( function(){
+	posicion=parseInt($('img').css('left'),10);
+	
+	if($('img').is(':animated')){
+		$('img').stop();
+	}
+	if(posicion<300){
+		$('img').animate({left:'+=100px'},'slow');
+	}
+});	
+
+$('#arriba').click( function(){
+	posicion=parseInt($('img').css('top'),10);
+	
+	if($('img').is(':animated')){
+		$('img').stop();
+	}
+	if(posicion>0){
+		$('img').animate({top:'-=100px'},'slow');
+	}
+});	
+
+$('#abajo').click( function(){
+	posicion=parseInt($('img').css('top'),10);
+	
+	if($('img').is(':animated')){
+		$('img').stop();
+	}
+	if(posicion<300){
+		$('img').animate({top:'+=100px'},'slow');
+	}
+});	
+
+});
+</script>
+</head>
+
+<body>
+<div>
+<button id="izquierda"> < </button>
+<button id="derecha"> > </button>
+<button id="arriba"> /\ </button>
+<button id="abajo"> \/ </button>
+</div>
+
+<img src="bird.png"/>
+
+</body>
+</html>

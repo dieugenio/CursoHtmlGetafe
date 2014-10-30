@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{margin:0; padding:0;
+font-family:Arial, Helvetica, sans-serif;}
+.contenedor {
+	border: 2px solid green;
+	margin-top:100px;
+	position:relative;
+	height: 300px;
+	width: 400px;
+	background-color: green;
+	color: white;
+	overflow: hidden;
+	}
+img.uno {	
+	position:absolute;
+	top:0;
+	clip: rect(0px 400px 150px 0px);
+	transition: margin-top 1s;
+}
+img.dos {
+	position:absolute;
+	top:0;
+	clip: rect(150px 400px 300px 0px);
+	transition: margin-top 1s;
+	}
+div:hover img.uno  {
+margin-top: -150px;
+}
+div:hover img.dos  {
+margin-top: 150px;
+}
+div.texto { 
+	width: 200px;
+	margin: auto;
+	transition: transform 1s 0.5s, opacity 1s ;
+	opacity: 0;
+	}
+div.contenedor:hover div.texto {
+	transform: scale(1.5,1.5) translate(0,-30px);
+	opacity: 1;
+	}
+h1 {padding-top: 100px;}
+
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+    <div class="texto">
+      <h1>Casa rural</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris suscipit ipsum ut massa dapibus ultrices. In elit mauris, adipiscing eget. </p>
+    </div>  
+    <img class="uno" src="casarural.jpg" width="400" height="300" />  
+    <img class="dos" src="casarural.jpg" width="400" height="300" />
+</div>
+</body>
+</html>

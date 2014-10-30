@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+* {margin: 0; padding: 0; font-family:Arial, Helvetica, sans-serif;}
+.contenedor { 
+	width: 900px;
+	height: 700px;
+margin:auto;
+position: relative;
+background-image: linear-gradient(to right, darkgreen, lightgreen);
+border-radius: 30px;
+	}
+ul li{
+	list-style: none;
+background-image: linear-gradient(to right, darkgreen, lightgreen);
+	width: 100px;
+	padding: 20px;
+border-bottom: 2px solid darkgreen;
+border-radius: 30px;
+color: white;
+font-weight: bold;
+text-align: center;
+transition: all 1s;
+}
+ul li:hover {width: 150px;}
+ul li img {
+position: absolute;
+top: -600px;
+left: 200px;
+opacity: 0;
+transition: top 1s, opacity 1s;
+}
+ul li:hover img{ 
+top:50px;
+opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+    <div class="menu">
+        <ul>
+            <li> FOTO 1 <img src="img/conil.jpg" /> </li>
+            <li> FOTO 2 <img src="img/rota.jpg" /> </li>
+            <li> FOTO 3 <img src="img/madridcentro.jpg" /> </li>
+            <li> FOTO 4 <img src="img/madridrio.jpg" /> </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

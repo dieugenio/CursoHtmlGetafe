@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*	{
+	margin:0;
+	padding:0;
+}
+
+div	{
+	margin-top:50px;
+	position: relative;
+}
+
+img	{
+	margin-right:10px;
+	opacity:0.2;
+	}
+
+</style>
+<script src="jquery.js"></script>
+<script>
+	$(function(){
+		$('img').mouseenter( function() {
+			$(this).stop().animate({marginTop: "-10px", paddingBottom: "10px", opacity: 1}, 'fast');
+		});
+		$('img').mouseleave( function() {
+			$(this).stop().animate({marginTop: 0, paddingBottom: 0, opacity: 0.2}, 'fast');
+		});
+	});
+</script>
+</head>
+
+<body>
+<h1>Efecto animate</h1>
+<div>
+<img src="facebook.gif" />
+<img src="twitter.gif" />
+<img src="linkedin.gif" />
+<img src="pinterest.gif" />
+</div>
+</body>
+</html>

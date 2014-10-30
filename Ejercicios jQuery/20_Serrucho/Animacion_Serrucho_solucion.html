@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Animación de un serrucho</title>
+		<script src="jquery.js"></script>
+		<script>
+			function serruchar() {
+				$('img').animate({marginLeft: 320}, 2000);
+				$('img').animate({marginLeft: 0}, 2000, serruchar);
+			};
+			$(function() {
+				$('img').css({marginLeft: 0});
+				$('img').mouseover( function() {
+					$('img').stop(true);
+				});
+				$('img').mouseleave( function() {
+					serruchar();
+				});
+				$('img').delay(3000);
+				serruchar();
+			});
+		</script>
+	</head>
+	<body>
+		<img src="serrucho.jpg" />
+	</body>
+</html>

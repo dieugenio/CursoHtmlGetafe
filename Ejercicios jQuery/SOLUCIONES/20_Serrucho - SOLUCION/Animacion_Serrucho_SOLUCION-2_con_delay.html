@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+	
+//Crear bucle:	
+function repetir(){
+	$('img')
+	.animate({'margin-left':'100px'},5000)
+	.animate({'margin-left':'0px'},5000,repetir);}
+
+//Ejecutar bucle:
+$('img').delay(2000);
+repetir();
+
+//Parar al poner encima y continuar al salir
+$('img').mouseenter(function(){
+ 	$(this).stop(repetir);
+});
+$('img').mouseleave(function(){
+	repetir();
+});
+
+});
+</script>
+</head>
+<body>
+<img src="serrucho.jpg" />
+</body>
+</html>

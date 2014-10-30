@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Control de Movimientos con Animate</title>
+		<script src="jquery.js"></script>
+		<script>
+		/*
+			function moverIzquierda() {
+				var myLeft=parseFloat($('img').css('left'))-100;
+				if(myLeft<0){
+					myLeft=0;
+				}
+				$('img').stop().animate({left:myLeft},'slow');
+			}
+			*/
+			function moverIzquierda() {
+				var myLeft=parseFloat($('img').css('left'))-100;
+				myLeft=(myLeft<0)?0:myLeft;
+				$('img').stop().animate({left:myLeft},'slow');
+			}
+			function moverDerecha() {
+				$('img').stop().animate({left:'+=100px'},'slow');
+			}
+			function moverArriba() {
+				var myTop=parseFloat($('img').css('top'))-100;
+				myTop=(myTop<20)?20:myTop;
+				$('img').stop().animate({top:myTop},'slow');
+			}
+			function moverAbajo() {
+				$('img').stop().animate({top:'+=100px'},'slow');
+			}
+			$(function() {
+				$('#izquierda').click( moverIzquierda );
+				$('#derecha').click( moverDerecha );
+				$('#arriba').click( moverArriba );
+				$('#abajo').click( moverAbajo );
+				//Posición inicial:
+				$('img').css({position:'absolute',top:'50px',left:'0px'});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<button id="izquierda"> < </button>
+			<button id="derecha"> > </button>
+			<button id="arriba"> /\ </button>
+			<button id="abajo"> \/ </button>
+		</div>
+		<img src="bird.png"/>
+	</body>
+</html>

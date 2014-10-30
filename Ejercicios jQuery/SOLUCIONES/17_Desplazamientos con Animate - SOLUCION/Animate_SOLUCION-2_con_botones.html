@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+img {
+	position: absolute;
+	top: 200px;
+	opacity: 0.2;
+	}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+
+function mover(){
+	$('img')
+	.css({top:200, left:0, opacity:0.2})
+	.animate({top:0, left:200, opacity:1},1000)
+	.animate({top:200, left:400},1000)
+	.animate({left:0, opacity:0.2},1000);   
+}
+
+$('#reproducir').click(mover);
+$('#parar').click( function() {
+	$('img').stop();
+	});
+});
+</script>
+</head>
+
+<body>
+
+<input type="button" id="reproducir" value="MOVER PÁJARO" />
+<input type="button" id="parar" value="PARAR" />
+<br />
+<img src="bird.png"/>
+
+</body>
+</html>
