@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+
+body{ background: linear-gradient(gray, white) fixed;}
+
+div {
+	position:absolute;
+	top: 240px;
+	width: 180px;
+	height: 150px;
+	border: 2px solid gray;
+	z-index:1;
+}
+article {
+	position:absolute;
+	top: 240px;
+	width: 160px;
+	height: 130px;
+	padding: 20px 10px 0 10px;
+	background-color: yellow;
+	opacity:0;
+background-image: url(cerrar.png);
+background-repeat: no-repeat;
+background-position: 160px 5px;
+}
+.uno, .azul {left: 0px;}
+.dos, .negro {left: 190px;}
+.tres, .gris {left: 380px;}
+.cuatro, .rojo {left: 570px;}
+.cinco, .blanco {left: 760px;}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+ 
+$('div').click( function(){
+	$('article').animate({top:240,opacity:0},3000);
+	$(this).next('article')
+	.stop(true)
+	.animate({top:420,opacity:1},'slow')
+	.animate({top:400},'fast');		
+})
+
+$('article').click( function(){
+	$(this)
+	.animate({top:240,opacity:0},1000);
+})
+	
+});
+</script>
+</head>
+
+<body>
+		<div class="uno"></div>
+  	<article class="azul">
+        <h2>Coche Azul</h2>
+        <p>Aenean sed placerat lorem. Integer tempor mollis quam</p>
+    </article>
+   	<div class="dos"></div>
+  	<article class="negro">
+        <h2>Coche Negro</h2>
+        <p>Mauris gravida velit sed ligula aliquam feugiat.</p>
+    </article>
+   	<div class="tres"></div>
+  	<article class="gris">
+        <h2>Coche Gris</h2>
+        <p>Fusce imperdiet dui in 	ullamcorper adipiscing.</p>
+    </article>
+    <div class="cuatro"> </div>
+  	<article class="rojo"> 
+        <h2>Coche Rojo</h2>
+        <p>Sed feugiat elit eu augue accumsan porttitor nec et ipsum.</p>
+    </article>
+    <div class="cinco"></div>
+    <article class="blanco"> 
+        <h2>Coche Blanco</h2>
+        <p>Vivamus eleifend scelerisque mi nec ultricies.</p>
+    </article>
+    
+<img src="coches.png" />
+</body>
+</html>

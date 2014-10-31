@@ -9,7 +9,7 @@
         padding:0;
       }
       body {
-        background-color: ;
+        background: linear-gradient(gray, white) fixed;
       }
       div {
       	top: 240px;
@@ -22,12 +22,15 @@
       article {
         top: 240px;
         height: 130px;
-        background-color: yellow;
+        /*background-color: yellow;*/
+        box-shadow: 0 0 5px #888888;
         position: absolute;
         padding: 20px 10px 0 10px;
+        margin-left: 2px;
         width: 160px;
         opacity: 0;
       }
+      .close { float: right; margin-left: 150px; margin-top: -10px; cursor: pointer;}
       .uno, .azul { left: 0px;}
       .dos, .negro { left: 190px;}
       .tres, .gris { left: 380px;}
@@ -37,14 +40,16 @@
     <script src="jquery.js"></script>
     <script>
       $(function() {
-        $('div').mouseenter( function() {
-          //alert($(this).next().css("background-color"));
-          $(this).next('article')
-            .animate({opacity: 1, top: 420}, 500)
-            .animate({top: 400}, 200);
+        $('h2').before('<img class="close" src="cerrar.png" alt="boton cerrar">');
+        $('div').click( function() {
+          if($(this).next('article').css('opacity')==0){
+            $(this).next('article')
+              .animate({opacity: 1, top: 420}, 500)
+              .animate({top: 400}, 200);
+            }
         });
-        $('div').mouseleave( function() {
-          $(this).next('article').stop(true).animate({opacity: 0, top: 240}, 300);
+        $('.close').click( function() {
+          $(this).parent().stop(true).animate({opacity: 0, top: 240}, 300);
         });
       });
     </script>
