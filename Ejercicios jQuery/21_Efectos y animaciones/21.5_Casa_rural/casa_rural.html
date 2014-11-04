@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{margin:0; padding:0;
+font-family:Arial, Helvetica, sans-serif;}
+.contenedor {
+	border: 2px solid green;
+	margin-top:100px;
+	position:relative;
+	height: 300px;
+	width: 400px;
+	background-color: green;
+	color: white;
+	overflow: hidden;
+	}
+img.uno {	
+	position:absolute;
+	z-index:1;
+	top:0;
+	clip: rect(0px 400px 150px 0px);
+}
+img.dos {
+	position:absolute;
+	z-index:1;
+	top:0;
+	clip: rect(150px 400px 300px 0px);
+}
+h1 {padding-top: 100px;}
+div div{
+	width:200px;
+	margin:auto;
+	opacity: 0;
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+    <img class="uno" src="casarural.jpg" width="400" height="300" />
+    <img class="dos" src="casarural.jpg" width="400" height="300" />
+    <div>
+        <h1>Casa rural</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris suscipit ipsum ut massa dapibus ultrices. In elit mauris, adipiscing eget. </p>
+    </div>
+</div>
+</body>
+</html>

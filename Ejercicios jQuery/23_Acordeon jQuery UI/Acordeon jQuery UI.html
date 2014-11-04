@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Documento sin título</title>
+        <style>
+            .acordeon {
+                width: 600px;
+            }
+        </style>
+        <link rel="stylesheet" href="jquery-ui.css">
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $('.acordeon').accordion( {
+                    icons: {
+                        header: "ui-icon-circle-triangle-s",
+                        activeHeader: "ui-icon-circle-triangle-n"
+                    },
+                    collapsible: 'true' 
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="acordeon">
+            <h1>Mostrar ELEFANTE</h1>
+            <div >
+                <img src="elefante.jpg" />
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Aliquam erat volutpat. Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, tristique felis et aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+            </div>
+            <h1>Mostrar PERRO</h1>
+            <div>
+                <img src="perro.jpg" />
+                <p> Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Aliquam erat volutpat.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id. Quisque lectus tortor, vehicula nec eleifend ut, ullamcorper porta dolor. Aenean urna quam, eleifend a eros in, pellentesque hendrerit risus. Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+            </div>
+            <h1>Mostrar HIPOPÓTAMO</h1>
+            <div>
+                <img src="hipo.jpg" />
+                <p>Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per nostra, per inceptos himenaeos.Aliquam erat volutpat. Aenean, eleifend a eros in, pellentesque hendrerit risus.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+            </div>
+        </div>
+        <div class="botones">
+            <a href="http://www.zoomadrid.com" >ZOO DE MADRID</a>
+            <a href="http://www.faunia.es"> FAUNIA</a>
+        </div>
+    </body>
+</html>
