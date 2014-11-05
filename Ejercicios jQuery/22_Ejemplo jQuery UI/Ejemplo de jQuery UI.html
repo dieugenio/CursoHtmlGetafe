@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Documento sin título</title>
-        <link href="jquery-ui.css" rel="stylesheet" type="text/css"></style>
+        <link href="jquery-ui.css" rel="stylesheet" type="text/css">
         <style>
             #cajon {
                 width: 200px;
@@ -24,6 +24,13 @@
                     }
                 });
                 $('#seleccionable').selectable();
+                $('#paneles').accordion( {
+                    icons: {
+                        header: "ui-icon-plus",
+                        activeHeader: "ui-icon-minus"
+                    },
+                    collapsible: 'true' })
+                });
             });
         </script>
     </head>

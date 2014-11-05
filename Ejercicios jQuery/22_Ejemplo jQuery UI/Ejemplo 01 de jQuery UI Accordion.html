@@ -3,29 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>Documento sin título</title>
-        <link href="jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link href="lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link href="darkness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <script src="jquery.js"></script>
+        <script src="lightness/jquery-ui.js"></script>
         <style>
-/*            #cajon {
+            #cajon {
                 width: 200px;
                 height: 200px;
                 border: 2px solid yellow;
             }
             .ui-selecting {background: green;}
             .ui-selected {background: blue;}
-*/        
         </style>
-        <script src="jquery.js"></script>
-        <script src="jquery-ui.js"></script>
         <script>
             $(function() {
-                //$('img').draggable();
+                $('img').draggable();
+                $('h1').draggable();
                 // $('p').resizable();
                 // $('div').sortable();
-                // $('#cajon').droppable( {
-                //     drop: function() {
-                //         $(this).css({border:'2px solid red'});
-                //     }
-                // });
+                $('#cajon').droppable( {
+                    drop: function() {
+                        $(this).css({border:'2px solid red'});
+                    }
+                });
                 // $('#seleccionable').selectable();
                 $('#paneles').accordion( {
                     icons: {
@@ -33,12 +34,34 @@
                         activeHeader: "ui-icon-minus"
                     },
                     collapsible: 'true' })
-                });
+                var ciudades=['Madrid','Barcelona','Sevilla','Málaga','Jerez'];
+                $('#lugar').autocomplete({source: ciudades});
+                $('#enviar').button();
+                $.datepicker.regional['es'] = {
+                    closeText: 'Cerrar',
+                    prevText: '<Ant',
+                    nextText: 'Sig>',
+                    currentText: 'Hoy',
+                    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+                    dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                    dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+                    dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+                    weekHeader: 'Sm',
+                    dateFormat: 'dd/mm/yy',
+                    firstDay: 1,
+                    isRTL: false,
+                    showMonthAfterYear: false,
+                    yearSuffix: ''
+                };
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('#fecha').datepicker();
+                $('#fecha2').datepicker();
+                $('#pestanas').tabs();
+            });
         </script>
     </head>
-
     <body>
-
         <div id="cajon"> </div>
         <img src="elefante.jpg" />
         <img src="hipo.jpg" />
@@ -62,36 +85,40 @@
                 <p>Curabitur   dictum tellus eu turpis scelerisque, eu posuere nibh scelerisque. Nulla   feugiat vehicula nulla nec egestas. Nulla sed rutrum lectus. </p>
             </div>
         </div>
-        <form>
-            <label>ELIGE CIUDAD:</label> <input type="text" id="lugar" name="lugar" />
-            <label>ELIGE FECHA: </label><input type="text" id="fecha" name="fecha" />
-            <input type="submit" id="enviar" />
-        </form>
 
+        <div class="oscuro">
 
-        <div id="pestanas">
-            <ul>
-                <li> <a href="#pestana1" >PRIMER ENLACE</a></li>
-                <li> <a href="#pestana2" >SEGUNDO ENLACE</a></li>
-                <li> <a href="#pestana3" >TERCER ENLACE</a></li>
-            </ul>
-            
-            <div id="pestana1">
-                <p> Aenean non nisi in purus gravida rhoncus id vitae nisl. Sed ac diam sem.   Nam pretium lorem at quam semper ultricies porttitor eget sem. Fusce et   orci metus.</p>
-                <p> Maecenas at egestas odio, eget ullamcorper nulla. Cras   lectus neque, scelerisque pharetra velit at, dignissim pulvinar est. </p>
-            </div>
-           
-            <div id="pestana2">
-                <p>  Vivamus facilisis ligula nec lacus rutrum, at commodo nibh auctor. Sed   bibendum varius lectus vel sodales. In fermentum metus sed odio tempor   pellentesque. </p>
-                <p> Vestibulum mi justo, semper eu sem vel, consectetur ullamcorper augue.   Vivamus ut enim sapien. Nam dui nibh, bibendum id purus eu, dignissim   mollis odio.</p>
-            </div>
+<input type="text" id="fecha2" name="fecha2" />
 
-            <div id="pestana3">
-                <p> Curabitur urna mi, cursus ut est nec, fermentum sagittis   lorem. Sed congue quis lacus eget condimentum. Pellentesque blandit   fermentum volutpat. Etiam tincidunt dui at iaculis blandit.</p>
-                <p>Curabitur   dictum tellus eu turpis scelerisque, eu posuere nibh scelerisque. Nulla   feugiat vehicula nulla nec egestas. Nulla sed rutrum lectus. </p>
+            <form>
+                <label>ELIGE CIUDAD:</label> <input type="text" id="lugar" name="lugar" />
+                <label>ELIGE FECHA: </label><input type="text" id="fecha" name="fecha" />
+                <input type="submit" id="enviar" />
+            </form>
+
+            <div id="pestanas">
+                <ul>
+                    <li> <a href="#pestana1" >PRIMER ENLACE</a></li>
+                    <li> <a href="#pestana2" >SEGUNDO ENLACE</a></li>
+                    <li> <a href="#pestana3" >TERCER ENLACE</a></li>
+                </ul>
+                
+                <div id="pestana1">
+                    <p> Aenean non nisi in purus gravida rhoncus id vitae nisl. Sed ac diam sem.   Nam pretium lorem at quam semper ultricies porttitor eget sem. Fusce et   orci metus.</p>
+                    <p> Maecenas at egestas odio, eget ullamcorper nulla. Cras   lectus neque, scelerisque pharetra velit at, dignissim pulvinar est. </p>
+                </div>
+               
+                <div id="pestana2">
+                    <p>  Vivamus facilisis ligula nec lacus rutrum, at commodo nibh auctor. Sed   bibendum varius lectus vel sodales. In fermentum metus sed odio tempor   pellentesque. </p>
+                    <p> Vestibulum mi justo, semper eu sem vel, consectetur ullamcorper augue.   Vivamus ut enim sapien. Nam dui nibh, bibendum id purus eu, dignissim   mollis odio.</p>
+                </div>
+
+                <div id="pestana3">
+                    <p> Curabitur urna mi, cursus ut est nec, fermentum sagittis   lorem. Sed congue quis lacus eget condimentum. Pellentesque blandit   fermentum volutpat. Etiam tincidunt dui at iaculis blandit.</p>
+                    <p>Curabitur   dictum tellus eu turpis scelerisque, eu posuere nibh scelerisque. Nulla   feugiat vehicula nulla nec egestas. Nulla sed rutrum lectus. </p>
+                </div>
             </div>
         </div>
-
 
     </body>
 </html>
