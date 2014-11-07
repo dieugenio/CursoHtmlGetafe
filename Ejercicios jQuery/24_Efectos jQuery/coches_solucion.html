@@ -18,17 +18,11 @@
     }
     article {
     	position:absolute;
-    	top: 240px;
+    	top: 400px;
     	width: 160px;
     	height: 130px;
     	padding: 20px 10px 0 10px;
     	background-color: yellow;
-    }
-    .ocultar {
-      opacity: 0;
-    }
-    .mostrar {
-      opacity: 1;
     }
     .uno, .azul {left: 0px;}
     .dos, .negro {left: 190px;}
@@ -41,21 +35,17 @@
     <link rel="stylesheet" href="jquery-ui.css">
     <script>
     $(document).ready(function() {
-      //$('article').addClass('ocultar');
+      $('article').hide();
       $('div').mouseenter( function() {
-        //$(this).next('article').addClass('mostrar',1000,'bounce');
-        $(this).next('article').show('bounce',1000);
+        $(this).next('article').stop().show('bounce',2000);
       });
       $('div').mouseleave( function() {
-        console.log('sale del div');
-        //$(this).next('article').removeClass('mostrar');
-        //$(this).next('article').addClass('ocultar',1000,'bounce');
-        $(this).next('article').hide('bounce',1000);
+        $(this).next('article').stop().hide('fade',1000);
+        $(this).next('div.ui-effects-wrapper').find('article').stop().hide('fade',1000);
       });
     });
     </script>
   </head>
-
   <body>
   		<div class="uno"></div>
     	<article class="azul">

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+
+var rutaoriginal;
+var rutagrande;
+$('img').click( function(){
+    rutaoriginal = $(this).attr('src');
+    rutagrande = rutaoriginal.replace('.jpg','_grande.jpg');
+		$('#mostrargrande').html('<img src="'+rutagrande+'"/>');
+		$('#mostrargrande img').hide().fadeIn('slow');
+
+});
+
+
+});
+</script>
+</head>
+<body>
+<img src="imagenes/amarillo.jpg" />
+<img src="imagenes/azul.jpg" />
+<img src="imagenes/rojo.jpg" />
+<img src="imagenes/verde.jpg" />
+<div id="mostrargrande">
+</div>
+
+</body>
+</html>

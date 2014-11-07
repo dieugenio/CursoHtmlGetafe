@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				var aImages=$('body>img').toArray();
+				var aColors=aImages.slice();
+				var aBigs=aImages.slice();
+				for(var i=0;i<aImages.length-1;i++){
+					aColors[i]=aColors[i].replace('.jpg','._encolor.jpg');
+					aBigs[i]=aBigs[i].replace('.jpg','._engrande.jpg');
+				}
+
+				$('#anterior').css('opacity',0.3);
+
+				$('body>img').mouseleave( function() {
+					var imagenBN=$(this).attr('src').replace('_encolor.jpg','.jpg');
+					$(this).attr('src', imagenBN);
+				});
+
+				$('body>img').mouseenter( function() {
+					var imagenBN=$(this).attr('src').replace('_encolor.jpg','.jpg');
+					var imagenColor=imagenBN.replace('.jpg','_encolor.jpg');
+					var imagenGrande=imagenBN.replace('.jpg','_grande.jpg');
+
+					$(this).attr('src',imagenColor);
+					$('div img').attr('src', imagenGrande);
+
+					var i=parseInt($('div img').attr('src'));
+					if(i==0){
+						$('#siguiente').css('opacity',1);
+						$('#anterior').css('opacity',0.3);
+					} else if(i==aImages.length-1) {
+								$('#anterior').css('opacity',1);
+								$('#siguiente').css('opacity',0.3);
+							} else {
+								$('#anterior').css('opacity',1);
+								$('#siguiente').css('opacity',1);
+							}
+
+				});
+				$('#anterior').click( function() {
+					var i=parseInt($('div img').attr('src'));
+					if(i>0){
+						var newSrc=$(aImages[i-1]).attr('src').replace('_encolor.jpg','.jpg').replace('.jpg','_grande.jpg');
+						$('div img').attr('src', newSrc);
+						$('#siguiente').css('opacity',1);
+						i--;
+					}
+					if(i==0){
+						$('#anterior').css('opacity',0.3);
+					}
+				});
+				$('#siguiente').click( function() {
+					var i=parseInt($('div img').attr('src'));
+					if(i<aImages.length-1){
+						var newSrc=$(aImages[i+1]).attr('src').replace('_encolor.jpg','.jpg').replace('.jpg','_grande.jpg');
+						$('div img').attr('src', newSrc);
+						$('#anterior').css('opacity',1);
+						i++;
+					}
+					if(i==(aImages.length-1)) {
+						$('#siguiente').css('opacity',0.3);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<img src="0amarillo.jpg"/>
+		<img src="1azul.jpg" />
+		<img src="2rojo.jpg" />
+		<img src="3verde.jpg" />
+		<div id="mostrar">
+			<img src="0amarillo_grande.jpg"/>
+		</div>
+		<button id="anterior">ANTERIOR</button>
+		<button id="siguiente">SIGUIENTE</button>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+//Imágenes de sustitución
+var rutaoriginal;
+var rutanueva;
+
+
+$('body>img').mouseenter( function(){
+    rutaoriginal = $(this).attr('src');
+    rutanueva = rutaoriginal.replace('.jpg','_encolor.jpg');
+    $(this).attr('src',rutanueva);
+});
+$('body>img').mouseleave( function(){
+    $(this).attr('src',rutaoriginal);
+});
+
+//Mostrar imagen grande
+var rutagrande;
+var i;
+$('img').click( function(){
+		i=rutaoriginal.slice(1,2);
+	
+    rutagrande = rutaoriginal.replace('.jpg','_grande.jpg');
+    $('#mostrar').html('<img/>');
+    $('#mostrar img').attr('src',rutagrande);
+});
+
+//Carrusel
+var imagen=['f0amarillo_grande.jpg','f1azul_grande.jpg','f2rojo_grande.jpg', 'f3verde_grande.jpg'];
+
+$('#siguiente').click( function(){
+    if (i<(imagen.length-1)){
+        i++;
+					alert(i);
+        $('#mostrar img').attr('src',imagen[i]);
+    }else{
+        i=0;
+        $('#mostrar img').attr('src',imagen[i]);	
+    }
+});
+$('#anterior').click( function(){
+    if (i>0){
+        i=i-1;
+        $('#mostrar img').attr('src', imagen[i]);
+    }else{
+        i=imagen.length-1;
+        $('#mostrar img').attr('src', imagen[i]);	
+        }
+});
+
+});
+</script>
+</head>
+<body>
+<img src="f0amarillo.jpg"/>
+<img src="f1azul.jpg" />
+<img src="f2rojo.jpg" />
+<img src="f3verde.jpg" />
+<div id="mostrar">
+	<img src="f0amarillo_grande.jpg"/>
+</div>
+<button id="anterior">ANTERIOR</button>
+<button id="siguiente">SIGUIENTE</button>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo Carrousel</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				var imagen=['elefante.jpg','hipo.jpg','perro.jpg'];
+				var i=0;
+				$('#anterior').css('opacity',0.5);
+				$('#siguiente').click( function() {
+					if(i<imagen.length-1) {
+						i++;
+						$('#cambiar').attr('src', imagen[i]);
+					}
+					if(i==imagen.length-1){
+						$('#siguiente').css('opacity',0.5);
+					}
+					$('#anterior').css('opacity',1);
+				});
+
+				$('#anterior').click( function() {
+					if(i>0){
+						i--;
+						$('#cambiar').attr('src', imagen[i]);
+					}
+					if(i==0) {
+						$('#anterior').css('opacity',0.5);
+					}
+					$('#siguiente').css('opacity',1);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="anterior" value="ANTERIOR" />
+		<input type="button" id="siguiente" value="SIGUIENTE" />
+		<img id="cambiar" src="elefante.jpg" />
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+    
+var imagen=['elefante.jpg','hipo.jpg','perro.jpg'];
+var i=0;
+$('#siguiente').click( function(){
+	if(i<imagen.length-1){
+		i=i+1;
+		$('#cambiar').attr('src',imagen[i]).css({marginLeft:-100}).stop().animate({marginLeft:0});
+ 	}else{
+    i=0;
+    $('#cambiar').attr('src',imagen[i]).css({marginLeft:-100}).stop().animate({marginLeft:0});
+ 	}
+});
+
+$('#anterior').click( function(){
+	if(i>0){
+		i=i-1;
+		$('#cambiar').attr('src',imagen[i]).css({marginLeft:100}).stop().animate({marginLeft:0});
+	}else{
+		i=imagen.length-1;
+    $('#cambiar').attr('src',imagen[i]).css({marginLeft:100}).stop().animate({marginLeft:0});
+	}
+
+});
+
+});
+</script>
+
+
+</head>
+
+<body>
+<input type="button" id="anterior" value="ANTERIOR" />
+<input type="button" id="siguiente" value="SIGUIENTE" />
+<br />
+<img id="cambiar" src="elefante.jpg" />
+</body>
+</html>

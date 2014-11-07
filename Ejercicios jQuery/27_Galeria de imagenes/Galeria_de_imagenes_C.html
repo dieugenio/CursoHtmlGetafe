@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Galería de imágenes</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				var rutaoriginal, rutanueva, rutachica, rutagrande;
+
+				$('body>img').mouseenter( function() {
+					rutaoriginal=$(this).attr('src');
+					rutacolor=rutaoriginal.replace('.jpg','_encolor.jpg')
+					$(this).attr('src', rutacolor);
+				});
+				$('body>img').mouseleave( function() {
+					$(this).attr('src', rutaoriginal);
+				});
+				$('body>img').click( function() {
+					rutagrande=rutaoriginal.replace('.jpg','_grande.jpg');
+					$('#mostrargrande').html('<img/>');
+					$('#mostrargrande img')
+						.attr('src',rutagrande)
+						.hide().fadeIn('slow');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<img class="colores" src="imagenes/amarillo.jpg" />
+		<img class="colores" src="imagenes/azul.jpg" />
+		<img class="colores" src="imagenes/rojo.jpg" />
+		<img class="colores" src="imagenes/verde.jpg" />
+		<div id="mostrargrande">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Galería de imágenes</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				var rutaoriginal;
+				var rutagrande;
+				$('img').click( function() {
+					rutaoriginal=$(this).attr('src');
+					rutagrande=rutaoriginal.replace('.jpg','_grande.jpg');
+					$('#mostrargrande img').html('<img/>');
+					$('#mostrargrande img').attr('src',rutagrande);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<img src="imagenes/amarillo.jpg" />
+		<img src="imagenes/azul.jpg" />
+		<img src="imagenes/rojo.jpg" />
+		<img src="imagenes/verde.jpg" />
+		<div id="mostrargrande">
+		</div>
+	</body>
+</html>

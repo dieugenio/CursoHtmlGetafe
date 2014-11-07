@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Desplegables</title>
+		<style type="text/css">
+			*{
+				font-family:Arial, Helvetica, sans-serif;
+				padding:0;
+				margin: 0;
+			}
+			h1{ 
+				color: silver;
+				margin-bottom: 20px;
+			}
+			.desplegable div{
+				border-left:1px solid white;	
+				float: left;
+				height: 200px;
+				overflow: hidden;
+				width: 100px;
+			}
+			.desplegable div h2{
+				color: white;
+				margin: 5px 0 0 10px;
+				position: absolute;
+			}
+			.desplegable div.uno {
+				background-image: url(lila.jpg);
+				width: 300px;
+			}
+			.dos {
+				background-image: url(naranja.jpg);
+			}
+			.tres {
+				background-image: url(verde.jpg);
+			}
+			.desplegable p{ 
+				background-color: rgba(255,255,255,0.7);
+				height: 150px;
+				margin: 10px 0 0 100px;
+				padding: 10px;
+				width: 170px;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.desplegable div').mouseenter( function() {
+					$('.desplegable div').stop().animate({width: 100},1000);
+					$(this).stop().animate({width: 300},1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Galería de imágenes desplegable</h1>
+		<div class="desplegable">
+		    <div class="uno">
+		        <h2>Foto 1</h2>
+		        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Aliquam erat volutpat. </p>
+		    </div>
+		    <div class="dos">
+		        <h2>Foto 2</h2>
+		        <p> Nulla facilisi. Integer tellus mi, sollicitudin in vestibulum vel, suscipit non ipsum. Aliquam erat volutpat.Fusce semper lobortis tortor, quis rhoncus ipsum tristique id.  </p>
+		    </div>
+		    <div class="tres">
+		        <h2>Foto 3</h2>
+		        <p>Donec ultrices vel tortor id ultrices. Ut tristique felis et justo convallis tempus. Class aptent taciti sociosqu ad litora torquent per nostra, per inceptos himenaeos.   </p>
+		    </div>
+		</div>
+	</body>
+</html>

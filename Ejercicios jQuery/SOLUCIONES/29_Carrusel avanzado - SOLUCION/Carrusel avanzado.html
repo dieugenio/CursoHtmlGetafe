@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+
+var rutaoriginal;
+var rutanueva;
+
+$('img:not(div img)').mouseenter( function(){
+    rutaoriginal = $(this).attr('src');
+    rutanueva = rutaoriginal.replace('.jpg','_encolor.jpg');
+    $(this).attr('src',rutanueva);
+});
+$('img:not(div img)').mouseleave( function(){
+    $(this).attr('src',rutaoriginal);
+});
+
+
+});
+</script>
+</head>
+<body>
+<img src="0amarillo.jpg"/>
+<img src="1azul.jpg" />
+<img src="2rojo.jpg" />
+<img src="3verde.jpg" />
+<div id="mostrar">
+	<img src="0amarillo_grande.jpg"/>
+</div>
+<button id="anterior">ANTERIOR</button>
+<button id="siguiente">SIGUIENTE</button>
+
+</body>
+</html>
