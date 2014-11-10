@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+#paginacion a{
+	text-decoration: none;
+	margin:20px;
+	}
+#paginacion a.activeSlide { 
+	color: green;
+	font-size: 30px;
+	}
+</style>
+<script src="jquery.js"></script>
+<script src="jquery.cycle.all.js"></script>
+<script>
+$(document).ready(function() {
+
+$('#fotos').cycle({
+    timeout: 500,
+	prev: '#anterior',
+    next: '#siguiente',
+    pager: '#paginacion',
+	random: 2
+});
+$('#fotos').cycle('pause');
+$('#parar').click( function(){   
+	$('#fotos').cycle('pause');  
+});
+$('#reproducir').click( function(){   
+	$('#fotos').cycle('resume');  
+});
+$('#fotos').mouseenter( function(){   
+	$(this).cycle('pause');  
+});
+$('#fotos').mouseleave( function(){   
+	$(this).cycle('resume');  
+});
+
+
+});
+</script>
+</head>
+
+<body>
+<div id="paginacion"></div>
+<div id="fotos">
+    <img src="elefante.jpg"/>
+    <img src="hipo.jpg" />
+    <img src="perro.jpg" />
+</div>
+<input type="button" id="anterior" value="ANTERIOR"/>
+<input type="button" id="siguiente" value="SIGUIENTE"/>
+
+<input type="button" id="parar" value="STOP" />
+<input type="button" id="reproducir" value="PLAY" />
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Galería con Cycle</title>
+		<style>
+			#fotos {
+				margin: auto;
+				border: 1px solid black;
+				width: 600px;
+			}
+			#fotos div {
+				margin: auto;
+				width: 600px;
+				text-align: center;
+			}
+			#controles {
+				margin: auto;
+				text-align: center;
+			}
+			a {
+				color: gray;
+				text-decoration: none;
+				margin-left: 10px;
+			}
+			a.activeSlide {
+				font-weight: bold;
+				color: red;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script src="jquery.cycle.js"></script>
+		<script>
+			$(function() {
+				var fotos = $('#fotos').cycle({
+					fx: 'fade',
+					prev: '#anterior',
+					next: '#siguiente',
+					pager: '#paginacion',
+					timeout: 500
+					// after: onAfter1
+				});
+				// function onAfter1(curr,next,opts) {
+				// 	var caption1 = (opts.currSlide + 1) + '/' + opts.slideCount;
+				// 	$('#caption1').html(caption1);
+				// }
+				$('#parar').click( function() {
+					$('#fotos').cycle('pause');
+				});
+				$('#reproducir').click( function() {
+					$('#fotos').cycle('resume');
+				});
+				$('#fotos').cycle('pause');
+			});
+		</script>
+	</head>
+	<body>
+		<div id="controles">
+		    <button id="anterior"> < </button>
+		    <button id="parar">| |</button>
+		    <button id="reproducir">|></button>
+			<button id="siguiente"> > </button>
+			<span id="paginacion"></span>
+		</div>
+		<div id="fotos">
+		    <div><img src="conil.jpg" width="401" height="600"/></div>
+		    <div><img src="madridcentro.jpg" width="600" height="429"/></div>
+		    <div><img src="madridrio.jpg" width="600" height="401"/></div>
+		    <div><img src="rota.jpg" width="401" height="600"/></div>
+		</div>
+	</body>
+</html>

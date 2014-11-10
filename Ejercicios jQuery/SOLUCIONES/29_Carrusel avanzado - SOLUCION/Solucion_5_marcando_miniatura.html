@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+var rutaoriginal;
+var rutanueva;
+var rutagrande;
+
+//Imágenes de sustitución
+$('body>img').mouseenter( function(){
+	if($(this).attr('class')!='activo'){
+		rutaoriginal = $(this).attr('src');
+		rutanueva = rutaoriginal.replace('.jpg','_encolor.jpg');
+		$(this).attr('src',rutanueva);
+	}
+})
+$('body>img').mouseleave( function(){
+	if($(this).attr('class')!='activo'){
+    	$(this).attr('src',rutaoriginal);
+	}
+});
+
+//Imagen grande
+$('body>img').click( function(){
+	
+	rutaoriginal = $(this).attr('src');	
+  rutagrande = rutaoriginal.replace('_encolor.jpg','_grande.jpg');
+    $('#mostrar').html('<img src="'+rutagrande+'"/>');
+
+$('body>img').each(function() {
+	var sincolor=$(this).attr('src').replace('_encolor.jpg','.jpg');
+  	$(this).attr('src',sincolor);  
+});
+var concolor= $(this).attr('src').replace('.jpg','_encolor.jpg');
+$(this).attr('src',concolor);
+
+$('body>img').removeClass('activo');
+$(this).addClass('activo');
+
+})
+
+//Carrusel
+var imagen=new Array() ;
+
+$('body>img').each(function(i) {
+	imagen[i]=$(this).attr('src').replace('.jpg','_grande.jpg'); 
+});
+
+var i;
+$('#siguiente').click( function(){
+	var i= $('#mostrar').find('img').attr('src').slice(0,1);
+	if (i<(imagen.length-1)){
+        i++
+        $('#mostrar').find('img').attr('src', imagen[i]);
+    }else{
+        i=0;
+        $('#mostrar').find('img').attr('src', imagen[i]);	
+    }
+});
+$('#anterior').click( function(){
+	var i= $('#mostrar').find('img').attr('src').slice(0,1);
+    if (i>0){
+        i=i-1;
+        $('#mostrar').find('img').attr('src', imagen[i]);
+    }else{
+        i=imagen.length-1;
+        $('#mostrar').find('img').attr('src', imagen[i]);	
+        }
+});
+
+});
+</script>
+</head>
+<body>
+<img src="0amarillo.jpg"/>
+<img src="1azul.jpg" />
+<img src="2rojo.jpg" />
+<img src="3verde.jpg" />
+<div id="mostrar">
+	<img src="0amarillo_grande.jpg"/>
+</div>
+<button id="anterior">ANTERIOR</button>
+<button id="siguiente">SIGUIENTE</button>
+
+</body>
+</html>
