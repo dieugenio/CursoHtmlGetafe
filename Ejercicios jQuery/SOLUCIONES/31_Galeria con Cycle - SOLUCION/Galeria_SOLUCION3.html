@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+a{
+	color: gray;
+	text-decoration: none;
+	margin-right: 10px;
+	}
+a.activeSlide{
+	color: red;
+	font-weight: bold;
+	}
+#fotos{
+	background-color: gray;
+	margin: auto;
+}
+#fotos div {
+		text-align:center;
+		background-color: yellow;
+		width:700px; /*Es muy importante poner esta anchura para que funcione el text-align:center*/
+		}
+#controles{ 
+	width: 200px;
+	background-color: cyan;
+	margin: auto;}
+</style>
+<script src="jquery.js"></script>
+<script src="jquery.cycle.js"></script>
+<script>
+$(document).ready(function() {
+
+$('#fotos').cycle({
+	timeout: 500,
+	prev: '#anterior',
+  next: '#siguiente',
+	pager: '#controles span'
+});
+//$('#fotos').cycle('pause');  
+$('#parar').click( function(){   
+    $('#fotos').cycle('pause');  
+}); 
+$('#reproducir').click( function(){   
+    $('#fotos').cycle('resume');
+});
+
+
+});
+</script>
+</head>
+<body>
+<div id="controles">
+	<button id="anterior"> < </button>
+  <button id="parar">| |</button>
+  <button id="reproducir">|></button>
+  <button id="siguiente">></button>
+	<span id="paginacion"></span>
+</div>
+<div id="fotos">
+	<div>
+    <img src="conil.jpg" width="401" height="600"/>
+    <p>Esta es la imagen 1</p>
+ 	</div>
+  <div>
+    <img src="madridcentro.jpg" width="600" height="429"/>
+    <p>Esta es la imagen 2</p>
+	</div>
+  <div>
+    <img src="madridrio.jpg" width="600" height="401"/>
+    <p>Esta es la imagen 3</p>
+  </div>
+	<div>
+    <img src="rota.jpg" width="401" height="600"/>
+    <p>Esta es la imagen 4</p>
+  </div>
+<!--    <img src="Koala.jpg" width="1024" height="768"/>-->
+</div>
+</body>
+</html>
