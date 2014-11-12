@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario Sencillo</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('[name="dni"]').keyup( function(){ 
+					validarDNI();
+				});
+			});
+
+			function validarDNI() {
+				var regex=/^\d{8}-?[A-z]$/;
+				var dni=$([name="dni"]);
+				var valorobtenido=$('[name="dni"]').val();
+				$('[name="dni"]').next('span').html('');
+				if(valorobtenido.search(regex) == -1) {
+				 	$('[name="dni"]').next('span').html('INCORRECTO');
+				 	return false;
+				} else {
+				 	$('[name="dni"]').next('span').html('OK');
+				 	return true;
+				}
+			}
+		</script>
+		<style>
+			.mensaje {
+				display: block;
+				clear: left;
+			}
+			label {
+				float: left;
+				width: 100px;
+				line-height: 30px;
+			}
+			input {
+				margin-top: 5px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<label for="nombre">Nombre</label>
+			<input type="text" id="nombre" name="nombre" /><span class="mensaje" ></span>
+			<label for="apellido">Apellidos</label>
+			<input type="text" id="apellidos" name="apellidos" /><span class="mensaje" ></span>
+			<label for="dni">DNI</label>
+			<input type="text" id="dni" name="dni" /><span class="mensaje" ></span>
+			<label for="telefono">Teléfono</label>
+			<input type="phone" id="telefono" name="telefono" /><span class="mensaje" ></span>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email"><span class="mensaje" ></span>
+			<input type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario Sencillo</title>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('input').blur( function() {
+					$(this).next('span').remove();
+					if($(this).val()=='') {
+						$(this).after('<span>Introduce un valor</span>');
+					}
+				});
+				$('[name="dni"]').keyup( function() {
+					var regex = /^\d{8}-?[A-z]$/; 
+					var valorobtenido = $(this).val() ; 
+					$(this).next('span').remove(); 
+					if(valorobtenido.search(regex) == -1) { 
+						$(this).after('<span>Introduce un DNI válido</span>');
+					} else {
+						$(this).after('<span>Ok</span>');
+					}
+				});
+				$('[name="telefono"]').keyup( function() {
+					var regex = /^[+]?(\d{1,3})?[- ]?\b\d{9}$/; 
+					var valorobtenido = $(this).val() ; 
+					$(this).next('span').remove(); 
+					if(valorobtenido.search(regex) == -1) { 
+						$(this).after('<span>Introduce un teléfono válido</span>');
+					} else {
+						$(this).after('<span>Ok</span>');
+					}
+				});
+				$('[name="correo"]').keyup( function() {
+					var regex = /^[-\w\.]+@[A-z0-9]+(\.[A-z]+)+$/; 
+					var valorobtenido = $(this).val() ; 
+					$(this).next('span').remove(); 
+					if(valorobtenido.search(regex) == -1) { 
+						$(this).after('<span>Introduce un correo electrónico válido</span>');
+					} else {
+						$(this).after('<span>Ok</span>');
+					}
+				});
+			});
+		</script>
+		<style>
+			form div {	
+				margin-top: 10px;
+			}
+			label {
+				float: left;
+				width: 100px;
+			}
+			[type="submit"] {
+				margin-top: 20px;
+			}
+			span {
+				color: red;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<div>
+				<label for="nombre">Nombre</label>
+				<input type="text" required="required" id="nombre" name="nombre" />
+			</div>
+			<div>
+				<label for="apellido">Apellidos</label>
+				<input type="text" id="apellidos" name="apellidos" />
+			</div>
+			<div>
+				<label for="dni">DNI</label>
+				<input type="text" id="dni" name="dni" />
+			</div>
+			<div>
+				<label for="telefono">Teléfono</label>
+				<input type="text" id="telefono" name="telefono" />
+			</div>
+			<div>
+				<label for="correo">Email</label>
+				<input type="email" id="correo" name="correo">
+			</div>
+			<input type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>
