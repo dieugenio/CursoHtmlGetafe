@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+h1 { 
+background-color: gray;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$( function() {
+
+function ponerverde(){
+	$('#uno').css({'background-color':'green'});
+}
+
+$('#uno')      
+.animate({height:'200px', fontSize:'64px'}, 2000, ponerverde)
+.animate({height:'100px'}, 500, 'linear')
+.animate({width:'400px'}, 1000, 'linear');
+
+
+});
+</script>
+</head>
+<body>
+<h1 id="uno">TITULAR UNO</h1>
+<h1 id="dos">TITULAR DOS</h1>
+</body>
+</html>

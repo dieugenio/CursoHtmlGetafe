@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+h1,h2 {
+	position: relative;
+	top: 200px;
+	opacity: 0.2;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+function calcular(precio,iva){
+var precio;
+//precio=10;
+var iva;
+//iva=0.21;
+var precioconiva=precio+precio*iva;
+alert(precioconiva);
+}
+calcular(100,0.16);
+
+});
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

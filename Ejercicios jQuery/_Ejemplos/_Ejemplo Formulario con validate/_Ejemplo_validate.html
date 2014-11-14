@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <title>Documento sin título</title>
+          <style type="text/css">
+
+          </style>
+          <script src="jquery.js"></script>
+          <script src="jquery.validate.js"></script>
+          <script>
+               $(document).ready( function() {
+
+                    $('form').validate();
+
+               });
+          </script>
+     </head>
+     <body>
+          <form>
+               <label>Nombre y apellidos:</label> 
+               <input type="text" name="nombre" class="required"/> 
+               <br />
+
+               <label>Fecha de nacimiento:</label> 
+               <input type="text" name="nacimiento" class="date"/>
+               <br />
+
+               <label>Web personal:</label>
+               <input type="text" name="web" class="url"/>
+               <br />
+
+               <label>Correo electrónico:</label>
+               <input type="text" name="correo" class="email"/> 
+               <br />
+
+               <label>Teléfono:</label>
+               <input type="text" name="telefono" class="digits"/>
+               <br />
+
+               <input type="submit"/>
+          </form>
+     </body>
+</html>

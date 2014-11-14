@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+h1{
+	position:absolute;
+	top:0px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready( function() {
+
+function animacion(){
+	$('h1').animate({top:500}, 20000);
+}
+
+$('#parar').click( function(){
+		$('h1').stop();
+	});
+$('#reproducir').click(animacion);
+});
+</script>
+</head>
+<body>
+<h1>TITULAR</h1>
+<button id="parar">PARAR</button>
+<button id="reproducir">REPRODUCIR</button>
+</body>
+</html>

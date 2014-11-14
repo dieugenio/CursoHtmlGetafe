@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+label{ 
+	float:left;
+	width:100px;
+	}
+form div { margin-top:10px;}
+[type="submit"]{ margin-top: 30px;}
+form span{
+	margin-left:10px;
+	color:red;}
+form span.ok{
+	color:green;}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+
+$('[name="nombre"],[name="apellidos"]').blur( function(){
+	$(this).next('span').remove();
+	if($(this).val()==''){
+		$(this).after('<span>Introduce un valor</span>');
+	} else {
+			$(this).after('<span class="ok">OK</span>');
+	}
+	
+});
+
+$('[name="dni"]').keyup( function(){
+	var regex = /^\d{8}-?[A-z]$/;
+	var valorobtenido = $(this).val() ;
+	$(this).next('span').remove();
+	if(valorobtenido.search(regex) == -1) {
+		$(this).after('<span>Introduzca un DNI válido</span>');
+    } else {
+			$(this).after('<span class="ok">OK</span>');
+    }
+});
+$('[name=telefono]').keyup( function(){
+	var regex = /^\d{9}$/;
+	var valorobtenido = $(this).val() ;
+	$(this).next('span').remove();
+	if(valorobtenido.search(regex) == -1) {
+		$(this).after('<span>Introduzca un teléfono válido</span>');
+    } else {
+			$(this).after('<span class="ok">OK</span>');
+    }
+});
+
+$('[name="email"]').keyup( function(){
+    var regex = /^[-\w\.]+@[A-z0-9]+(\.[A-z]+)+$/;
+    var valorobtenido = $(this).val() ;
+    $(this).next('span').remove();
+    if(valorobtenido.search(regex) == -1) {
+		$(this).after('<span>Introduzca un email válido</span>');
+    } else {
+        $(this).after('<span class="ok">OK</span>');
+    }
+});
+
+
+});
+</script>
+</head>
+<body>
+<form>     
+    <div>
+        <label> Nombre </label>
+        <input type="text" name="nombre"/> 
+    </div>
+    <div>
+        <label> Apellidos </label>
+        <input type="text" name="apellidos"/> 
+    </div>
+    <div>
+        <label> DNI </label>
+        <input type="text" name="dni"/> 
+    </div>
+    <div>
+        <label> Teléfono </label>
+        <input type="number" name="telefono" /> 
+    </div>
+    <div>
+        <label> Email </label>
+        <input type="email" name="email" /> 
+    </div>
+    <input type="submit" /> 
+</form>
+
+
+</body>
+</html>

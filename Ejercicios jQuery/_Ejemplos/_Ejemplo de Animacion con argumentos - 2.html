@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+h1,h2 {
+	position: relative;
+	top: 200px;
+	opacity: 0.2;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+function mover(elemento){
+var elemento;
+
+	elemento
+	.animate({top:0, left:200, opacity:1},500)
+	.animate({top:200, left:400},500)
+	.animate({left:0, top:200, opacity:0.2},500);   
+}
+
+//Así no funcionaría bien:
+//$('#reproducir').click(mover($('h1')));
+
+//Así si funcionaría:
+$('#reproducir').click(function(){mover($('h2'))});
+
+});
+</script>
+</head>
+
+<body>
+
+<button id="reproducir">HAZ CLIC</button>
+<br />
+<h1>TITULAR UNO</h1>
+<h2>TITULAR DOS</h2>
+
+</body>
+</html>

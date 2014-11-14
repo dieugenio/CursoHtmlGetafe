@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{
+	padding:0;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.contenedor {
+	width:800px;
+	padding: 20px;
+}
+h1{
+	color:orange;
+}
+
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+
+</head>
+
+<body>
+<div class="contenedor">
+	<h1>CONTACTO</h1>
+    <form>
+    <div class="izquierda">
+        <label>Nombre: <span>*</span></label>
+        <input type="text" name="nombre" required="required" placeholder="Nombre" />
+        <p>Introduce tu nombre</p>
+        <label>Apellidos: <span>*</span></label>
+        <input type="text" name="apellidos" required="required" placeholder="Apellidos" />
+        <p>Introduce tus apellidos</p>
+        <label>DNI: <span>*</span></label>
+            <input type="text" name="dni" required="required" placeholder="01234567A"/>
+        <p>Introduce tu número de DNI, p. e. 01234567A</p>
+    </div>
+    <div class="derecha">
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" placeholder="Teléfono"/>
+        <p>Introduce tu número teléfono</p>
+        <label>Correo electrónico: <span>*</span></label>
+        <input type="email" name="email" required="required" placeholder="Correo electrónico"/>
+        <p>Introduce tu correo electrónico</p>
+        <input type="checkbox" name="informacion" value="SI" checked="checked" />
+        <label class="enlinea">Deseo recibir información.</label> 
+        <div class="informacion">
+            <input type="checkbox" name="promociones" value="ok" checked="checked" />
+            <label class="enlinea">Promociones.</label> 
+            <br />
+            <input type="checkbox" name="promociones" value="ok" checked="checked" />
+            <label class="enlinea">Novedades.</label>
+            <br />
+            <input type="checkbox" name="promociones" value="ok" checked="checked" /> 
+            <label class="enlinea">Cursos.</label>
+            
+        </div>
+    </div>
+    <input class="enviar" type="image" src="enviar.jpg" />
+    </form>
+    <p><span>*</span> Los campos marcados  son obligatorios.</p>
+</div>
+</body>
+</html>

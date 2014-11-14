@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+span.mal{ color:red;}
+span.bien{ color:green;}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready( function() {
+function comprobarDNI(){
+    var regex = /^\d{8}-?[A-z]$/;
+    var valorobtenido = $('[name="dni"]').val() ;
+    $('[name="dni"]').next('span').remove();
+    if(valorobtenido.search(regex) == -1) {
+        $('[name="dni"]').after('<span>INCORRECTO</span>');
+				return false;
+    } else {
+        $('[name="dni"]').after('<span>OK</span>');
+    }
+}	
+	
+function comprobarCorreo(){
+    var regex = /^[-\w\.]+@[A-z0-9]+(\.[A-z]+)+$/;
+    var valorobtenido = $('[name="email"]').val() ;
+    $('[name="email"]').next('span').remove();
+    if(valorobtenido.search(regex) == -1) {
+        $('[name="email"]').after('<span>INCORRECTO</span>');
+				return false;
+    } else {
+        $('[name="email"]').after('<span>OK</span>');
+    }
+}
+$('[name="dni"]').keyup(comprobarDNI);
+$('[name="email"]').keyup(comprobarCorreo);
+$('form').submit( function(){
+     comprobarDNI();
+     comprobarCorreo();
+});
+
+
+});
+</script>
+</head>
+<body>
+
+<form>
+  <label>DNI:</label> 
+  <input type="text" name="dni"/> 
+  <br/>
+  <label>Email:</label>
+  <input type="email" name="email"/>
+  <br/>
+  <input type="submit"/>  
+</form>
+
+
+</body>
+</html>

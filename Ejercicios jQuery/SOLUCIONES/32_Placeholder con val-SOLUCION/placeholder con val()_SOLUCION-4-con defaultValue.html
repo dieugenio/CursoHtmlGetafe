@@ -7,10 +7,10 @@
 <script>
 $(document).ready(function() {
 	
-var valorOriginal;
 var valorEscrito;
+var	valorOriginal;
 $(':input').focus( function(){
-	valorOriginal=$(this).attr('value');
+	valorOriginal=$(this).prop('defaultValue');
 	valorEscrito=$(this).val();	
 	if(valorOriginal==valorEscrito){
 		$(this).val('');

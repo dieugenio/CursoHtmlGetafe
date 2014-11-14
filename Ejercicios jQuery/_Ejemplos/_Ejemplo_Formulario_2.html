@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+span.mal{ color:red;}
+span.bien{ color:green;}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready( function() {
+	
+$(':text').keyup( function(){
+    var regex = /^\d{8}-?[A-z]$/;
+    var valorobtenido = $(this).val() ;
+    $(this).next('span').remove();
+    if(valorobtenido.search(regex) == -1) {
+        $(this)
+				.css({outline:'2px solid red'})
+				.after('<span class="mal">INCORRECTO</span>');
+    } else {
+        $(this)
+				.css({outline:'none'})
+				.after('<span class="bien">OK</span>');
+    }
+});
+
+});
+</script>
+</head>
+<body>
+
+<form>
+    <label>DNI:</label>
+    <input type="text" name="dni" /> 
+</form>
+
+</body>
+</html>
