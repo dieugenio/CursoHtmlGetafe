@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style type="text/css">
+*{
+	padding:0;
+	margin: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body{background: linear-gradient(purple, white) fixed;}
+.contenedor {
+	width:800px;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: white;
+	border-radius: 20px;
+}
+h1{color:purple;}
+label{
+	display: block;
+	font-weight: bold;
+}
+label+input{
+	margin-bottom: 30px;
+}
+label.enlinea{display:inline;}
+div.informacion label { 
+	font-weight: normal;
+}
+span{color:red;}
+div.informacion{ margin: 10px 0 0 40px;}
+form{
+	border: 3px solid purple;
+	width: 700px;
+	padding:15px 80px 15px 15px;
+	border-radius: 20px;
+}
+form p{
+	margin-bottom:20px;	
+	color: gray;
+	font-size:16px;
+}
+input:focus{
+	color: purple;
+	}
+input{
+	padding:5px 0 5px 2px;
+	font-size:16px;
+	border-radius: 5px;
+}
+div.izquierda{float:left;}
+div.derecha{float:right;}
+input.enviar{ 
+	display:block; 
+	clear:left;
+}
+</style>
+<script src="jquery.js"></script>
+<script src="jquery.validate.js"></script>
+<script>
+$(document).ready(function() {
+
+
+	
+});
+</script>
+
+</head>
+
+<body>
+<div class="contenedor">
+  <h1>CONTACTO</h1>
+  <form>
+    <div class="izquierda">
+      <label>Nombre: <span>*</span></label>
+      <input type="text" name="nombre" placeholder="Nombre" />
+  
+      <label>Apellidos: <span>*</span></label>
+      <input type="text" name="apellidos" placeholder="Apellidos" />
+  
+      <label>DNI: <span>*</span></label>
+      <input type="text" name="dni" placeholder="01234567A"/>
+  
+    </div>
+    <div class="derecha">
+      <label>Teléfono:</label>
+      <input type="number" name="telefono" placeholder="Teléfono"/>
+      
+      <label>Correo electrónico: <span>*</span></label>
+      <input type="email" name="email" placeholder="Correo electrónico" title="Introduce un correo válido"/>
+      <br />
+      <input type="checkbox" name="informacion" value="SI" checked="checked" />
+      <label class="enlinea">Deseo recibir información.</label> 
+      <div class="informacion">
+        <input type="checkbox" name="promociones" value="ok" checked="checked" />
+        <label class="enlinea">Promociones.</label> 
+        <br />
+        <input type="checkbox" name="promociones" value="ok" checked="checked" />
+        <label class="enlinea">Novedades.</label>
+        <br />
+        <input type="checkbox" name="promociones" value="ok" checked="checked" /> 
+        <label class="enlinea">Cursos.</label>
+       </div>
+    </div>
+    <input class="enviar" type="image" src="enviar.jpg" />
+  </form>
+  <p><span>*</span> Los campos marcados  son obligatorios.</p>
+</div>
+</body>
+</html>
