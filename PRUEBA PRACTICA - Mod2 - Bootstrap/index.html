@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Ejercicio de Práctica de Bootstrap</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+		<script src="jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<style>
+			.navbar, .navbar-toggle {
+				border: none;
+			}
+			.navbar-brand, .navbar li a {
+				color: #6f5499 !important;
+			}
+			.icon-bar, .main {
+				background-color: #6f5499 !important;
+			}
+			.navbar
+			{
+				margin: 0;
+			}
+			.main {
+				height: 400px;
+				width: 100%;
+				margin: 0;
+			}
+			.logo {
+				width: 150px;
+				height: 150px;
+				border-radius: 20px;
+				border: 1px solid white;
+				color: white;
+				margin: auto;
+				font-size: 128px;
+				text-align: center;
+				vertical-align: center;
+				margin-top: 100px;
+			}
+			.logo span {
+				padding: 0;
+				margin: 0;
+				height: 150px;
+				line-height: 100px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barra">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Bootstrap</a>
+				</div>
+				<div class="collapse navbar-collapse" id="barra">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href=" ">Getting started</a></li>
+						<li><a href=" ">CSS</a></li>
+						<li><a href=" ">Components</a></li>
+						<li><a href=" ">JavaScript</a></li>
+						<li><a href=" ">Customize</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href=" ">Expo</a></li>
+						<li><a href=" ">Blog</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="main container-fluid">
+			<div class="logo"><span>B</span></div>
+		</div>
+	</body>
+</html>
