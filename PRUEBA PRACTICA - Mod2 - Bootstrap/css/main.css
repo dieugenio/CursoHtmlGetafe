@@ -23,7 +23,6 @@
 	padding-top: 80px;
 }
 .features {
-	border: 1px solid red;
 	color: #6f5499;
 	margin: auto;
 	text-align: center;
@@ -108,3 +107,36 @@
 	top: 105px;
 }
 
+.short_separator {
+	width: 100px;
+	height: 1px;
+	border-top: 1px solid lightgray;
+}
+
+footer {
+	margin-top: 20px;
+	border-top: 1px solid lightgray;
+}
+
+.btn-white {
+	background-color: white;
+	color: #6f5499;
+	border-radius: 5px;
+	border: 1px solid #6f5499;
+	font-size: 20px;
+}
+.btn-white:hover {
+	background-color: #6f5499;
+	border: 1px solid white;
+	color: white;
+}
+
+.go_to_project {
+	width: 90%;
+	text-align: center;
+}
+
+.samples {
+	text-align: center;
+	width: 90%;
+}
