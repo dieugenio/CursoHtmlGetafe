@@ -9,43 +9,7 @@
 		<link href="css/bootstrap.docs.min.css" rel="stylesheet">
 		<script src="jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<style>
-			.navbar, .navbar-toggle {
-				border: none;
-			}
-			.navbar-brand, .navbar li a {
-				color: #6f5499 !important;
-				font-weight: bold;
-			}
-			.icon-bar, .main {
-				background-color: #6f5499 !important;
-			}
-			#barra ul li a:hover {
-				background-color: #fafafa;
-			}
-			.navbar
-			{
-				margin: auto;
-
-			}
-			.main {
-				height: 400px;
-				margin: 0;
-				width: 100%;
-				padding-top: 80px;
-				border: 1px solid red;
-			}
-			.features {
-				height: 300px;
-				margin: 0;
-				width: 100%;
-				border: 1px solid red;
-			}
-			.main * {
-				margin: auto;
-
-			}
-		</style>
+		<link href="css/main.css" rel="stylesheet">
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -74,14 +38,74 @@
 			</div>
 		</nav>
 		<div class="main containers-fluid">
-			<span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">B</span>
-			<h3>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</h3>
-			<button>Download Bootstrap</button>
-			<span>Currently v3.3.1</span>
+			<span class="logo bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">B</span>
+			<p class="descrip text-center">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+			<button class="btn btn-default btn-lg download">Download Bootstrap</button>
+			<span class="version">Currently v3.3.1</span>
 			<div class="ads">
-				
+				<img src="img/hack_reactor_ad.jpg" alt="" class="ad_logo">
+				<span class="ad_message">Previously Only in San Francisco, attend the "Harvard" of coding schools wherever you are</span>
+				<span class="ad_by">ads via Carbon</span>	
 			</div>
 		</div>
-		<div class="features containers-fluid"></div>
+		<div class="features containers-fluid">
+			<h2 class="features_title">Designed for everyone, everywhere.</h2>
+			<p class="features_message">Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</h3>
+			<div class="preprocessors">
+				<img class="img-responsive" src="img/sass-less.png" alt="">
+				<h3>Preprocessors</h3>
+				<p>Bootstrap ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.</p>
+			</div>
+			<div class="all_devices">
+				<img class="img-responsive" src="img/devices.png" alt="">
+				<h3>One framework, every device.</h3>
+				<p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+			</div>
+			<div class="full_features">
+				<img class="img-responsive" src="img/components.png" alt="">
+				<h3>Full of features</h3>
+				<p>With Bootstrap, you get extensive and beautiful documentation for common HTML elements, dozens of custom HTML and CSS components, and awesome jQuery plugins.</p>
+			</div>
+		</div>
+		<div class="go_to_project">
+			<p class="descrip">Bootstrap is open source. It's hosted, developed, and maintained on Github.</p>
+			<button>View the GitHub project</button>
+		</div>
+		<div class="samples">
+			<h3 class="title">Built with Bootstrap.</h3>
+			<p class="descrip">Millions of amazing sites across the web are being built with Bootstrap. Get started on your own with our growing <a href="#">collection of examples</a> or by exploring some of our favorites.</p>
+			<div class="thumbs">
+				<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" class="lyft"><img src="img/lyft-thumb.jpg" alt="lyft" /></a>
+				<a href="http://expo.getbootstrap.com/2014/09/30/vogue/" class="vogue"><img src="img/vogue-thumb.jpg" alt="vogue" /></a>
+				<a href="http://expo.getbootstrap.com/2014/03/13/riot-design/" class="riot"><img src="img/riot-thumb.jpg" alt="riot" /></a>
+				<a href="http://expo.getbootstrap.com/2014/02/12/newsweek/"><img src="img/newsweek-thumb.jpg" alt="newsweek" /></a>
+			</div>
+		</div>
+		<div class="short_separator"></div>
+		<div class="expo">
+			<p class="descrip">We showcase dozens of inspiring projects built with Bootstrap on the Bootstrap Expo.</p>
+			<button class="explore">Explore the Expo</button>
+		</div>
+		<footer>
+			<img class="btn_star" src="img/social01.jpg" alt="Star"></img>
+			<img class="btn_fork" src="img/social02.jpg" alt="Fork"></img>
+			<img class="btn_follow" src="img/social03.jpg" alt="Follow"></img>
+			<img class="btn_tweet" src="img/social04.jpg" alt="Tweet"></img>
+			<p class="designed">Designed and built wit all the love in the work by <a href="#">@mdo</a> and <a href="#">@fat</a></p>
+			<p class="maintained">Maintained by the <a href="#">core team</a> with the help of <a href="#">our contributors.</a></p>
+			<p class="licenced">Code licenced under <a href="#">MIT</a>, documentation under <a href="#">CC BY 3.0</a></p>
+			<div class="links">
+				<span class="version">Currently v3.3.1</span>
+				<a href="https://github.com/twbs/bootstrap">GitHub</a>
+				<a href="http://getbootstrap.com/getting-started/#examples">Examples</a>
+				<a href="http://getbootstrap.com/2.3.2/">v2.3.2 docs</a>
+				<a href="http://getbootstrap.com/about/">About</a>
+				<a href="http://expo.getbootstrap.com/">Expo</a>
+				<a href="http://blog.getbootstrap.com/">Blog</a>
+				<a href="https://github.com/twbs/bootstrap/issues">Issues</a>
+				<a href="https://github.com/twbs/bootstrap/releases">Releases</a>
+			</div>
+
+		</footer>
 	</body>
 </html>
