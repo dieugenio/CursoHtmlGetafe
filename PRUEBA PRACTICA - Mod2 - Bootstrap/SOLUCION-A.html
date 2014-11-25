@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documento sin título</title>
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+
+div.morado{ 
+/*    background-color: #563D7C;*/
+    background-color: purple; 
+    color:white;
+}
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+div.logo{ 
+    border: 1px solid white;
+    width: 142px;
+    height: 142px;
+    font-size: 108px;
+    line-height: 140px;
+    border-radius: 15%;
+}
+aside.publi{ 
+    width: 330px; 
+    padding: 20px; 
+    border: 1px solid white;
+}
+aside.publi img { 
+    float:left;
+    width: 150px;
+    height: 100px;
+    padding-right: 20px;}
+div.textopubli { 
+    text-align: left;
+    font-size: 12px;
+    line-height: 16px;
+}
+section.ejemplos img{
+    padding: 1px;
+}
+footer.piepagina li{
+padding: 2px;
+}
+footer.piepagina li:not(:first-child) a:before{
+    content: "·";
+    margin-right: 8px;
+}
+hr.corto{ width: 100px;}
+
+/* Personalizando Bootstrap */
+.navbar{
+margin-bottom: 0;}    
+
+.navbar-default {
+    background-color: transparent;
+}
+    
+.navbar-default a.navbar-brand,
+.navbar-default a.navbar-brand:hover,
+.navbar-default .navbar-collapse li a,    
+.navbar-default .navbar-collapse li a:hover{ 
+    color: purple;
+}
+.navbar-default .navbar-collapse li a:hover{
+/*    background-color: #F9F9F9;*/
+    background-color: beige;
+}
+
+h1.entradilla {
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFF;
+}
+section.presentacion a.btn{ 
+    border: 1px solid white;
+    color: white;
+    margin-top: 15px ;
+    margin-bottom: 15px;
+    padding: 15px 30px;
+    font-size: 20px;
+}
+section.presentacion a.btn:hover{ 
+    background-color: white;
+    color: purple;
+}
+a.btn{
+    border: 1px solid purple;
+    color: purple;   
+}
+a.btn:hover{
+    color: white;
+    background-color: purple;
+    border-color: purple;
+}
+</style>
+<script src="jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<header class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" 
+    data-toggle="collapse" data-target="#barra">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="#">SOLUCIÓN</a>
+        </div>
+        <nav class="collapse navbar-collapse" id="barra">
+            <ul class="nav navbar-nav">
+                <li><a href=" ">Getting started</a></li>
+                <li><a href=" ">CSS</a></li>
+                <li><a href=" ">Components</a></li>
+                <li><a href=" ">JavaScript</a></li>
+                <li><a href=" ">Customize</a></li>  
+            </ul>
+           	<ul class="nav navbar-nav navbar-right">
+                <li><a href=" ">Expo</a></li>
+                <li><a href=" ">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="morado">
+    <section class="presentacion container text-center">
+        <div class="logo center-block">B</div>
+        <h1 class="entradilla">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</h1>
+        <a href="" class="btn">Download Bootstrap</a>
+        <p class="text-center">Currently v3.3.1</p>
+        <aside class="publi center-block">
+            <a href=""><img alt="" src="img/asana.png"/></a>
+            <div class="textopubli">
+                <a href=""><p>Say goodbye to email, to-do lists, calendars & notepads. And say hello to Asana.</p></a>
+                <p>ads via <a href="">Carbon</a></p>
+            </div>
+        </aside>
+    </section>
+</div>
+<section class="funcionamiento container text-center">
+    <header>
+        <h2>Designed for everyone, everywhere.</h2>
+        <p>Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</p>
+    </header>
+    <hr class="corto"/>
+    <div class="row">
+        <article class="col-sm-4">
+            <img class="img-responsive" src="img/sass-less.png"/>
+            <h3>Preprocessors</h3>
+            <p>Bootstrap ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, <a href="">Less</a> and <a href="">Sass</a>. Quickly get started with precompiled CSS or build on the source.</p>
+        </article>
+        <article class="col-sm-4">
+            <img class="img-responsive" src="img/devices.png"/>
+            <h3>One framework, every device.</h3>
+            <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+        </article>
+        <article class="col-sm-4">
+            <img class="img-responsive" src="img/components.png"/>
+            <h3>One framework, every device.</h3>
+            <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+        </article>
+    </div>
+    <hr class="corto"/>
+    <footer>
+        <p>Bootstrap is open source. It's hosted, developed, and maintained on GitHub.</p>
+        <a href="" class="btn btn-lg">View the GitHub project</a>
+    </footer>   
+</section>
+<hr/>
+<section class="ejemplos container text-center">
+    <h2>Built with Bootstrap.</h2>
+    <p>Millions of amazing sites across the web are being built with Bootstrap. Get started on your own with our growing collection of examples or by exploring some of our favorites.</p>
+    <hr class="corto"/>
+    <div class="row">
+      <a href="">
+      <img src="img/lyft-thumb.jpg" class="col-xs-6 col-sm-3"/></a>
+      <a href=""><img src="img/vogue-thumb.jpg" class="col-xs-6 col-sm-3"/></a>
+      <a href=""><img src="img/riot-thumb.jpg" class="col-xs-6 col-sm-3"/></a>
+      <a href=""><img src="img/newsweek-thumb.jpg" class="col-xs-6 col-sm-3"/></a>
+    </div>
+    <hr class="corto"/>
+    <p>We showcase dozens of inspiring projects built with Bootstrap on the Bootstrap Expo.</p>
+    <a href="" class="btn btn-lg">Explore the Expo</a> 
+</section>
+<hr/>
+<footer class="piepagina text-center">
+    <div>
+        <img src="img/social01.jpg"/>
+        <img src="img/social02.jpg"/>
+        <img src="img/social03.jpg"/>
+        <img src="img/social04.jpg"/>
+    </div>
+    <p>Designed and built with all the love in the world by <a href=""> @mdo</a> and <a href="">@fat</a></p>
+    <p>Maintained by the <a href="">core team</a> with the help of <a href="">our contributors</a>.</p>
+    <p>Code licensed under <a href="">MIT</a>, documentation under <a href="">CC BY 3.0.</a></p>
+    <ul class="list-inline">
+      <li>Currently v3.3.1</li>
+      <li><a href="">GitHub</a></li>
+      <li><a href="">Examples</a></li>
+      <li><a href="">v2.3.2 docs</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Expo</a></li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">Issues</a></li>
+      <li><a href="">Releases</a></li>
+    </ul>
+
+</footer>
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">2</div>
+        <div class="col-xs-1">3</div>
+        <div class="col-xs-1">4</div>
+        <div class="col-xs-1">5</div>
+        <div class="col-xs-1">6</div>
+        <div class="col-xs-1">7</div>
+        <div class="col-xs-1">8</div>
+        <div class="col-xs-1">9</div>
+        <div class="col-xs-1">10</div>
+        <div class="col-xs-1">11</div>
+        <div class="col-xs-1">12</div>
+	</div>
+</div>
+-->
+
+</body>
+</html>
